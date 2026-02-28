@@ -242,8 +242,7 @@
                 <!-- Desktop Menu -->
                 <div class="hidden lg:flex items-center space-x-8">
                     <a href="#home" class="text-white hover:text-accent-yellow transition-colors font-medium">Home</a>
-                    <a href="about-us/"
-                        class="text-white hover:text-accent-yellow transition-colors font-medium">About
+                    <a href="about-us/" class="text-white hover:text-accent-yellow transition-colors font-medium">About
                         Us</a>
 
                     <!-- Services Mega Menu -->
@@ -596,8 +595,8 @@
                 </button>
                 <div class="accordion-content max-h-0 overflow-hidden opacity-0">
                     <div class="py-2 pl-4 grid grid-cols-2 gap-2">
-                        <a href="old-louisville/"
-                            class="mobile-link text-gray-600 text-base hover:text-teal-600">Old Louisville</a>
+                        <a href="old-louisville/" class="mobile-link text-gray-600 text-base hover:text-teal-600">Old
+                            Louisville</a>
                         <a href="the-highlands/" class="mobile-link text-gray-600 text-base hover:text-teal-600">The
                             Highlands</a>
                         <a href="nulu/" class="mobile-link text-gray-600 text-base hover:text-teal-600">NuLu</a>
@@ -615,12 +614,9 @@
                             class="mobile-link text-gray-600 text-base hover:text-teal-600">Jeffersontown</a>
                         <a href="fern-creek/" class="mobile-link text-gray-600 text-base hover:text-teal-600">Fern
                             Creek</a>
-                        <a href="okolona/"
-                            class="mobile-link text-gray-600 text-base hover:text-teal-600">Okolona</a>
-                        <a href="shively/"
-                            class="mobile-link text-gray-600 text-base hover:text-teal-600">Shively</a>
-                        <a href="prospect/"
-                            class="mobile-link text-gray-600 text-base hover:text-teal-600">Prospect</a>
+                        <a href="okolona/" class="mobile-link text-gray-600 text-base hover:text-teal-600">Okolona</a>
+                        <a href="shively/" class="mobile-link text-gray-600 text-base hover:text-teal-600">Shively</a>
+                        <a href="prospect/" class="mobile-link text-gray-600 text-base hover:text-teal-600">Prospect</a>
                         <a href="anchorage/"
                             class="mobile-link text-gray-600 text-base hover:text-teal-600">Anchorage</a>
                         <a href="hurstbourne/"
@@ -1766,19 +1762,22 @@
                 { name: "Gutter Cleaning", keyword: "roof,gutter", img: "images/gutter_cleaning.png" }
             ];
 
-            const createCardHTML = (service, accentColor) => `
+            const createCardHTML = (service, accentColor) => {
+                const urlSlug = service.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+                return `
                 <div class="relative w-[280px] md:w-[320px] h-[350px] md:h-[400px] rounded-3xl overflow-hidden group flex-shrink-0 shadow-xl cursor-pointer border border-gray-100/20">
                     <img src="${service.img ? service.img : 'https://source.unsplash.com/random/600x800/?' + service.keyword + '&sig=' + Math.random().toString(36).substring(7)}" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" alt="${service.name}">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900/95 via-gray-900/40 to-transparent group-hover:from-gray-900/100 transition-colors duration-300"></div>
                     <div class="absolute inset-x-0 bottom-0 p-6 md:p-8 transform transition-transform duration-300 group-hover:-translate-y-4">
                         <h4 class="text-white text-xl md:text-2xl font-bold mb-3 tracking-tight">${service.name}</h4>
                         <div class="w-12 h-1.5 ${accentColor} rounded-full transition-all duration-300 group-hover:w-full opacity-80 group-hover:opacity-100 shadow-sm mb-4"></div>
-                        <a href="#quote" class="inline-block px-5 py-2 rounded-full border border-white/30 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-gray-900">
+                        <a href="${urlSlug}/" class="inline-block px-5 py-2 rounded-full border border-white/30 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-gray-900">
                             Learn More
                         </a>
                     </div>
                 </div>
             `;
+            };
 
             const populateMarquee = (containerId, services, accentColor) => {
                 const container = document.getElementById(containerId);
