@@ -75,7 +75,7 @@ function buildPage(type, data) {
 
     const pageTitle = `${keyword} in ${locationStr} - 502 Star Service`;
     const pageDesc = `Get the best ${data.title.toLowerCase()} from 502 Star Service in ${locationStr}. We provide 5-star, professional, and reliable cleaning solutions tailored to your needs.`;
-    const canonical = `https://502starservice.com/${data.id}.html`;
+    const canonical = `https://502starservice.com/${data.id}/`;
 
     // Pick a high-quality default if no specific image is provided (like for locations)
     const defaultMansion = 'images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg'; // High quality location default
@@ -251,14 +251,27 @@ async function run() {
 
     let totalCreated = 0;
 
+    function savePage(item, htmlBody) {
+        let finalHtml = htmlBody.replace(/src="images\//g, 'src="../images/');
+        finalHtml = finalHtml.replace(/href="images\//g, 'href="../images/');
+        finalHtml = finalHtml.replace(/href="index\.html/g, 'href="../index.html');
+        // Fix internal links to other directories
+        finalHtml = finalHtml.replace(/href="([a-z0-9-]+)\/"/g, 'href="../$1/"');
+
+        const dirPath = path.join(__dirname, item.id);
+        if (!fs.existsSync(dirPath)) {
+            fs.mkdirSync(dirPath, { recursive: true });
+        }
+        fs.writeFileSync(path.join(dirPath, 'index.html'), finalHtml);
+    }
+
     // Generate Services
     for (let s of services) {
         let html = buildPage('service', s);
         html = html.replace('<!-- _GLOBAL_HEAD_CSS_ -->', globalCss);
         html = html.replace('<!-- _GLOBAL_HEADER_ -->', globalHeader);
         html = html.replace('<!-- _GLOBAL_FOOTER_ -->', globalFooterAndSections);
-
-        fs.writeFileSync(path.join(__dirname, `${s.id}.html`), html);
+        savePage(s, html);
         totalCreated++;
     }
 
@@ -268,12 +281,11 @@ async function run() {
         html = html.replace('<!-- _GLOBAL_HEAD_CSS_ -->', globalCss);
         html = html.replace('<!-- _GLOBAL_HEADER_ -->', globalHeader);
         html = html.replace('<!-- _GLOBAL_FOOTER_ -->', globalFooterAndSections);
-
-        fs.writeFileSync(path.join(__dirname, `${l.id}.html`), html);
+        savePage(l, html);
         totalCreated++;
     }
 
-    console.log(`Successfully generated ${totalCreated} SEO optimized pages.`);
+    console.log(`Successfully generated ${services.length + locations.length} SEO optimized directory pages.`);
 }
 
 run();

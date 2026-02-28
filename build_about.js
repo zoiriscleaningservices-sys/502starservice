@@ -5,8 +5,6 @@ const html = fs.readFileSync('index.html', 'utf8');
 const heroStart = html.indexOf('<!-- Hero Section -->');
 const aboutStart = html.indexOf('<!-- About Section -->');
 const servicesStart = html.indexOf('<!-- Services Section -->');
-const quoteStart = html.indexOf('<!-- Quote/Contact Section -->');
-const footerStart = html.indexOf('<!-- Modern Full Footer -->');
 
 // Blocks
 const headToNav = html.substring(0, heroStart);
@@ -37,14 +35,23 @@ const aboutHero = `
         </div>
     </section>`;
 
-const assembledHTML = headToNav + aboutHero + aboutBlock + servicesToFooter;
+let finalHtml = headToNav + aboutHero + aboutBlock + servicesToFooter;
 
-// Update Title and Links
-let finalHTML = assembledHTML.replace(/<title>.*?<\/title>/, '<title>About Us - 502 Star Service - Louisville HQ</title>');
-finalHTML = finalHTML.replace(/content="We are dedicated to providing exceptional cleaning services tailored to your specific needs.*?"/, 'content="Learn more about 502 Star Service, Louisville\\\'s most trusted residential and commercial cleaning company. 5+ years of dedicated service."');
-finalHTML = finalHTML.replace(/id="about" class="py-20 bg-gray-50"/, 'id="about" class="py-24 bg-white"'); // Minor stylistic tweak for standalone page
-finalHTML = finalHTML.replace(/href="#home"/g, 'href="index.html#home"');
-// The other # anchor links do NOT need rewriting because Services, Locations, Contact, and Reviews exist directly on this page now!
+finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>About Us - 502 Star Service</title>');
+finalHtml = finalHtml.replace(/content="We are dedicated to providing exceptional cleaning services tailored to your specific needs.*?"/, 'content="Learn more about 502 Star Service, Louisville\\\'s most trusted residential and commercial cleaning company. 5+ years of dedicated service."');
+finalHtml = finalHtml.replace(/id="about" class="py-20 bg-gray-50"/, 'id="about" class="py-24 bg-white"'); // Minor stylistic tweak for standalone page
 
-fs.writeFileSync('about-us.html', finalHTML);
-console.log('Successfully created about-us.html');
+// Fix paths since it's now in a subfolder
+finalHtml = finalHtml.replace(/src="images\//g, 'src="../images/');
+finalHtml = finalHtml.replace(/href="images\//g, 'href="../images/');
+finalHtml = finalHtml.replace(/href="index\.html/g, 'href="../index.html');
+finalHtml = finalHtml.replace(/href="([a-z0-9-]+)\/"/g, 'href="../$1/"');
+// Note: index.html has href="about-us.html", which we changed to href="about-us/" via update_to_folders.js
+finalHtml = finalHtml.replace(/href="#home"/g, 'href="../index.html#home"');
+
+const dirPath = __dirname + '/about-us';
+if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+}
+fs.writeFileSync(dirPath + '/index.html', finalHtml);
+console.log('Successfully created about-us/index.html');

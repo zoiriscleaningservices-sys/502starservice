@@ -1,17 +1,16 @@
 const fs = require('fs');
 const html = fs.readFileSync('index.html', 'utf8');
 
-// Boundaries
 const heroStart = html.indexOf('<!-- Hero Section -->');
-const servicesStart = html.indexOf('<!-- Services Section -->');
 const quoteStart = html.indexOf('<!-- Quote/Contact Section -->');
+const contactStart = html.indexOf('<!-- Contact Info -->');
 const footerStart = html.indexOf('<!-- Modern Full Footer -->');
+const servicesStart = html.indexOf('<!-- Services Section -->');
 
-// Blocks
 const headToNav = html.substring(0, heroStart);
-const contactBlocks = html.substring(quoteStart, footerStart);
-const servicesBlock = html.substring(servicesStart, quoteStart);
-const footerToEOF = html.substring(footerStart);
+const quoteBlock = html.substring(quoteStart, contactStart);
+const contactBlock = html.substring(contactStart, footerStart);
+const servicesToFooter = html.substring(servicesStart);
 
 const contactHero = `
     <!-- Hero Section -->
@@ -37,13 +36,18 @@ const contactHero = `
         </div>
     </section>`;
 
-// Assemble in desired order: Head + Contact + Services + Footer
-const assembledHTML = headToNav + contactHero + contactBlocks + servicesBlock + footerToEOF;
+let finalHtml = headToNav + contactHero + quoteBlock + contactBlock + servicesToFooter;
+finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>Contact Us - 502 Star Service</title>');
 
-let finalHTML = assembledHTML.replace(/<title>.*?<\/title>/, '<title>Contact Us - 502 Star Service</title>');
-finalHTML = finalHTML.replace(/content="We are dedicated to providing exceptional cleaning services tailored to your specific needs.*?"/, 'content="Get in touch with 502 Star Service for a free estimate tailored to your residential or commercial cleaning needs."');
-finalHTML = finalHTML.replace(/href="#home"/g, 'href="index.html#home"');
-finalHTML = finalHTML.replace(/href="#about"/g, 'href="about-us.html"');
+finalHtml = finalHtml.replace(/src="images\//g, 'src="../images/');
+finalHtml = finalHtml.replace(/href="images\//g, 'href="../images/');
+finalHtml = finalHtml.replace(/href="index\.html/g, 'href="../index.html');
+finalHtml = finalHtml.replace(/href="([a-z0-9-]+)\/"/g, 'href="../$1/"');
+finalHtml = finalHtml.replace(/href="#home"/g, 'href="../index.html#home"');
 
-fs.writeFileSync('contact-us.html', finalHTML);
-console.log('Successfully created contact-us.html');
+const dirPath = __dirname + '/contact-us';
+if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+}
+fs.writeFileSync(dirPath + '/index.html', finalHtml);
+console.log('Successfully created contact-us/index.html');
