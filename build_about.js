@@ -41,6 +41,9 @@ finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>About #1 Cleaning S
 finalHtml = finalHtml.replace(/<meta name="description"\s+content=".*?" \/>/, '<meta name="description" content="Learn more about 502 Star Service, the #1 rated cleaning services in Louisville, KY. We provide top-quality house cleaning and commercial janitorial services throughout Louisville Kentucky." />');
 finalHtml = finalHtml.replace(/id="about" class="py-20 bg-gray-50"/, 'id="about" class="py-24 bg-white"'); // Minor stylistic tweak for standalone page
 
+// Fix canonical and OG URLs from index.html template
+finalHtml = finalHtml.replace(/https:\/\/www\.502starservices\.com\/(?=["'])/g, 'https://www.502starservices.com/about-us/');
+
 // Fix paths since it's now in a subfolder
 finalHtml = finalHtml.replace(/src="images\//g, 'src="../images/');
 finalHtml = finalHtml.replace(/href="images\//g, 'href="../images/');
