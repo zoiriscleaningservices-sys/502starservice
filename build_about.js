@@ -37,8 +37,8 @@ const aboutHero = `
 
 let finalHtml = headToNav + aboutHero + aboutBlock + servicesToFooter;
 
-finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>About Us - 502 Star Service</title>');
-finalHtml = finalHtml.replace(/content="We are dedicated to providing exceptional cleaning services tailored to your specific needs.*?"/, 'content="Learn more about 502 Star Service, Louisville\\\'s most trusted residential and commercial cleaning company. 5+ years of dedicated service."');
+finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>About #1 Cleaning Services Louisville KY | 502 Star Service</title>');
+finalHtml = finalHtml.replace(/<meta name="description"\s+content=".*?" \/>/, '<meta name="description" content="Learn more about 502 Star Service, the #1 rated cleaning services in Louisville, KY. We provide top-quality house cleaning and commercial janitorial services throughout Louisville Kentucky." />');
 finalHtml = finalHtml.replace(/id="about" class="py-20 bg-gray-50"/, 'id="about" class="py-24 bg-white"'); // Minor stylistic tweak for standalone page
 
 // Fix paths since it's now in a subfolder

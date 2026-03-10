@@ -73,9 +73,9 @@ function buildPage(type, data) {
     const keyword = isLocal ? "Cleaning Services" : data.title;
     const locationStr = isLocal ? data.title : "Louisville, KY";
 
-    const pageTitle = `${keyword} in ${locationStr} - 502 Star Service`;
-    const pageDesc = `Get the best ${data.title.toLowerCase()} from 502 Star Service in ${locationStr}. We provide 5-star, professional, and reliable cleaning solutions tailored to your needs.`;
-    const canonical = `https://502starservice.com/${data.id}/`;
+    const pageTitle = `#1 Rated ${keyword} ${locationStr} | Top Cleaners | 502 Star Service`;
+    const pageDesc = `Looking for the best ${data.title.toLowerCase()} in ${locationStr}? 502 Star Service is the #1 rated local company providing professional ${data.title.toLowerCase()} and janitorial services. Get a free quote today!`;
+    const canonical = `https://www.502starservices.com/${data.id}/`;
 
     // Pick a high-quality default if no specific image is provided (like for locations)
     const defaultMansion = 'images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg'; // High quality location default
@@ -100,16 +100,16 @@ function buildPage(type, data) {
     <meta property="og:description" content="${pageDesc}" />
     <meta property="og:url" content="${canonical}" />
     <meta property="og:site_name" content="502 Star Service" />
-    <meta property="og:image" content="https://502starservice.com/images/logo.jpg" />
+    <meta property="og:image" content="https://www.502starservices.com/images/logo.jpg" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${pageTitle}" />
     <meta name="twitter:description" content="${pageDesc}" />
-    <meta name="twitter:image" content="https://502starservice.com/images/logo.jpg" />
+    <meta name="twitter:image" content="https://www.502starservices.com/images/logo.jpg" />
     
     <!-- Schema.org JSON-LD -->
-    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":"${pageTitle}","isPartOf":{"@id":"https://502starservice.com/#website"},"about":{"@id":"https://502starservice.com/#organization"},"primaryImageOfPage":{"@id":"https://502starservice.com/#primaryimage"},"image":{"@id":"https://502starservice.com/#primaryimage"},"thumbnailUrl":"https://502starservice.com/images/logo.jpg","description":"${pageDesc}","breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["${canonical}"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://502starservice.com/#primaryimage","url":"https://502starservice.com/images/logo.jpg","contentUrl":"https://502starservice.com/images/logo.jpg"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://502starservice.com/"},{"@type":"ListItem","position":2,"name":"${data.title}"}]},{"@type":"WebSite","@id":"https://502starservice.com/#website","url":"https://502starservice.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://502starservice.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://502starservice.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://502starservice.com/#organization","name":"502 Star Service","url":"https://502starservice.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://502starservice.com/#/schema/logo/image/","url":"https://502starservice.com/images/logo.jpg","contentUrl":"https://502starservice.com/images/logo.jpg","caption":"502 Star Service"},"image":{"@id":"https://502starservice.com/#/schema/logo/image/"}}]}</script>
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":"${pageTitle}","isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"primaryImageOfPage":{"@id":"https://www.502starservices.com/#primaryimage"},"image":{"@id":"https://www.502starservices.com/#primaryimage"},"thumbnailUrl":"https://www.502starservices.com/images/logo.jpg","description":"${pageDesc}","breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["${canonical}"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#primaryimage","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":"${data.title}"}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.502starservices.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#/schema/logo/image/","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg","caption":"502 Star Service"},"image":{"@id":"https://www.502starservices.com/#/schema/logo/image/"}}]}</script>
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -138,8 +138,8 @@ function buildPage(type, data) {
             </div>
 
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight flex flex-col items-center">
-                <span class="text-accent-yellow block text-sm md:text-xl mb-2 tracking-widest uppercase font-semibold">${isLocal ? 'Service Area' : data.category}</span>
-                ${data.title} ${isLocal ? 'Cleaning Services' : ''}
+                <span class="text-accent-yellow block text-sm md:text-xl mb-2 tracking-widest uppercase font-semibold">#1 Rated ${isLocal ? 'Service Area' : data.category}</span>
+                ${data.title} ${isLocal ? 'Cleaning Services' : 'in Louisville KY'}
             </h1>
             <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed mb-10">
                 ${pageDesc}

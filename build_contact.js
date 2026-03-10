@@ -37,7 +37,8 @@ const contactHero = `
     </section>`;
 
 let finalHtml = headToNav + contactHero + quoteBlock + contactBlock + servicesToFooter;
-finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>Contact Us - 502 Star Service</title>');
+finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>Contact #1 Cleaning Services Louisville KY | 502 Star Service</title>');
+finalHtml = finalHtml.replace(/<meta name="description"\s+content=".*?" \/>/, '<meta name="description" content="Contact 502 Star Service, the #1 rated cleaning services in Louisville, KY. Get a free quote for top-quality house cleaning and commercial janitorial services today." />');
 
 finalHtml = finalHtml.replace(/src="images\//g, 'src="../images/');
 finalHtml = finalHtml.replace(/href="images\//g, 'href="../images/');
