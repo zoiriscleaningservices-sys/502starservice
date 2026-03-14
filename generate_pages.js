@@ -73,8 +73,8 @@ function buildPage(type, data) {
     const keyword = isLocal ? "Cleaning Services" : data.title;
     const locationStr = isLocal ? data.title : "Louisville, KY";
 
-    const pageTitle = `#1 Rated ${keyword} ${locationStr} | Top Cleaners | 502 Star Service`;
-    const pageDesc = `Looking for the best ${data.title.toLowerCase()} in ${locationStr}? 502 Star Service is the #1 rated local company providing professional ${data.title.toLowerCase()} and janitorial services. Get a free quote today!`;
+    const pageTitle = `${keyword} in ${locationStr} | #1 Rated | 502 Star Service`;
+    const pageDesc = `(502) 835-1870: Need the best ${data.title.toLowerCase()} in ${locationStr}? 502 Star Service is the #1 rated local company providing professional cleaning and janitorial services. Free quote!`;
     const canonical = `https://www.502starservices.com/${data.id}/`;
 
     // Pick a high-quality default if no specific image is provided (like for locations)
@@ -88,25 +88,31 @@ function buildPage(type, data) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Optimized SEO Structure -->
-    <title>${pageTitle}</title>
-    <meta name="description" content="${pageDesc}" />
-    <link rel="canonical" href="${canonical}" />
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>\${pageTitle}</title>
+    <meta name="description" content="\${pageDesc}" />
+    <link rel="canonical" href="\${canonical}" />
     <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
     
     <!-- Open Graph Data -->
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="${pageTitle}" />
-    <meta property="og:description" content="${pageDesc}" />
-    <meta property="og:url" content="${canonical}" />
+    <meta property="og:title" content="\${pageTitle}" />
+    <meta property="og:description" content="\${pageDesc}" />
+    <meta property="og:url" content="\${canonical}" />
     <meta property="og:site_name" content="502 Star Service" />
+    <meta property="article:modified_time" content="2026-03-05T15:05:10+00:00" />
     <meta property="og:image" content="https://www.502starservices.com/images/logo.jpg" />
+    <meta property="og:image:width" content="88" />
+    <meta property="og:image:height" content="77" />
+    <meta property="og:image:type" content="image/jpeg" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="${pageTitle}" />
-    <meta name="twitter:description" content="${pageDesc}" />
+    <meta name="twitter:title" content="\${pageTitle}" />
+    <meta name="twitter:description" content="\${pageDesc}" />
     <meta name="twitter:image" content="https://www.502starservices.com/images/logo.jpg" />
+    <meta name="google-site-verification" content="xmGae3ujVfInVGbCGAuESkICJXZZOKLj7iISf8ZkfKI" />
     
     <!-- Schema.org JSON-LD -->
     <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":"${pageTitle}","isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"primaryImageOfPage":{"@id":"https://www.502starservices.com/#primaryimage"},"image":{"@id":"https://www.502starservices.com/#primaryimage"},"thumbnailUrl":"https://www.502starservices.com/images/logo.jpg","description":"${pageDesc}","breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["${canonical}"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#primaryimage","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":"${data.title}"}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.502starservices.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#/schema/logo/image/","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg","caption":"502 Star Service"},"image":{"@id":"https://www.502starservices.com/#/schema/logo/image/"}}]}</script>

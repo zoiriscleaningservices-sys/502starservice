@@ -37,8 +37,18 @@ const contactHero = `
     </section>`;
 
 let finalHtml = headToNav + contactHero + quoteBlock + contactBlock + servicesToFooter;
-finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>Contact #1 Cleaning Services Louisville KY | 502 Star Service</title>');
-finalHtml = finalHtml.replace(/<meta name="description"\s+content=".*?" \/>/, '<meta name="description" content="Contact 502 Star Service, the #1 rated cleaning services in Louisville, KY. Get a free quote for top-quality house cleaning and commercial janitorial services today." />');
+
+const contactTitle = 'Contact Us | Cleaning Services in Louisville KY | 502 Star Service';
+const contactDesc = '(502) 835-1870: Contact 502 Star Service, the #1 rated cleaning services in Louisville, KY. Get a free quote for top-quality house cleaning and commercial janitorial services today.';
+
+finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${contactTitle}</title>`);
+finalHtml = finalHtml.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${contactDesc}" />`);
+
+// Update Open Graph and Twitter tags
+finalHtml = finalHtml.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${contactTitle}" />`);
+finalHtml = finalHtml.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${contactDesc}" />`);
+finalHtml = finalHtml.replace(/<meta name="twitter:title" content=".*?" \/>/, `<meta name="twitter:title" content="${contactTitle}" />`);
+finalHtml = finalHtml.replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${contactDesc}" />`);
 
 // Fix canonical and OG URLs from index.html template
 finalHtml = finalHtml.replace(/https:\/\/www\.502starservices\.com\/(?=["'])/g, 'https://www.502starservices.com/contact-us/');

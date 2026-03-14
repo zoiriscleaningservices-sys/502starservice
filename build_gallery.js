@@ -7,7 +7,11 @@ const files = fs.readdirSync(imgDir).filter(f => f.endsWith('.jpeg') || f.endsWi
 let html = `
 <!DOCTYPE html>
 <html>
-<head><title>Gallery</title><style>
+<head>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <title>Gallery | Super Cleaning Service Louisville : House Cleaning &amp; Maid Services</title>
+    <meta name="description" content="View our gallery of professional cleaning services in Louisville, KY." />
+<style>
     body { font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 20px; }
     .card { width: 300px; border: 1px solid #ccc; padding: 10px; }
     img { max-width: 100%; height: auto; }

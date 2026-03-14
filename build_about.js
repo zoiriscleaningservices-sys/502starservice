@@ -37,9 +37,20 @@ const aboutHero = `
 
 let finalHtml = headToNav + aboutHero + aboutBlock + servicesToFooter;
 
-finalHtml = finalHtml.replace(/<title>.*?<\/title>/, '<title>About #1 Cleaning Services Louisville KY | 502 Star Service</title>');
-finalHtml = finalHtml.replace(/<meta name="description"\s+content=".*?" \/>/, '<meta name="description" content="Learn more about 502 Star Service, the #1 rated cleaning services in Louisville, KY. We provide top-quality house cleaning and commercial janitorial services throughout Louisville Kentucky." />');
-finalHtml = finalHtml.replace(/id="about" class="py-20 bg-gray-50"/, 'id="about" class="py-24 bg-white"'); // Minor stylistic tweak for standalone page
+const aboutTitle = 'About Us | Cleaning Services in Louisville KY | 502 Star Service';
+const aboutDesc = '(502) 835-1870: Learn more about 502 Star Service, the #1 rated cleaning services in Louisville, KY. We provide top-quality house cleaning and commercial janitorial services throughout Louisville Kentucky.';
+
+finalHtml = finalHtml.replace(/<title>.*?<\/title>/, `<title>${aboutTitle}</title>`);
+finalHtml = finalHtml.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${aboutDesc}" />`);
+
+// Update Open Graph and Twitter tags
+finalHtml = finalHtml.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${aboutTitle}" />`);
+finalHtml = finalHtml.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${aboutDesc}" />`);
+finalHtml = finalHtml.replace(/<meta name="twitter:title" content=".*?" \/>/, `<meta name="twitter:title" content="${aboutTitle}" />`);
+finalHtml = finalHtml.replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${aboutDesc}" />`);
+
+// Minor stylistic tweak for standalone page
+finalHtml = finalHtml.replace(/id="about" class="py-20 bg-gray-50"/, 'id="about" class="py-24 bg-white"');
 
 // Fix canonical and OG URLs from index.html template
 finalHtml = finalHtml.replace(/https:\/\/www\.502starservices\.com\/(?=["'])/g, 'https://www.502starservices.com/about-us/');
