@@ -63,9 +63,72 @@ function extractSection(html, startComment, endComment) {
     const startIndex = html.indexOf(startComment);
     if (startIndex === -1) return '';
     const endIndex = html.indexOf(endComment, startIndex);
-    if (endIndex === -1) return '';
+    if (endIndex === -1) {
+        // If no end comment, read to end of string
+        return html.substring(startIndex);
+    }
     return html.substring(startIndex, endIndex + endComment.length);
 }
+
+// Simple seeded random number generator based on string hash
+function seededRandom(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = ((hash << 5) - hash) + str.charCodeAt(i);
+        hash |= 0; // Convert to 32bit integer
+    }
+    return function() {
+        let t = hash += 0x6D2B79F5;
+        t = Math.imul(t ^ t >>> 15, t | 1);
+        t ^= t + Math.imul(t ^ t >>> 7, t | 61);
+        return ((t ^ t >>> 14) >>> 0) / 4294967296;
+    }
+}
+
+// Spintax Components
+const spintax = {
+    intros: [
+        "At 502 Star Service, we understand that finding reliable and meticulous cleaning services is crucial.",
+        "When it comes to maintaining a pristine environment, 502 Star Service is the name you can trust.",
+        "Discover the difference that professional attention to detail makes with 502 Star Service.",
+        "Your space deserves the best care possible, and that's exactly what 502 Star Service provides.",
+        "Experience a new standard of cleanliness with the dedicated professionals at 502 Star Service."
+    ],
+    middles: [
+        "By leveraging advanced cleaning techniques and eco-friendly products, we ensure that your property is not just visually clean, but fundamentally sanitized and healthy.",
+        "Our team utilizes industry-leading equipment and sustainable solutions to deliver a deep, comprehensive clean that protects your health and your investment.",
+        "We combine proven methodologies with meticulous execution to create spaces that look impeccable and feel refreshingly pristine.",
+        "Through our rigorous standards and premium supplies, we guarantee an exceptional outcome that elevates the comfort and safety of your environment.",
+        "Going beyond the surface, our approach focuses on eliminating hidden dust and allergens to promote a truly revitalized space."
+    ],
+    bullets: [
+        [
+            "Highly trained, background-checked professionals.",
+            "Customized cleaning plans tailored to your schedule.",
+            "100% Satisfaction Guarantee on all services."
+        ],
+        [
+            "Vetted, experienced, and trustworthy cleaning staff.",
+            "Flexible scheduling that works around your life.",
+            "Commitment to eco-friendly, safe cleaning products."
+        ],
+        [
+            "Dedicated teams consistently delivering top-tier results.",
+            "Transparent pricing with no hidden fees.",
+            "Fully licensed, bonded, and insured for your peace of mind."
+        ],
+        [
+            "Meticulous attention to every corner and crevice.",
+            "Prompt, reliable, and communicative customer service.",
+            "State-of-the-art equipment for maximum efficiency."
+        ],
+        [
+            "Local experts who care about our community.",
+            "Rapid response times for urgent cleaning needs.",
+            "Tailored checklists to ensure your specific priorities are met."
+        ]
+    ]
+};
 
 // Ensure the start and end of blocks are correctly defined
 function buildPage(type, data) {
@@ -80,6 +143,12 @@ function buildPage(type, data) {
     // Pick a high-quality default if no specific image is provided (like for locations)
     const defaultMansion = 'images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg'; // High quality location default
     const bannerImage = isLocal ? defaultMansion : (data.img ? data.img : defaultMansion);
+
+    // Generate Unique Content Variations based on ID
+    const randomSeed = seededRandom(data.id);
+    const introText = spintax.intros[Math.floor(randomSeed() * spintax.intros.length)];
+    const middleText = spintax.middles[Math.floor(randomSeed() * spintax.middles.length)];
+    const bulletSet = spintax.bullets[Math.floor(randomSeed() * spintax.bullets.length)];
 
     // Create the HTML payload
     return `<!DOCTYPE html>
@@ -138,7 +207,7 @@ function buildPage(type, data) {
                 The Best ${data.title} ${isLocal ? 'Cleaning Services' : 'in Louisville, KY'}
             </h1>
             <p class="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto font-semibold">
-                We Clean So You Don't Have To! - 502 Star Service
+                <b>We Clean So You Don't Have To! - 502 Star Service</b>
             </p>
             <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto font-light leading-relaxed font-semibold mb-10">
                 <b>For a free estimate or to schedule your cleaning service, reach out via call, text, or online booking today.</b>
@@ -164,14 +233,14 @@ function buildPage(type, data) {
                     <div class="bg-white rounded-3xl p-8 md:p-12 shadow-[0_8px_30px_rgb(0,0,0,0.04)] reveal border border-gray-100">
                         <h2 class="text-3xl font-bold text-gray-900 mb-6">Why Choose Our ${data.title} in ${locationStr}?</h2>
                         <div class="prose prose-lg text-gray-600">
-                            <p class="mb-4">At 502 Star Service, we understand that finding reliable and meticulous cleaning services is crucial. Our <strong>${data.title}</strong> is designed to exceed expectations and deliver a spotless environment every single time.</p>
-                            <p class="mb-8">By leveraging advanced cleaning techniques and eco-friendly products, we ensure that your property in ${locationStr} is not just visually clean, but fundamentally sanitized and healthy.</p>
+                            <p class="mb-4">${introText} Our <strong>${data.title}</strong> is designed to exceed expectations and deliver a spotless environment every single time.</p>
+                            <p class="mb-8">${middleText}</p>
                             
                             <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2"><i data-lucide="sparkles" class="text-teal-600"></i> Quality Guaranteed</h3>
                             <ul class="space-y-3 list-none">
-                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-teal-600 shrink-0 mt-1"></i> Highly trained, background-checked professionals.</li>
-                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-teal-600 shrink-0 mt-1"></i> Customized cleaning plans tailored to your schedule.</li>
-                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-teal-600 shrink-0 mt-1"></i> 100% Satisfaction Guarantee on all services.</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-teal-600 shrink-0 mt-1"></i> ${bulletSet[0]}</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-teal-600 shrink-0 mt-1"></i> ${bulletSet[1]}</li>
+                                <li class="flex items-start gap-3"><i data-lucide="check-circle-2" class="text-teal-600 shrink-0 mt-1"></i> ${bulletSet[2]}</li>
                             </ul>
                         </div>
                     </div>
@@ -240,9 +309,10 @@ async function run() {
     const cssMatch = indexHtml.match(/<script>\s*tailwind\.config[\s\S]*?<\/style>/);
     let globalCss = cssMatch ? cssMatch[0] : '';
 
-    // Extract all lower sections including Services, Locations, Reviews, Quote, Contact, Footer, and Scripts
-    const sectionsMatch = indexHtml.match(/<!-- Services Section -->[\s\S]*?<\/body>/);
-    let globalFooterAndSections = sectionsMatch ? sectionsMatch[0].replace('</body>', '') : '';
+    // Extract exactly the Footer block, avoiding Sections duplication
+    const footerMatch = indexHtml.match(/<!-- Modern Full Footer -->[\s\S]*?<\/html>/);
+    // Remove closing html tag since buildPage manages it, but keep the closing body to correctly close the structure
+    let globalFooterAndSections = footerMatch ? footerMatch[0].replace('</html>', '') : '';
 
     // Fix broken local scroll links in the Footer because Home and About don't exist on sub-pages
     globalFooterAndSections = globalFooterAndSections.replace(/href="#home"/g, 'href="index.html#home"');
