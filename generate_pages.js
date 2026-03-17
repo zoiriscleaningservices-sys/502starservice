@@ -307,46 +307,9 @@ async function run() {
     globalHeader = globalHeader.replace(/href="#home"/g, 'href="index.html#home"');
     globalHeader = globalHeader.replace(/href="#about"/g, 'href="index.html#about"');
 
-    // Hardcode the Tailwind configuration for the generated pages so it doesn't rely on index.html
-    let globalCss = `
-        <!-- Tailwind CSS -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            teal: {
-                                DEFAULT: '#00A5A6',
-                                50: '#E6F7F7',
-                                100: '#CCF0F0',
-                                600: '#00A5A6',
-                                700: '#008485',
-                                800: '#005959',
-                            },
-                            accent: {
-                                yellow: '#FBD027',
-                            }
-                        },
-                        fontFamily: {
-                            sans: ['Poppins', 'sans-serif'],
-                        },
-                        animation: {
-                            'float': 'float 6s ease-in-out infinite',
-                            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        },
-                        keyframes: {
-                            float: {
-                                '0%, 100%': { transform: 'translateY(0)' },
-                                '50%': { transform: 'translateY(-20px)' },
-                            }
-                        }
-                    }
-                }
-            }
-        </script>
-    `;
+    // Extract the Global CSS block correctly spanning tailwind.config to style end
+    const cssMatch = indexHtml.match(/<script>\s*tailwind\.config[\s\S]*?<\/style>/);
+    let globalCss = cssMatch ? cssMatch[0] : '';
 
     // Extract exactly the Footer block, avoiding Sections duplication
     const footerMatch = indexHtml.match(/<!-- Modern Full Footer -->[\s\S]*?<\/html>/);
