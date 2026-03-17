@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Page Not Found - 502 Star Service</title>
+    <meta name="robots" content="noindex">
+    <script>
+        // Redirect legacy .html URLs to their new directory equivalents
+        var path = window.location.pathname;
+        if (path.endsWith('.html') && path !== '/index.html' && path !== '/gallery.html') {
+            var newPath = path.replace('.html', '/');
+            window.location.replace(newPath);
+        } else {
+            // General 404, redirect to home after a brief delay or immediately
+            window.location.replace('/');
+        }
+    </script>
+</head>
+<body>
+    <p>Redirecting to the correct page...</p>
+</body>
+</html>

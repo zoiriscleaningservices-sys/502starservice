@@ -29,7 +29,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script defer src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
@@ -435,7 +435,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn"
+                <button id="mobile-menu-btn" aria-label="Toggle mobile menu"
                     class="lg:hidden text-white p-2 hover:bg-teal-700 rounded-lg transition-colors overflow-hidden relative z-[51]">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -460,7 +460,7 @@
                 </div>
                 <span class="font-bold text-gray-900 text-lg">Menu</span>
             </div>
-            <button id="close-mobile-menu"
+            <button id="close-mobile-menu" aria-label="Close mobile menu"
                 class="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
@@ -639,6 +639,8 @@
         </div>
     </div>
 
+    <main>
+
     <!-- Hero Section -->
     <section id="home"
         class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-900 pt-20">
@@ -723,7 +725,7 @@
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="reveal">
                     <div class="relative">
-                        <img src="http://static.photos/office/640x360/42" alt="Cleaning Team"
+                        <img src="images/WhatsApp Image 2026-02-27 at 11.40.24 PM (4).jpeg" alt="Cleaning Team"
                             class="rounded-2xl shadow-2xl w-full object-cover h-96">
                         <div class="absolute -bottom-6 -right-6 bg-accent-yellow p-6 rounded-2xl shadow-xl">
                             <p class="text-3xl font-bold text-gray-900">5+</p>
@@ -733,8 +735,8 @@
                 </div>
 
                 <div class="reveal">
-                    <h2 class="text-accent-yellow font-bold text-lg uppercase tracking-wider mb-2">About Us</h2>
-                    <h3 class="text-4xl font-bold text-gray-900 mb-6">Louisville's Most Trusted Cleaning Service</h3>
+                    <p class="text-teal-700 font-bold text-lg uppercase tracking-wider mb-2">About Us</p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">Louisville's Most Trusted Cleaning Service</h2>
                     <p class="text-gray-600 text-lg mb-6 leading-relaxed">
                         As the premier provider of <strong>cleaning services Louisville KY</strong>, 502 Star Service
                         delivers top-quality residential and commercial cleaning solutions throughout Jefferson County.
@@ -754,7 +756,7 @@
                                 <i data-lucide="check-circle" class="w-6 h-6 text-teal-600"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900">Background Checked</h4>
+                                <h3 class="font-bold text-gray-900">Background Checked</h3>
                                 <p class="text-sm text-gray-600">All staff verified</p>
                             </div>
                         </div>
@@ -763,7 +765,7 @@
                                 <i data-lucide="award" class="w-6 h-6 text-teal-600"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900">Quality Guarantee</h4>
+                                <h3 class="font-bold text-gray-900">Quality Guarantee</h3>
                                 <p class="text-sm text-gray-600">100% satisfaction</p>
                             </div>
                         </div>
@@ -777,7 +779,7 @@
     <section id="services" class="py-24 bg-gray-50 overflow-hidden relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 relative z-10">
             <div class="text-center reveal">
-                <h3 class="text-accent-yellow font-bold text-lg uppercase tracking-wider mb-2">Our Capabilities</h3>
+                <p class="text-teal-700 font-bold text-lg uppercase tracking-wider mb-2">Our Capabilities</p>
                 <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Cleaning Services In Louisville</h2>
                 <p class="text-gray-600 text-xl max-w-2xl mx-auto">From cozy apartments to complex industrial
                     facilities, we deliver absolute excellence across every square foot.</p>
@@ -796,23 +798,23 @@
 
             <!-- Row 1 Container -->
             <div class="pl-4 md:pl-8">
-                <h4 class="text-teal-700 font-bold uppercase tracking-widest text-sm mb-4 ml-4">Residential & Property
-                </h4>
+                <h3 class="text-teal-700 font-bold uppercase tracking-widest text-sm mb-4 ml-4">Residential & Property
+                </h3>
                 <div id="marquee-row-1" class="flex w-max animate-marquee hover:[animation-play-state:paused]"></div>
             </div>
 
             <!-- Row 2 Container -->
             <div class="pl-4 md:pl-8">
-                <h4 class="text-blue-700 font-bold uppercase tracking-widest text-sm mb-4 ml-4 md:pr-12">Commercial &
-                    Industrial</h4>
+                <h3 class="text-blue-700 font-bold uppercase tracking-widest text-sm mb-4 ml-4 md:pr-12">Commercial &
+                    Industrial</h3>
                 <div id="marquee-row-2" class="flex w-max animate-marquee-reverse hover:[animation-play-state:paused]">
                 </div>
             </div>
 
             <!-- Row 3 Container -->
             <div class="pl-4 md:pl-8">
-                <h4 class="text-purple-700 font-bold uppercase tracking-widest text-sm mb-4 ml-4">Property Management
-                </h4>
+                <h3 class="text-purple-700 font-bold uppercase tracking-widest text-sm mb-4 ml-4">Property Management
+                </h3>
                 <div id="marquee-row-3" class="flex w-max animate-marquee hover:[animation-play-state:paused]"></div>
             </div>
         </div>
@@ -831,9 +833,9 @@
     <section id="locations" class="py-24 bg-[#f4f5f6] relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-10 reveal">
-                <h2 class="text-[#fac916] font-bold text-[13px] uppercase tracking-[0.15em] mb-4">Service Areas</h2>
-                <h3 class="text-3xl md:text-[40px] font-bold text-[#1a202c] mb-3 tracking-tight">#1 Cleaning Services
-                    Louisville KY</h3>
+                <p class="text-teal-700 font-bold text-[13px] uppercase tracking-[0.15em] mb-4">Service Areas</p>
+                <h2 class="text-3xl md:text-[40px] font-bold text-[#1a202c] mb-3 tracking-tight">#1 Cleaning Services
+                    Louisville KY</h2>
                 <p class="text-[#64748b] text-[17px]">Serving Jefferson County and all Louisville Neighborhoods with
                     Top-Rated Cleaning</p>
             </div>
@@ -908,7 +910,7 @@
                 <div
                     class="relative w-full h-[450px] md:h-[600px] rounded-[2rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.12)] border-[8px] border-white group">
                     <!-- Google Maps iframe pointing to Louisville KY -->
-                    <iframe
+                    <iframe title="Service Area Map"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d400424.1685117904!2d-86.0753!3d38.1887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88690b1ab35bd511%3A0xd4d3b4282071fd32!2sLouisville%2C%20KY!5e0!3m2!1sen!2sus!4v1709403328249!5m2!1sen!2sus"
                         class="absolute inset-0 w-full h-full border-0 grayscale-[20%] contrast-[1.1]"
                         allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -922,7 +924,7 @@
                                 <i data-lucide="map-pin" class="w-6 h-6 text-white absolute animate-bounce"></i>
                             </div>
                             <div>
-                                <h4 class="font-bold text-gray-900 leading-tight">Locally Owned & <br />Operated</h4>
+                                <p class="font-bold text-gray-900 leading-tight">Locally Owned & <br />Operated</p>
                             </div>
                         </div>
                         <p class="text-teal-700 text-xs font-bold uppercase tracking-wide mb-2">Headquartered in
@@ -999,7 +1001,7 @@
                 <!-- Right Slider (Reviews API Look-a-like) -->
                 <div class="w-full lg:w-[800px] relative">
                     <!-- Nav Button (Right only to match design) -->
-                    <button
+                    <button aria-label="Next review"
                         class="review-nav-next absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-[42px] h-[42px] bg-white rounded-full shadow-[0_2px_10px_rgba(0,0,0,0.1)] flex items-center justify-center text-gray-600 hover:text-gray-900 hover:bg-gray-50 transition-all border border-gray-100 hidden sm:flex">
                         <i data-lucide="chevron-right" class="w-6 h-6 stroke-[1.5]"></i>
                     </button>
@@ -1015,8 +1017,8 @@
                                     <img src="https://ui-avatars.com/api/?name=Kathleen+Daniel&background=34a853&color=fff&size=40"
                                         alt="Avatar" class="w-10 h-10 rounded-full" />
                                     <div class="flex flex-col">
-                                        <h4 class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Kathleen
-                                            Daniel</h4>
+                                        <p class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Kathleen
+                                            Daniel</p>
                                         <p class="text-[13px] text-gray-500 font-normal">a month ago</p>
                                     </div>
                                 </div>
@@ -1064,8 +1066,8 @@
                                     <img src="https://ui-avatars.com/api/?name=linda+coke&background=ea4335&color=fff&size=40"
                                         alt="Avatar" class="w-10 h-10 rounded-full" />
                                     <div class="flex flex-col">
-                                        <h4 class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">linda coke
-                                        </h4>
+                                        <p class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">linda coke
+                                        </p>
                                         <p class="text-[13px] text-gray-500 font-normal">6 months ago</p>
                                     </div>
                                 </div>
@@ -1113,8 +1115,8 @@
                                     <img src="https://ui-avatars.com/api/?name=Diego+Maldonado&background=4285f4&color=fff&size=40"
                                         alt="Avatar" class="w-10 h-10 rounded-full" />
                                     <div class="flex flex-col">
-                                        <h4 class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Diego
-                                            Maldonado</h4>
+                                        <p class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Diego
+                                            Maldonado</p>
                                         <p class="text-[13px] text-gray-500 font-normal">8 months ago</p>
                                     </div>
                                 </div>
@@ -1162,8 +1164,8 @@
                                     <img src="https://ui-avatars.com/api/?name=Yoangel+Perodín&background=f29900&color=fff&size=40"
                                         alt="Avatar" class="w-10 h-10 rounded-full" />
                                     <div class="flex flex-col">
-                                        <h4 class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Yoangel
-                                            Perodín</h4>
+                                        <p class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Yoangel
+                                            Perodín</p>
                                         <p class="text-[13px] text-gray-500 font-normal">8 months ago</p>
                                     </div>
                                 </div>
@@ -1211,8 +1213,8 @@
                                     <img src="https://ui-avatars.com/api/?name=Angel+Hands+Massage&background=3c4043&color=fff&size=40"
                                         alt="Avatar" class="w-10 h-10 rounded-full" />
                                     <div class="flex flex-col">
-                                        <h4 class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Angel Hands
-                                            Massage</h4>
+                                        <p class="font-bold text-gray-900 text-[15px] leading-tight mb-0.5">Angel Hands
+                                            Massage</p>
                                         <p class="text-[13px] text-gray-500 font-normal">7 months ago</p>
                                     </div>
                                 </div>
@@ -1276,29 +1278,29 @@
                 <form id="quote-form" class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                            <input type="text" required
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="quote-name">Full Name</label>
+                            <input type="text" id="quote-name" required
                                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
                                 placeholder="John Doe">
                         </div>
                         <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" required
+                            <label class="block text-sm font-medium text-gray-700 mb-2" for="quote-phone">Phone Number</label>
+                            <input type="tel" id="quote-phone" required
                                 class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
                                 placeholder="(502) 123-4567">
                         </div>
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                        <input type="email" required
+                        <label class="block text-sm font-medium text-gray-700 mb-2" for="quote-email">Email Address</label>
+                        <input type="email" id="quote-email" required
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
                             placeholder="john@example.com">
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
-                        <select required
+                        <label class="block text-sm font-medium text-gray-700 mb-2" for="quote-service">Service Type</label>
+                        <select id="quote-service" required
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all">
                             <option value="">Select a service...</option>
                             <option value="residential">Residential Cleaning</option>
@@ -1311,8 +1313,8 @@
                     </div>
 
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Message / Details</label>
-                        <textarea rows="4"
+                        <label class="block text-sm font-medium text-gray-700 mb-2" for="quote-message">Message / Details</label>
+                        <textarea id="quote-message" rows="4"
                             class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
                             placeholder="Tell us about your space, square footage, or specific needs..."></textarea>
                     </div>
@@ -1380,6 +1382,8 @@
             </div>
         </div>
     </section>
+    
+    </main>
 
     <!-- Modern Full Footer -->
     <footer
@@ -1412,15 +1416,15 @@
 
                     <!-- Social Links -->
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/61581019032152" target="_blank"
+                        <a href="https://www.facebook.com/61581019032152" target="_blank" aria-label="Facebook Profile"
                             class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 hover:bg-teal-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(20,184,166,0.2)] transition-all duration-300">
                             <i data-lucide="facebook" class="w-5 h-5"></i>
                         </a>
-                        <a href="#home"
+                        <a href="#home" aria-label="Instagram Profile"
                             class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 hover:bg-teal-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(20,184,166,0.2)] transition-all duration-300">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a href="#home"
+                        <a href="#home" aria-label="Twitter Profile"
                             class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 hover:bg-teal-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(20,184,166,0.2)] transition-all duration-300">
                             <i data-lucide="twitter" class="w-5 h-5"></i>
                         </a>
@@ -1429,10 +1433,10 @@
 
                 <!-- Quick Links Column (Spans 2) -->
                 <div class="lg:col-span-2 lg:ml-8">
-                    <h4 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
+                    <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-accent-yellow"></span>
                         Quick Links
-                    </h4>
+                    </h3>
                     <ul class="space-y-4">
                         <li><a href="#home"
                                 class="text-gray-400 hover:text-accent-yellow hover:translate-x-2 transition-all duration-300 flex items-center text-[15px] group"><i
@@ -1464,10 +1468,10 @@
 
                 <!-- Top Services Column (Spans 3) -->
                 <div class="lg:col-span-3 lg:ml-4">
-                    <h4 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
+                    <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-teal-500"></span>
                         Popular Services
-                    </h4>
+                    </h3>
                     <ul class="space-y-4">
                         <li><a href="deep-cleaning/"
                                 class="text-gray-400 hover:text-teal-400 hover:translate-x-2 transition-all duration-300 flex items-center text-[15px] group"><i
@@ -1504,10 +1508,10 @@
                         class="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                     <div class="relative z-10">
-                        <h4 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
+                        <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
                             <i data-lucide="phone-call" class="w-5 h-5 text-accent-yellow"></i>
                             Reach Out Today
-                        </h4>
+                        </h3>
 
                         <a href="tel:5028351870"
                             class="block mb-6 hover:-translate-y-1 transition-transform group/phone">
@@ -1776,7 +1780,7 @@
                         <h4 class="text-white text-xl md:text-2xl font-bold mb-3 tracking-tight">${service.name}</h4>
                         <div class="w-12 h-1.5 ${accentColor} rounded-full transition-all duration-300 group-hover:w-full opacity-80 group-hover:opacity-100 shadow-sm mb-4"></div>
                         <a href="${urlSlug}/" class="inline-block px-5 py-2 rounded-full border border-white/30 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-gray-900">
-                            Learn More
+                            Learn More <span class="sr-only">about ${service.name}</span>
                         </a>
                     </div>
                 </div>

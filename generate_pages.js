@@ -253,16 +253,16 @@ function buildPage(type, data) {
                         <p class="text-gray-500 text-sm mb-6">We'll respond within 2 hours!</p>
                         <form id="quote-form" class="space-y-4">
                             <div>
-                                <input type="text" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Full Name">
+                                <input type="text" aria-label="Full Name" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Full Name">
                             </div>
                             <div>
-                                <input type="tel" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Phone Number">
+                                <input type="tel" aria-label="Phone Number" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Phone Number">
                             </div>
                             <div>
-                                <input type="email" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Email Address">
+                                <input type="email" aria-label="Email Address" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Email Address">
                             </div>
                             <div>
-                                <textarea rows="3" class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Details about your space..."></textarea>
+                                <textarea rows="3" aria-label="Details" class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Details about your space..."></textarea>
                             </div>
                             <button type="submit" class="w-full bg-teal-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
                                 Send Request <i data-lucide="send"></i>
@@ -278,6 +278,8 @@ function buildPage(type, data) {
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- GLOBAL FOOTER INCLUSION FLAG -->
     <!-- _GLOBAL_FOOTER_ -->

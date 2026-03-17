@@ -429,7 +429,7 @@
                 </div>
 
                 <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn"
+                <button id="mobile-menu-btn" aria-label="Toggle mobile menu"
                     class="lg:hidden text-white p-2 hover:bg-teal-700 rounded-lg transition-colors overflow-hidden relative z-[51]">
                     <i data-lucide="menu" class="w-6 h-6"></i>
                 </button>
@@ -454,7 +454,7 @@
                 </div>
                 <span class="font-bold text-gray-900 text-lg">Menu</span>
             </div>
-            <button id="close-mobile-menu"
+            <button id="close-mobile-menu" aria-label="Close mobile menu"
                 class="p-2 text-gray-500 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors">
                 <i data-lucide="x" class="w-6 h-6"></i>
             </button>
@@ -633,6 +633,8 @@
         </div>
     </div>
 
+    <main>
+
     
     
     <!-- Hero Section -->
@@ -699,16 +701,16 @@
                         <p class="text-gray-500 text-sm mb-6">We'll respond within 2 hours!</p>
                         <form id="quote-form" class="space-y-4">
                             <div>
-                                <input type="text" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Full Name">
+                                <input type="text" aria-label="Full Name" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Full Name">
                             </div>
                             <div>
-                                <input type="tel" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Phone Number">
+                                <input type="tel" aria-label="Phone Number" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Phone Number">
                             </div>
                             <div>
-                                <input type="email" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Email Address">
+                                <input type="email" aria-label="Email Address" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Email Address">
                             </div>
                             <div>
-                                <textarea rows="3" class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Details about your space..."></textarea>
+                                <textarea rows="3" aria-label="Details" class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Details about your space..."></textarea>
                             </div>
                             <button type="submit" class="w-full bg-teal-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
                                 Send Request <i data-lucide="send"></i>
@@ -724,6 +726,8 @@
             </div>
         </div>
     </section>
+
+    </main>
 
     <!-- GLOBAL FOOTER INCLUSION FLAG -->
     <!-- Modern Full Footer -->
@@ -757,15 +761,15 @@
 
                     <!-- Social Links -->
                     <div class="flex gap-4">
-                        <a href="https://www.facebook.com/61581019032152" target="_blank"
+                        <a href="https://www.facebook.com/61581019032152" target="_blank" aria-label="Facebook Profile"
                             class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 hover:bg-teal-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(20,184,166,0.2)] transition-all duration-300">
                             <i data-lucide="facebook" class="w-5 h-5"></i>
                         </a>
-                        <a href="../index.html#home"
+                        <a href="../index.html#home" aria-label="Instagram Profile"
                             class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 hover:bg-teal-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(20,184,166,0.2)] transition-all duration-300">
                             <i data-lucide="instagram" class="w-5 h-5"></i>
                         </a>
-                        <a href="../index.html#home"
+                        <a href="../index.html#home" aria-label="Twitter Profile"
                             class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-teal-400 hover:bg-teal-500 hover:text-white hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(20,184,166,0.2)] transition-all duration-300">
                             <i data-lucide="twitter" class="w-5 h-5"></i>
                         </a>
@@ -774,10 +778,10 @@
 
                 <!-- Quick Links Column (Spans 2) -->
                 <div class="lg:col-span-2 lg:ml-8">
-                    <h4 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
+                    <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-accent-yellow"></span>
                         Quick Links
-                    </h4>
+                    </h3>
                     <ul class="space-y-4">
                         <li><a href="../index.html#home"
                                 class="text-gray-400 hover:text-accent-yellow hover:translate-x-2 transition-all duration-300 flex items-center text-[15px] group"><i
@@ -809,10 +813,10 @@
 
                 <!-- Top Services Column (Spans 3) -->
                 <div class="lg:col-span-3 lg:ml-4">
-                    <h4 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
+                    <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
                         <span class="w-2 h-2 rounded-full bg-teal-500"></span>
                         Popular Services
-                    </h4>
+                    </h3>
                     <ul class="space-y-4">
                         <li><a href="../deep-cleaning/"
                                 class="text-gray-400 hover:text-teal-400 hover:translate-x-2 transition-all duration-300 flex items-center text-[15px] group"><i
@@ -849,10 +853,10 @@
                         class="absolute inset-0 bg-gradient-to-br from-teal-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                     </div>
                     <div class="relative z-10">
-                        <h4 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
+                        <h3 class="text-white text-lg font-bold mb-6 flex items-center gap-2">
                             <i data-lucide="phone-call" class="w-5 h-5 text-accent-yellow"></i>
                             Reach Out Today
-                        </h4>
+                        </h3>
 
                         <a href="tel:5028351870"
                             class="block mb-6 hover:-translate-y-1 transition-transform group/phone">
@@ -1121,7 +1125,7 @@
                         <h4 class="text-white text-xl md:text-2xl font-bold mb-3 tracking-tight">${service.name}</h4>
                         <div class="w-12 h-1.5 ${accentColor} rounded-full transition-all duration-300 group-hover:w-full opacity-80 group-hover:opacity-100 shadow-sm mb-4"></div>
                         <a href="${urlSlug}/" class="inline-block px-5 py-2 rounded-full border border-white/30 text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:bg-white hover:text-gray-900">
-                            Learn More
+                            Learn More <span class="sr-only">about ${service.name}</span>
                         </a>
                     </div>
                 </div>
