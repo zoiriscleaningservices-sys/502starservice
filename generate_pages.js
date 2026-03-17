@@ -200,7 +200,7 @@ function buildPage(type, data) {
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center reveal pt-12">
             <!-- Logo Mark -->
             <div class="mx-auto w-24 h-24 sm:w-28 sm:h-28 bg-white rounded-full flex items-center justify-center p-1.5 shadow-[0_0_30px_rgba(250,201,22,0.4)] mb-6 transform transition-transform hover:scale-105">
-                <img src="images/logo.jpg" alt="502 Star Service Logo" class="w-full h-full object-cover rounded-full" />
+                <img src="images/logo.webp" alt="502 Star Service Logo" width="400" height="400" class="w-full h-full object-cover rounded-full" />
             </div>
 
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight flex flex-col items-center">
@@ -264,12 +264,12 @@ function buildPage(type, data) {
                             <div>
                                 <textarea rows="3" aria-label="Details" class="w-full px-4 py-3 bg-gray-50 rounded-xl border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Details about your space..."></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-teal-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-teal-700 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
+                            <button type="submit" class="w-full bg-teal-700 text-white py-4 rounded-xl font-bold text-lg hover:bg-teal-800 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
                                 Send Request <i data-lucide="send"></i>
                             </button>
                         </form>
-                        <div id="success-message" class="hidden text-teal-600 font-bold text-center py-4 bg-teal-50 rounded-xl mt-4 border border-teal-100">
-                            <i data-lucide="check-circle" class="w-6 h-6 mx-auto mb-2"></i>
+                        <div id="success-message" class="hidden text-teal-800 font-bold text-center py-4 bg-teal-50 rounded-xl mt-4 border border-teal-100">
+                            <i data-lucide="check-circle" class="w-6 h-6 mx-auto mb-2 text-teal-600"></i>
                             Quote request received!<br>We'll call you shortly.
                         </div>
                     </div>
