@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    /* Custom Bubble Animation */
+    .bubble {
+        position: absolute;
+        bottom: -100px;
+        background: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        animation: rise var(--duration) infinite ease-in;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(2px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    @keyframes rise {
+        0% { transform: translateY(0) scale(1); opacity: 0; }
+        10% { opacity: 1; }
+        100% { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    /* Dropdown animations */
+    .dropdown-content {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        pointer-events: none;
+    }
+
+    .dropdown-content::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        height: 20px;
+    }
+
+    .dropdown-content.center-dropdown {
+        transform: translateY(10px) translateX(-50%);
+    }
+
+    .dropdown:hover .dropdown-content,
+    .dropdown.active .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .dropdown:hover .dropdown-content.center-dropdown,
+    .dropdown.active .dropdown-content.center-dropdown {
+        transform: translateY(0) translateX(-50%);
+    }
+
+    .accordion-content {
+        transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    }
+
+    .accordion-item.active .accordion-content {
+        opacity: 1;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+    }
+
+    .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #00A5A6;
+        border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #008485;
+    }
+
+    /* Services Carousel Hidden Scrollbar */
+    .hide-scroll::-webkit-scrollbar {
+        display: none;
+    }
+
+    .hide-scroll {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    /* Infinite Marquee */
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-50%)); }
+    }
+
+    @keyframes marquee-reverse {
+        0% { transform: translateX(calc(-50%)); }
+        100% { transform: translateX(0); }
+    }
+
+    .animate-marquee {
+        animation: marquee 50s linear infinite;
+        will-change: transform;
+    }
+
+    .animate-marquee-reverse {
+        animation: marquee-reverse 50s linear infinite;
+        will-change: transform;
+    }
+}
