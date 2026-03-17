@@ -177,13 +177,9 @@ function buildPage(type, data) {
     <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":"${pageTitle}","isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"primaryImageOfPage":{"@id":"https://www.502starservices.com/#primaryimage"},"image":{"@id":"https://www.502starservices.com/#primaryimage"},"thumbnailUrl":"https://www.502starservices.com/images/logo.jpg","datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-03T18:16:30+00:00","description":"${pageDesc}","breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["${canonical}"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#primaryimage","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":"${data.title}"}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.502starservices.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#/schema/logo/image/","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg","width":500,"height":500,"caption":"502 Star Service"},"image":{"@id":"https://www.502starservices.com/#/schema/logo/image/"}}]}</script>
     <!-- / Yoast SEO plugin. -->
 
-    <!-- Tailwind CSS (Compiled Inline) -->
-    <style>
-\${fs.readFileSync(path.join(__dirname, 'style.css'), 'utf8')}
-    </style>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- _GLOBAL_HEAD_CSS_ -->
@@ -288,27 +284,6 @@ function buildPage(type, data) {
     <!-- GLOBAL FOOTER INCLUSION FLAG -->
     <!-- _GLOBAL_FOOTER_ -->
 
-    <script src="https://unpkg.com/lucide@latest" defer></script>
-    <script>
-        // Extreme Performance Lazy Loading
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const heroVid = document.getElementById('heroVideoBg');
-                if (heroVid) {
-                    const source = heroVid.querySelector('source');
-                    if (source && source.dataset.src) {
-                        source.src = source.dataset.src;
-                        heroVid.load();
-                    }
-                }
-
-                const mapIframe = document.getElementById('mapIframe');
-                if (mapIframe && mapIframe.dataset.src) {
-                    mapIframe.src = mapIframe.dataset.src;
-                }
-            }, 100);
-        });
-    </script>
 </body>
 </html>`;
 }
@@ -332,8 +307,9 @@ async function run() {
     globalHeader = globalHeader.replace(/href="#home"/g, 'href="index.html#home"');
     globalHeader = globalHeader.replace(/href="#about"/g, 'href="index.html#about"');
 
-    // Not needed anymore since we hardcoded the link above, but we leave the replacement for compatibility
-    let globalCss = '';
+    // Extract the Global CSS block correctly spanning tailwind to style end
+    const cssMatch = indexHtml.match(/<script>\s*tailwind\.config[\s\S]*?<\/style>/);
+    let globalCss = cssMatch ? cssMatch[0] : '';
 
     // Extract exactly the Footer block, avoiding Sections duplication
     const footerMatch = indexHtml.match(/<!-- Modern Full Footer -->[\s\S]*?<\/html>/);
