@@ -4,39 +4,39 @@ const path = require('path');
 // 1. Data Structures
 const services = [
     // Residential
-    { id: "house-cleaning", title: "House Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.39.57 PM.jpeg" },
-    { id: "deep-cleaning", title: "Deep Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (2).jpeg" },
-    { id: "move-in-cleaning", title: "Move-In Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (3).jpeg" },
-    { id: "move-out-cleaning", title: "Move-Out Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (6).jpeg" },
-    { id: "carpet-cleaning", title: "Carpet Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM (2).jpeg" },
-    { id: "window-cleaning", title: "Window Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (4).jpeg" },
-    { id: "pressure-washing", title: "Pressure Washing", category: "Residential & Property", img: "images/pressure_washing.png" },
-    { id: "luxury-estate-cleaning", title: "Luxury Estate Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg" },
-    { id: "laundry-services", title: "Laundry Services", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.23 PM.jpeg" },
-    { id: "detailing", title: "Detailing", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (2).jpeg" },
+    { id: "house-cleaning", title: "House Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.39.57 PM.webp" },
+    { id: "deep-cleaning", title: "Deep Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (2).webp" },
+    { id: "move-in-cleaning", title: "Move-In Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (3).webp" },
+    { id: "move-out-cleaning", title: "Move-Out Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (6).webp" },
+    { id: "carpet-cleaning", title: "Carpet Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM (2).webp" },
+    { id: "window-cleaning", title: "Window Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (4).webp" },
+    { id: "pressure-washing", title: "Pressure Washing", category: "Residential & Property", img: "images/pressure_washing.webp" },
+    { id: "luxury-estate-cleaning", title: "Luxury Estate Cleaning", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).webp" },
+    { id: "laundry-services", title: "Laundry Services", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.23 PM.webp" },
+    { id: "detailing", title: "Detailing", category: "Residential & Property", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (2).webp" },
 
     // Commercial
-    { id: "commercial-cleaning", title: "Commercial Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.39.54 PM (1).jpeg" },
-    { id: "office-janitorial", title: "Office Janitorial Services", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM (1).jpeg" },
-    { id: "janitorial-cleaning", title: "Janitorial Cleaning Services", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.01 PM.jpeg" },
-    { id: "medical-facility-cleaning", title: "Medical Facility Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.09 PM (1).jpeg" },
-    { id: "industrial-warehouse-cleaning", title: "Industrial & Warehouse Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.06 PM.jpeg" },
-    { id: "floor-stripping-waxing", title: "Floor Stripping & Waxing", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (1).jpeg" },
-    { id: "gym-fitness-cleaning", title: "Gym & Fitness Center Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (3).jpeg" },
-    { id: "school-daycare-cleaning", title: "School & Daycare Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.25 PM (1).jpeg" },
-    { id: "church-worship-cleaning", title: "Church & Worship Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (1).jpeg" },
-    { id: "solar-panel-cleaning", title: "Solar Panel Cleaning", category: "Commercial & Industrial", img: "images/solar_panel_cleaning.png" },
+    { id: "commercial-cleaning", title: "Commercial Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.39.54 PM (1).webp" },
+    { id: "office-janitorial", title: "Office Janitorial Services", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM (1).webp" },
+    { id: "janitorial-cleaning", title: "Janitorial Cleaning Services", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.01 PM.webp" },
+    { id: "medical-facility-cleaning", title: "Medical Facility Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.09 PM (1).webp" },
+    { id: "industrial-warehouse-cleaning", title: "Industrial & Warehouse Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.06 PM.webp" },
+    { id: "floor-stripping-waxing", title: "Floor Stripping & Waxing", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (1).webp" },
+    { id: "gym-fitness-cleaning", title: "Gym & Fitness Center Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (3).webp" },
+    { id: "school-daycare-cleaning", title: "School & Daycare Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.25 PM (1).webp" },
+    { id: "church-worship-cleaning", title: "Church & Worship Cleaning", category: "Commercial & Industrial", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (1).webp" },
+    { id: "solar-panel-cleaning", title: "Solar Panel Cleaning", category: "Commercial & Industrial", img: "images/solar_panel_cleaning.webp" },
 
     // Property
-    { id: "vacation-rental-cleaning", title: "Vacation Rental Cleaning", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (1).jpeg" },
-    { id: "airbnb-cleaning", title: "Airbnb Cleaning", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (6).jpeg" },
-    { id: "airbnb-rental-management", title: "Airbnb & Rental Management", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (5).jpeg" },
-    { id: "post-construction-cleanup", title: "Post-Construction Cleanup", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (4).jpeg" },
-    { id: "property-management-janitorial", title: "Property Management Janitorial", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM.jpeg" },
-    { id: "property-maintenance", title: "Property Maintenance", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (5).jpeg" },
-    { id: "home-watch-services", title: "Home Watch Services", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (3).jpeg" },
-    { id: "luxury-estate-management", title: "Luxury Estate Management", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM.jpeg" },
-    { id: "gutter-cleaning", title: "Gutter Cleaning", category: "Property Management", img: "images/gutter_cleaning.png" }
+    { id: "vacation-rental-cleaning", title: "Vacation Rental Cleaning", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (1).webp" },
+    { id: "airbnb-cleaning", title: "Airbnb Cleaning", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (6).webp" },
+    { id: "airbnb-rental-management", title: "Airbnb & Rental Management", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (5).webp" },
+    { id: "post-construction-cleanup", title: "Post-Construction Cleanup", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (4).webp" },
+    { id: "property-management-janitorial", title: "Property Management Janitorial", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM.webp" },
+    { id: "property-maintenance", title: "Property Maintenance", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (5).webp" },
+    { id: "home-watch-services", title: "Home Watch Services", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (3).webp" },
+    { id: "luxury-estate-management", title: "Luxury Estate Management", category: "Property Management", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM.webp" },
+    { id: "gutter-cleaning", title: "Gutter Cleaning", category: "Property Management", img: "images/gutter_cleaning.webp" }
 ];
 
 const locations = [
@@ -141,7 +141,7 @@ function buildPage(type, data) {
     const canonical = `https://www.502starservices.com/${data.id}/`;
 
     // Pick a high-quality default if no specific image is provided (like for locations)
-    const defaultMansion = 'images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg'; // High quality location default
+    const defaultMansion = 'images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).webp'; // High quality location default
     const bannerImage = isLocal ? defaultMansion : (data.img ? data.img : defaultMansion);
 
     // Generate Unique Content Variations based on ID
@@ -163,7 +163,7 @@ function buildPage(type, data) {
     <title>${pageTitle}</title>
     <meta name="description" content="${pageDesc}" />
     <link rel="canonical" href="${canonical}" />
-    <link rel="icon" type="image/jpeg" href="images/logo.jpg" />
+    <link rel="icon" type="image/jpeg" href="images/logo.webp" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="${pageTitle}" />
@@ -171,10 +171,10 @@ function buildPage(type, data) {
     <meta property="og:url" content="${canonical}" />
     <meta property="og:site_name" content="502 Star Service" />
     <meta property="article:modified_time" content="2026-03-03T18:16:30+00:00" />
-    <meta property="og:image" content="https://www.502starservices.com/images/logo.jpg" />
+    <meta property="og:image" content="https://www.502starservices.com/images/logo.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="google-site-verification" content="xmGae3ujVfInVGbCGAuESkICJXZZOKLj7iISf8ZkfKI" />
-    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":"${pageTitle}","isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"primaryImageOfPage":{"@id":"https://www.502starservices.com/#primaryimage"},"image":{"@id":"https://www.502starservices.com/#primaryimage"},"thumbnailUrl":"https://www.502starservices.com/images/logo.jpg","datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-03T18:16:30+00:00","description":"${pageDesc}","breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["${canonical}"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#primaryimage","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":"${data.title}"}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.502starservices.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#/schema/logo/image/","url":"https://www.502starservices.com/images/logo.jpg","contentUrl":"https://www.502starservices.com/images/logo.jpg","width":500,"height":500,"caption":"502 Star Service"},"image":{"@id":"https://www.502starservices.com/#/schema/logo/image/"}}]}</script>
+    <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":"${pageTitle}","isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"primaryImageOfPage":{"@id":"https://www.502starservices.com/#primaryimage"},"image":{"@id":"https://www.502starservices.com/#primaryimage"},"thumbnailUrl":"https://www.502starservices.com/images/logo.webp","datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-03T18:16:30+00:00","description":"${pageDesc}","breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["${canonical}"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#primaryimage","url":"https://www.502starservices.com/images/logo.webp","contentUrl":"https://www.502starservices.com/images/logo.webp"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":"${data.title}"}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.502starservices.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.502starservices.com/#/schema/logo/image/","url":"https://www.502starservices.com/images/logo.webp","contentUrl":"https://www.502starservices.com/images/logo.webp","width":500,"height":500,"caption":"502 Star Service"},"image":{"@id":"https://www.502starservices.com/#/schema/logo/image/"}}]}</script>
     <!-- / Yoast SEO plugin. -->
 
     <!-- Tailwind CSS (Inline Local) -->
