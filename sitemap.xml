@@ -1,253 +1,291 @@
 <?xml version='1.0' encoding='utf-8'?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
-		<loc>https://www.502starservices.com/404.html</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/gallery.html</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
 		<loc>https://www.502starservices.com/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/about-us/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/airbnb-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/airbnb-rental-management/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/anchorage/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/butchertown/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/carpet-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/church-worship-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
-	</url>
-	<url>
-		<loc>https://www.502starservices.com/commercial-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/contact-us/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>monthly</changefreq>
+		<priority>0.8</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/airbnb-cleaning/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/airbnb-rental-management/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/anchorage/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/butchertown/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/carpet-cleaning/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/church-worship-cleaning/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
+	</url>
+	<url>
+		<loc>https://www.502starservices.com/commercial-cleaning/</loc>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/crescent-hill/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/deep-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/detailing/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/fern-creek/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/floor-stripping-waxing/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/germantown/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/gutter-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/gym-fitness-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/home-watch-services/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/house-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/hurstbourne/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/industrial-warehouse-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/janitorial-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/jeffersontown/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/laundry-services/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/luxury-estate-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/luxury-estate-management/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/lyndon/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/medical-facility-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/middletown/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/move-in-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/move-out-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/nulu/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/office-janitorial/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/okolona/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/old-louisville/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/post-construction-cleanup/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/pressure-washing/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/property-maintenance/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/property-management-janitorial/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/prospect/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/school-daycare-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/shively/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/solar-panel-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/st-matthews/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/the-highlands/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/vacation-rental-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
 	<url>
 		<loc>https://www.502starservices.com/window-cleaning/</loc>
-		<priority>1.0</priority>
-		<changefreq>daily</changefreq>
+		<lastmod>2026-03-19</lastmod>
+		<changefreq>weekly</changefreq>
+		<priority>0.9</priority>
 	</url>
-</urlset>
+</urlset>
