@@ -1217,72 +1217,25 @@
                     </p>
                 </div>
 
-                <form id="quote-form" class="space-y-6">
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                            <input type="text" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
-                                placeholder="John Doe">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" required
-                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
-                                placeholder="(502) 123-4567">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                        <input type="email" required
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
-                            placeholder="john@example.com">
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Service Type</label>
-                        <select required
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all">
-                            <option value="">Select a service...</option>
-                            <option value="residential">Residential Cleaning</option>
-                            <option value="commercial">Commercial Cleaning</option>
-                            <option value="move">Move-In/Out Cleaning</option>
-                            <option value="airbnb">Airbnb/Property Management</option>
-                            <option value="deep">Deep Cleaning</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-2">Message / Details</label>
-                        <textarea rows="4"
-                            class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-teal-500 focus:border-transparent outline-none transition-all"
-                            placeholder="Tell us about your space, square footage, or specific needs..."></textarea>
-                    </div>
-
-                    <button type="submit"
-                        class="w-full bg-accent-yellow text-gray-900 py-4 rounded-lg font-bold text-lg hover:scale-[1.02] transition-transform shadow-lg flex items-center justify-center gap-2">
-                        <i data-lucide="send" class="w-5 h-5"></i>
-                        Request Quote
-                    </button>
-
-                    <p class="text-center text-sm text-gray-500 flex items-center justify-center gap-2">
-                        <i data-lucide="shield-check" class="w-4 h-4"></i>
-                        Your information is secure and never shared
-                    </p>
-                </form>
-
-                <!-- Success Message (Hidden by default) -->
-                <div id="success-message" class="hidden text-center py-12">
-                    <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i data-lucide="check-circle" class="w-10 h-10 text-green-600"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Quote Request Sent!</h3>
-                    <p class="text-gray-600 mb-6">We'll get back to you within 2 hours with a customized quote.</p>
-                    <button onclick="resetForm()" class="text-teal-600 font-medium hover:underline">Send another
-                        request</button>
-                </div>
+                <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/v8olXj1AgIuDePlOGajN"
+                    style="width:100%;height:922px;min-height:922px;border:none;border-radius:3px"
+                    id="inline-v8olXj1AgIuDePlOGajN" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Us"
+                    data-height="922"
+                    data-layout-iframe-id="inline-v8olXj1AgIuDePlOGajN"
+                    data-form-id="v8olXj1AgIuDePlOGajN"
+                    title="Contact Us"
+                        >
+                </iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>                </div>
             </div>
         </div>
     </section>

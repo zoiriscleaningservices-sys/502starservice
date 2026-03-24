@@ -19,6 +19,16 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="google-site-verification" content="xmGae3ujVfInVGbCGAuESkICJXZZOKLj7iISf8ZkfKI" />
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.502starservices.com/detailing/","url":"https://www.502starservices.com/detailing/","name":"Detailing in Louisville, KY | 502 Star Service","isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-19T17:00:00+00:00","description":"Professional detailing services in Louisville, KY. Vehicles, upholstery & more. Spot-on results every time. Call (502) 835-1870 for a quote.","breadcrumb":{"@id":"https://www.502starservices.com/detailing/#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"https://www.502starservices.com/detailing/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":"Detailing"}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"inLanguage":"en-US"},{"@type":"LocalBusiness","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","telephone":"502-835-1870","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"15:00"}],"address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Louisville","addressRegion":"KY"},"logo":{"@type":"ImageObject","url":"https://www.502starservices.com/images/logo.webp","width":500,"height":500}},{"@type":"Service","@id":"https://www.502starservices.com/detailing/#service","name":"Detailing","serviceType":"Detailing","provider":{"@id":"https://www.502starservices.com/#organization"},"areaServed":{"@type":"City","name":"Louisville","containedInPlace":{"@type":"State","name":"Kentucky"}},"description":"Professional detailing services in Louisville, KY. Vehicles, upholstery & more. Spot-on results every time. Call (502) 835-1870 for a quote."},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What does your Louisville detailing service include?","acceptedAnswer":{"@type":"Answer","text":"Our Louisville detailing covers interior vacuuming, upholstery cleaning, leather conditioning, surface wipe-downs, glass cleaning, and odor elimination — bringing any interior back to pristine condition."}},{"@type":"Question","name":"Do you detail car interiors at Louisville homes?","acceptedAnswer":{"@type":"Answer","text":"Yes! We come to you. Our mobile detailing team can clean your vehicle's interior at your Louisville home or office — no need to drive anywhere or wait at a shop."}},{"@type":"Question","name":"Can you remove tough stains from upholstery in Louisville?","acceptedAnswer":{"@type":"Answer","text":"Yes! We use professional enzyme cleaners and hot water extraction to tackle tough stains on car seats, boat interiors, and home upholstery throughout Louisville."}}]}]}</script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
     <script>
         tailwind.config = {
             theme: {
@@ -748,26 +758,26 @@
                     <div class="sticky top-28 bg-white rounded-[2rem] p-8 shadow-[0_20px_50px_rgba(0,165,166,0.1)] border-2 border-teal-50 reveal">
                         <h3 class="text-2xl font-bold text-gray-900 mb-2">Get Your Free Quote</h3>
                         <p class="text-gray-500 text-sm mb-6">We respond within 2 hours — fast, free &amp; no-obligation!</p>
-                        <form id="quote-form" class="space-y-4" action="https://formspree.io/f/mrgwjqrk" method="POST">
-                            <div><input type="text" name="name" aria-label="Full Name" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Full Name"></div>
-                            <div><input type="tel" name="phone" aria-label="Phone Number" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Phone Number"></div>
-                            <div><input type="email" name="email" aria-label="Email Address" required class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Email Address"></div>
-                            <div><input type="text" name="service" aria-label="Service Needed" class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Service Needed" value="Detailing"></div>
-                            <div><textarea rows="3" name="message" aria-label="Additional Details" class="w-full px-4 py-3 bg-gray-50 rounded-xl border border-transparent focus:bg-white focus:border-teal-500 focus:ring-2 focus:ring-teal-200 transition-all outline-none" placeholder="Details about your space..."></textarea></div>
-                            <button type="submit" class="w-full bg-teal-700 text-white py-4 rounded-xl font-bold text-lg hover:bg-teal-800 hover:shadow-lg hover:-translate-y-0.5 transition-all flex items-center justify-center gap-2">
-                                Send Request <i data-lucide="send"></i>
-                            </button>
-                        </form>
-                        <div id="success-message" class="hidden text-teal-800 font-bold text-center py-4 bg-teal-50 rounded-xl mt-4 border border-teal-100">
-                            <i data-lucide="check-circle" class="w-6 h-6 mx-auto mb-2 text-teal-600"></i>
-                            Quote request received!<br>We'll call you shortly.
-                        </div>
-                        <div class="mt-6 pt-6 border-t border-gray-100 text-center">
-                            <a href="tel:5028351870" class="text-teal-700 font-bold text-lg hover:text-teal-900 transition-colors flex items-center justify-center gap-2">
-                                <i data-lucide="phone" class="w-5 h-5"></i> (502) 835-1870
-                            </a>
-                            <p class="text-gray-500 text-xs mt-1">Call or text anytime — 7 days a week</p>
-                        </div>
+                                        <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/v8olXj1AgIuDePlOGajN"
+                    style="width:100%;height:922px;min-height:922px;border:none;border-radius:3px"
+                    id="inline-v8olXj1AgIuDePlOGajN" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Contact Us"
+                    data-height="922"
+                    data-layout-iframe-id="inline-v8olXj1AgIuDePlOGajN"
+                    data-form-id="v8olXj1AgIuDePlOGajN"
+                    title="Contact Us"
+                        >
+                </iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+
                     </div>
                 </div>
 
