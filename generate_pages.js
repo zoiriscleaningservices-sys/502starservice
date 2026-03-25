@@ -666,8 +666,17 @@ function buildPage(type, data, opts) {
       <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Services in ${data.title}</h2>
       <p class="text-gray-600 text-lg max-w-2xl mx-auto">From home cleaning to commercial janitorial, we cover every cleaning need in ${data.title}, KY.</p>
     </div>
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-      ${services.map(s=>`<a href="../${s.id}/" title="${s.title} in Louisville, KY" class="flex items-center gap-2 bg-white hover:bg-teal-600 text-gray-700 hover:text-white px-4 py-2.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all border border-teal-50"><i data-lucide="sparkles" class="w-3.5 h-3.5 shrink-0"></i>${s.title}</a>`).join('\n      ')}
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      ${services.map(s=>`<a href="../${s.id}/" title="${s.title} in Louisville, KY" class="group bg-white rounded-[1.75rem] overflow-hidden shadow-sm hover:shadow-xl border border-teal-100 transition-all hover:-translate-y-1">
+        <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+          <img src="../${s.img}" alt="${s.title} service by 502 Star Service" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" width="640" height="480" />
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-semibold uppercase tracking-wide text-teal-600 mb-2">${s.category}</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-2">${s.title}</h3>
+          <p class="text-sm text-gray-600">Professional ${s.title.toLowerCase()} available throughout Louisville and nearby service areas.</p>
+        </div>
+      </a>`).join('\n      ')}
     </div>
   </div>
 </section>`
@@ -880,7 +889,7 @@ async function run() {
     nav = nav.replace(/href="contact-us\/"/g, 'href="../contact-us/"');
 
     // Extract CSS
-    const cssMatch = indexHtml.match(/<script>\s*tailwind\.config[\s\S]*?<\/style>/);
+    const cssMatch = indexHtml.match(/<!-- Tailwind CSS -->\s*<style>[\s\S]*?<script>\s*tailwind\.config[\s\S]*?<\/style>/);
     const css = cssMatch ? cssMatch[0] : '';
 
     // Extract footer
