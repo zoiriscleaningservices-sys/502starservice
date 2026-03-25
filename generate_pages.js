@@ -519,6 +519,105 @@ function buildNavLinks(prefix) {
     return { col1, col2, col3, locGrid };
 }
 
+function formatList(items) {
+    if (items.length <= 1) return items[0] || '';
+    if (items.length === 2) return `${items[0]} and ${items[1]}`;
+    return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`;
+}
+
+function normalizeOutput(text) {
+    return text
+        .replace(/â€”|â€“|—|–/g, '-')
+        .replace(/â€™|’/g, "'")
+        .replace(/â€œ|â€|“|”/g, '"')
+        .replace(/â€¦|…/g, '...')
+        .replace(/Â·/g, '|')
+        .replace(/Â/g, '');
+}
+
+function buildServiceUseCases(service) {
+    if (service.category === "Commercial & Industrial") {
+        return `Louisville businesses book ${service.title.toLowerCase()} for cleaner workspaces, safer customer-facing areas, and dependable after-hours service. We work with offices, medical spaces, retail locations, schools, gyms, warehouses, and specialty facilities that need consistent results without disrupting operations.`;
+    }
+
+    if (service.category === "Property Management") {
+        return `Property managers, landlords, and short-term rental hosts in Louisville use ${service.title.toLowerCase()} to keep properties guest-ready, rent-ready, and easier to manage. This service is a strong fit for turnovers, inspections, recurring upkeep, and time-sensitive scheduling between tenants or bookings.`;
+    }
+
+    return `Louisville homeowners often book ${service.title.toLowerCase()} for recurring upkeep, seasonal resets, move preparation, and one-time help when life gets busy. We tailor the checklist to your home, priorities, and schedule so the service fits the way you actually live.`;
+}
+
+function buildSeoBlock(type, data, unique) {
+    const serviceAreaList = formatList(locations.map(l => l.title));
+    const nearbyAreaList = formatList(locations.filter(l => l.id !== data.id).map(l => l.title));
+    const nearbyCommunities = 'Jeffersonville, New Albany, and Clarksville';
+    const cleanExtra = unique && unique.extra ? normalizeOutput(unique.extra) : '';
+
+    if (type === 'location') {
+        return `<!-- Targeted Local SEO Content Block -->
+    <section class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose max-w-none text-gray-600">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Cleaning Services in ${data.title}, KY</h2>
+                <p class="mb-6 leading-relaxed">
+                    Need reliable cleaning services in ${data.title}, KY? 502 Star Service helps homeowners, renters, Airbnb hosts, offices, and property managers with house cleaning, deep cleaning, move-in and move-out cleaning, commercial cleaning, and recurring maid service.
+                </p>
+                ${cleanExtra ? `<p class="mb-6 leading-relaxed">${cleanExtra}</p>` : ''}
+
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Popular Services in ${data.title}</h3>
+                <p class="mb-6 leading-relaxed">
+                    Clients in ${data.title} often book recurring home cleaning, one-time deep cleaning, apartment cleaning, rental turnover cleaning, and detail-focused service before move-ins or move-outs. We adjust each visit to the property type, frequency, and the rooms that matter most to you.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Nearby Areas We Serve</h3>
+                <p class="mb-8 leading-relaxed">
+                    In addition to ${data.title}, we serve Louisville neighborhoods including ${nearbyAreaList}. We also work with clients in nearby Southern Indiana communities such as ${nearbyCommunities}. If your home or business is near ${data.title}, call or message us for a fast quote.
+                </p>
+
+                <div class="not-prose text-center">
+                    <a href="#quote" class="inline-flex items-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-teal-700 hover:scale-105 transition-all shadow-xl">
+                        Get Your Free Quote Now
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <p class="mt-3 text-sm text-gray-500">Fast response, clear pricing, and flexible scheduling for ${data.title}.</p>
+                </div>
+            </div>
+        </div>
+    </section>`;
+    }
+
+    return `<!-- Targeted Local SEO Content Block -->
+    <section class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="prose max-w-none text-gray-600">
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">${data.title} in Louisville, KY</h2>
+                <p class="mb-6 leading-relaxed">
+                    Need ${data.title.toLowerCase()} in Louisville, KY? 502 Star Service provides dependable help for homes, rentals, offices, and managed properties across Jefferson County with clear communication, careful cleaning, and flexible scheduling.
+                </p>
+                ${cleanExtra ? `<p class="mb-6 leading-relaxed">${cleanExtra}</p>` : ''}
+
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">When Louisville Clients Book ${data.title}</h3>
+                <p class="mb-6 leading-relaxed">
+                    ${buildServiceUseCases(data)}
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Neighborhoods We Serve</h3>
+                <p class="mb-8 leading-relaxed">
+                    We provide ${data.title.toLowerCase()} throughout Louisville, including ${serviceAreaList}. We also serve nearby communities such as ${nearbyCommunities}. If you are not sure whether your address is in range, call us and we will confirm availability quickly.
+                </p>
+
+                <div class="not-prose text-center">
+                    <a href="#quote" class="inline-flex items-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-teal-700 hover:scale-105 transition-all shadow-xl">
+                        Request a Free Quote
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                    </a>
+                    <p class="mt-3 text-sm text-gray-500">Serving Louisville homes and businesses with responsive scheduling and detailed service.</p>
+                </div>
+            </div>
+        </div>
+    </section>`;
+}
+
 function buildPage(type, data, opts) {
     const isLocal = type === 'location';
     const keyword  = isLocal ? "Cleaning Services" : data.title;
@@ -526,7 +625,7 @@ function buildPage(type, data, opts) {
     const unique   = isLocal ? locationData[data.id] : serviceData[data.id];
 
     const pageTitle = isLocal
-        ? `#1 Cleaning Services in ${data.title}, KY | 502 Star Service`
+        ? `Cleaning Services in ${data.title}, KY | 502 Star Service`
         : `${data.title} in Louisville, KY | 502 Star Service`;
     const pageDesc  = unique ? unique.desc : `502 Star Service provides professional ${keyword.toLowerCase()} in ${locStr}. Licensed, bonded & 5-star rated. Call (502) 835-1870 for a free quote!`;
     const canonical = `https://www.502starservices.com/${data.id}/`;
@@ -555,7 +654,7 @@ function buildPage(type, data, opts) {
 
     // Build service-specific or location-specific schema piece
     const extraSchema = isLocal
-        ? `{"@type":"LocalBusiness","@id":"${canonical}#localbusiness","name":"502 Star Service — ${data.title}","url":"${canonical}","areaServed":{"@type":"City","name":"${data.title}","containedInPlace":{"@type":"State","name":"Kentucky"}},"telephone":"502-835-1870","priceRange":"$$","image":"https://www.502starservices.com/images/logo.webp"}`
+        ? `{"@type":"LocalBusiness","@id":"${canonical}#localbusiness","name":"502 Star Service - ${data.title}","url":"${canonical}","areaServed":{"@type":"Place","name":"${data.title}, Kentucky"},"telephone":"+15028351870","priceRange":"$$","image":"https://www.502starservices.com/images/logo.webp"}`
         : `{"@type":"Service","@id":"${canonical}#service","name":${JSON.stringify(data.title)},"serviceType":${JSON.stringify(data.title)},"provider":{"@id":"https://www.502starservices.com/#organization"},"areaServed":{"@type":"City","name":"Louisville","containedInPlace":{"@type":"State","name":"Kentucky"}},"description":${JSON.stringify(pageDesc)}}`;
 
     // Internal cross-linking section
@@ -565,10 +664,10 @@ function buildPage(type, data, opts) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
       <h2 class="text-3xl font-bold text-gray-900 mb-3">Our Services in ${data.title}</h2>
-      <p class="text-gray-600 text-lg max-w-2xl mx-auto">From home cleaning to commercial janitorial — we cover every cleaning need in ${data.title}, KY.</p>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">From home cleaning to commercial janitorial, we cover every cleaning need in ${data.title}, KY.</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
-      ${services.map(s=>`<a href="../${s.id}/" class="flex items-center gap-2 bg-white hover:bg-teal-600 text-gray-700 hover:text-white px-4 py-2.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all border border-teal-50"><i data-lucide="sparkles" class="w-3.5 h-3.5 shrink-0"></i>${s.title}</a>`).join('\n      ')}
+      ${services.map(s=>`<a href="../${s.id}/" title="${s.title} in Louisville, KY" class="flex items-center gap-2 bg-white hover:bg-teal-600 text-gray-700 hover:text-white px-4 py-2.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all border border-teal-50"><i data-lucide="sparkles" class="w-3.5 h-3.5 shrink-0"></i>${s.title}</a>`).join('\n      ')}
     </div>
   </div>
 </section>`
@@ -577,10 +676,10 @@ function buildPage(type, data, opts) {
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10">
       <h2 class="text-3xl font-bold text-gray-900 mb-3">${data.title} Available Throughout Louisville</h2>
-      <p class="text-gray-600 text-lg max-w-2xl mx-auto">We bring our professional ${data.title.toLowerCase()} service to every Louisville neighborhood — click your area below.</p>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">We bring our professional ${data.title.toLowerCase()} service to every Louisville neighborhood. Click your area below.</p>
     </div>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
-      ${locations.map(l=>`<a href="../${l.id}/" class="flex items-center gap-2 bg-white hover:bg-teal-600 text-gray-700 hover:text-white px-4 py-2.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all border border-teal-50 justify-center"><i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0"></i>${l.title}</a>`).join('\n      ')}
+      ${locations.map(l=>`<a href="../${l.id}/" class="flex items-center gap-2 bg-white hover:bg-teal-600 text-gray-700 hover:text-white px-4 py-2.5 rounded-full text-sm font-medium shadow-sm hover:shadow-md transition-all border border-teal-50 justify-center"><i data-lucide="map-pin" class="w-3.5 h-3.5 shrink-0"></i>Cleaning in ${l.title}</a>`).join('\n      ')}
     </div>
   </div>
 </section>`;
@@ -600,7 +699,7 @@ function buildPage(type, data, opts) {
     const nav = opts.nav;
     const css = opts.css;
     const footer = opts.footer;
-    const seoBlock = opts.seoBlock;
+    const seoBlock = buildSeoBlock(type, data, unique);
 
     return `<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -622,7 +721,7 @@ function buildPage(type, data, opts) {
     <meta property="og:image" content="https://www.502starservices.com/images/logo.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="google-site-verification" content="xmGae3ujVfInVGbCGAuESkICJXZZOKLj7iISf8ZkfKI" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":${JSON.stringify(pageTitle)},"isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-19T17:00:00+00:00","description":${JSON.stringify(pageDesc)},"breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":${JSON.stringify(data.title)}}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Discover the Art of Clean Living","publisher":{"@id":"https://www.502starservices.com/#organization"},"inLanguage":"en-US"},{"@type":"LocalBusiness","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","telephone":"502-835-1870","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"15:00"}],"address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Louisville","addressRegion":"KY"},"logo":{"@type":"ImageObject","url":"https://www.502starservices.com/images/logo.webp","width":500,"height":500}},${extraSchema},{"@type":"FAQPage","mainEntity":[${faqSchemaItems}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":${JSON.stringify(pageTitle)},"isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-19T17:00:00+00:00","description":${JSON.stringify(pageDesc)},"breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":${JSON.stringify(data.title)}}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Local cleaning services in Louisville, KY","publisher":{"@id":"https://www.502starservices.com/#organization"},"inLanguage":"en-US"},{"@type":"LocalBusiness","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","telephone":"+15028351870","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"15:00"}],"address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Louisville","addressRegion":"KY","postalCode":"40202"},"logo":{"@type":"ImageObject","url":"https://www.502starservices.com/images/logo.webp","width":500,"height":500}},${extraSchema},{"@type":"FAQPage","mainEntity":[${faqSchemaItems}]}]}</script>
     ${css}
 </head>
 <body class="font-sans antialiased overflow-x-hidden pt-20 bg-gray-50">
@@ -642,13 +741,13 @@ function buildPage(type, data, opts) {
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center reveal pt-12">
             <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full mb-6 border border-white/30">
                 <i data-lucide="star" class="w-5 h-5 text-accent-yellow fill-current"></i>
-                <span class="text-white font-medium text-sm">5.0 Rating · Louisville's #1 Cleaning Service</span>
+                <span class="text-white font-medium text-sm">5.0 Rating | Local Louisville Cleaning Team</span>
             </div>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                ${isLocal ? `Best Cleaning Services in ${data.title}, KY` : `${data.title} in Louisville, KY`}
+                ${isLocal ? `Cleaning Services in ${data.title}, KY` : `${data.title} in Louisville, KY`}
             </h1>
             <p class="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto font-semibold">
-                <b>We Clean So You Don't Have To! — 502 Star Service</b>
+                <b>We Clean So You Don't Have To! | 502 Star Service</b>
             </p>
             <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-10">
                 For a free estimate or to schedule service, call, text, or book online today.
@@ -784,10 +883,6 @@ async function run() {
     const cssMatch = indexHtml.match(/<script>\s*tailwind\.config[\s\S]*?<\/style>/);
     const css = cssMatch ? cssMatch[0] : '';
 
-    // Extract SEO block
-    const seoMatch = indexHtml.match(/<!-- Targeted Local SEO Content Block -->[\s\S]*?<\/section>/);
-    let baseSeoBlock = seoMatch ? seoMatch[0] : '';
-
     // Extract footer
     const footerMatch = indexHtml.match(/<!-- Modern Full Footer -->[\s\S]*?<\/html>/);
     let footer = footerMatch ? footerMatch[0].replace('</html>', '') : '';
@@ -802,35 +897,24 @@ async function run() {
         // Fix image paths
         html = html.replace(/src="images\//g, 'src="../images/');
         html = html.replace(/href="images\//g, 'href="../images/');
+        html = normalizeOutput(html);
         const dir = path.join(__dirname, item.id);
         if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-        fs.writeFileSync(path.join(dir, 'index.html'), html);
+        fs.writeFileSync(path.join(dir, 'index.html'), html, 'utf8');
     }
 
     const opts = { nav, css, footer };
 
     // Generate Service Pages
     for (const s of services) {
-        let seoBlock = baseSeoBlock
-            .replace(/House Cleaning Services/gi, s.title)
-            .replace(/house cleaning services/gi, s.title.toLowerCase())
-            .replace(/Louisville KY/g, 'Louisville, KY');
-        const html = buildPage('service', s, { ...opts, seoBlock });
+        const html = buildPage('service', s, opts);
         savePage(s, html);
         console.log(`  ✓ ${s.id}/index.html`);
     }
 
     // Generate Location Pages
     for (const l of locations) {
-        let seoBlock = baseSeoBlock
-            .replace(/Top-Rated House Cleaning Services in Louisville KY/gi, `Top-Rated Cleaning Services in ${l.title} KY`)
-            .replace(/House Cleaning Services/gi, 'Cleaning Services')
-            .replace(/house cleaning services/gi, 'cleaning services')
-            .replace(/our house cleaning/gi, 'our cleaning')
-            .replace(/Louisville, KY/g, `${l.title}, KY`)
-            .replace(/\bLouisville\b/g, l.title)
-            .replace(/Louisville KY/g, `${l.title} KY`);
-        const html = buildPage('location', l, { ...opts, seoBlock });
+        const html = buildPage('location', l, opts);
         savePage(l, html);
         console.log(`  ✓ ${l.id}/index.html`);
     }
@@ -844,4 +928,3 @@ async function run() {
 }
 
 run();
-
