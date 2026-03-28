@@ -558,15 +558,15 @@ function buildSeoBlock(type, data, unique) {
     <section class="py-20 bg-white border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose max-w-none text-gray-600">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Cleaning Services in ${data.title}, KY</h2>
-                <p class="mb-6 leading-relaxed">
-                    Need reliable cleaning services in ${data.title}, KY? 502 Star Service helps homeowners, renters, Airbnb hosts, offices, and property managers with house cleaning, deep cleaning, move-in and move-out cleaning, commercial cleaning, and recurring maid service.
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert Cleaning Services in ${data.title}, KY</h2>
+                <p class="mb-6 leading-relaxed text-lg">
+                    Searching for top-rated, reliable <strong>cleaning services in ${data.title}, KY</strong>? 502 Star Service delivers exceptional results across ${data.title} and the greater Louisville area. We assist homeowners, renters, Airbnb hosts, offices, and property managers with precise house cleaning, deep sanitization, commercial janitorial care, streak-free window washing, and recurring maid service.
                 </p>
-                ${cleanExtra ? `<p class="mb-6 leading-relaxed">${cleanExtra}</p>` : ''}
+                ${cleanExtra ? `<p class="mb-6 leading-relaxed font-semibold">${cleanExtra}</p>` : ''}
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Popular Services in ${data.title}</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Professional Services in ${data.title}</h3>
                 <p class="mb-6 leading-relaxed">
-                    Clients in ${data.title} often book recurring home cleaning, one-time deep cleaning, apartment cleaning, rental turnover cleaning, and detail-focused service before move-ins or move-outs. We adjust each visit to the property type, frequency, and the rooms that matter most to you.
+                    Clients in ${data.title} frequently book our recurring home cleaning, detailed deep cleaning, apartment move-out transformations, and professional window squeegee services. We customize every visit to match your specific property layout, focusing on the high-traffic areas and exterior details that matter most.
                 </p>
 
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Nearby Areas We Serve</h3>
@@ -590,13 +590,14 @@ function buildSeoBlock(type, data, unique) {
     <section class="py-20 bg-white border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose max-w-none text-gray-600">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">${data.title} in Louisville, KY</h2>
-                <p class="mb-6 leading-relaxed">
-                    Need ${data.title.toLowerCase()} in Louisville, KY? 502 Star Service provides dependable help for homes, rentals, offices, and managed properties across Jefferson County with clear communication, careful cleaning, and flexible scheduling.
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert ${data.title} in Louisville, KY</h2>
+                <p class="mb-6 leading-relaxed text-lg">
+                    Looking for professional <strong>${data.title.toLowerCase()} in Louisville, KY</strong>? 502 Star Service provides meticulous, high-quality care for homes, rentals, offices, and managed properties across Jefferson County. Our fully insured, background-checked professionals deliver spotless results with clear communication and reliable scheduling.
                 </p>
-                ${cleanExtra ? `<p class="mb-6 leading-relaxed">${cleanExtra}</p>` : ''}
+                ${cleanExtra ? `<p class="mb-6 leading-relaxed font-semibold">${cleanExtra}</p>` : ''}
+                ${data.id === 'window-cleaning' ? `<p class="mb-6 leading-relaxed font-bold text-teal-800 text-xl">Enhance your property's curb appeal with our specialized window washing. We use industry-grade squeegees, specialized microfiber applicators, and eco-friendly solutions to guarantee streak-free glass, spotless sills, and perfectly scrubbed tracks.</p>` : ''}
 
-                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">When Louisville Clients Book ${data.title}</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Louisville Clients Choose the Best for ${data.title}</h3>
                 <p class="mb-6 leading-relaxed">
                     ${buildServiceUseCases(data)}
                 </p>
@@ -625,9 +626,9 @@ function buildPage(type, data, opts) {
     const unique   = isLocal ? locationData[data.id] : serviceData[data.id];
 
     const pageTitle = isLocal
-        ? `Cleaning Services in ${data.title}, KY | 502 Star Service`
-        : `${data.title} in Louisville, KY | 502 Star Service`;
-    const pageDesc  = unique ? unique.desc : `502 Star Service provides professional ${keyword.toLowerCase()} in ${locStr}. Licensed, bonded & 5-star rated. Call (502) 835-1870 for a free quote!`;
+        ? `Professional Cleaning Services in ${data.title}, KY | 502 Star Service`
+        : `Expert ${data.title} in Louisville, KY | 502 Star Service`;
+    const pageDesc  = unique ? (data.id === 'window-cleaning' ? "Top-rated window cleaning in Louisville, KY. Crystal clear, streak-free window washing, sill, and track cleaning. Call (502) 835-1870 for a quote!" : unique.desc) : `Professional ${keyword.toLowerCase()} in ${locStr}. Trusted, fully insured experts delivering 5-star service. Call (502) 835-1870 for a free quote!`;
     const canonical = `https://www.502starservices.com/${data.id}/`;
 
     const bannerImage = isLocal
@@ -652,10 +653,12 @@ function buildPage(type, data, opts) {
         `{"@type":"Question","name":${JSON.stringify(f.q)},"acceptedAnswer":{"@type":"Answer","text":${JSON.stringify(f.a)}}}`
     ).join(',');
 
+    const schemaAreaServedString = '[' + locations.map(l => `{"@type":"Neighborhood","name":"${l.title}"}`).join(',') + ',{"@type":"City","name":"Louisville"},{"@type":"City","name":"Jeffersonville, Indiana"},{"@type":"City","name":"New Albany, Indiana"},{"@type":"City","name":"Clarksville, Indiana"}]';
+
     // Build service-specific or location-specific schema piece
     const extraSchema = isLocal
         ? `{"@type":"LocalBusiness","@id":"${canonical}#localbusiness","name":"502 Star Service - ${data.title}","url":"${canonical}","areaServed":{"@type":"Place","name":"${data.title}, Kentucky"},"telephone":"+15028351870","priceRange":"$$","image":"https://www.502starservices.com/images/logo.webp"}`
-        : `{"@type":"Service","@id":"${canonical}#service","name":${JSON.stringify(data.title)},"serviceType":${JSON.stringify(data.title)},"provider":{"@id":"https://www.502starservices.com/#organization"},"areaServed":{"@type":"City","name":"Louisville","containedInPlace":{"@type":"State","name":"Kentucky"}},"description":${JSON.stringify(pageDesc)}}`;
+        : `{"@type":"Service","@id":"${canonical}#service","name":${JSON.stringify(data.title)},"serviceType":${JSON.stringify(data.title)},"provider":{"@id":"https://www.502starservices.com/#organization"},"areaServed":${schemaAreaServedString},"description":${JSON.stringify(pageDesc)}}`;
 
     // Internal cross-linking section
     const crossLinkSection = isLocal
@@ -730,7 +733,7 @@ function buildPage(type, data, opts) {
     <meta property="og:image" content="https://www.502starservices.com/images/logo.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="google-site-verification" content="xmGae3ujVfInVGbCGAuESkICJXZZOKLj7iISf8ZkfKI" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":${JSON.stringify(pageTitle)},"isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-19T17:00:00+00:00","description":${JSON.stringify(pageDesc)},"breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":${JSON.stringify(data.title)}}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Local cleaning services in Louisville, KY","publisher":{"@id":"https://www.502starservices.com/#organization"},"inLanguage":"en-US"},{"@type":"LocalBusiness","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","telephone":"+15028351870","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"15:00"}],"address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Louisville","addressRegion":"KY","postalCode":"40202"},"logo":{"@type":"ImageObject","url":"https://www.502starservices.com/images/logo.webp","width":500,"height":500}},${extraSchema},{"@type":"FAQPage","mainEntity":[${faqSchemaItems}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"${canonical}","url":"${canonical}","name":${JSON.stringify(pageTitle)},"isPartOf":{"@id":"https://www.502starservices.com/#website"},"about":{"@id":"https://www.502starservices.com/#organization"},"datePublished":"2024-09-09T04:55:10+00:00","dateModified":"2026-03-27T17:00:00+00:00","description":${JSON.stringify(pageDesc)},"breadcrumb":{"@id":"${canonical}#breadcrumb"},"inLanguage":"en-US"},{"@type":"BreadcrumbList","@id":"${canonical}#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.502starservices.com/"},{"@type":"ListItem","position":2,"name":${JSON.stringify(data.title)}}]},{"@type":"WebSite","@id":"https://www.502starservices.com/#website","url":"https://www.502starservices.com/","name":"502 Star Service","description":"Louisville's #1 Rated Cleaning Services","publisher":{"@id":"https://www.502starservices.com/#organization"},"inLanguage":"en-US"},{"@type":"LocalBusiness","@id":"https://www.502starservices.com/#organization","name":"502 Star Service","url":"https://www.502starservices.com/","telephone":"+15028351870","aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"16","bestRating":"5","worstRating":"1"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Saturday"],"opens":"09:00","closes":"16:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Sunday"],"opens":"09:00","closes":"15:00"}],"address":{"@type":"PostalAddress","addressCountry":"US","addressLocality":"Louisville","addressRegion":"KY","postalCode":"40202"},"logo":{"@type":"ImageObject","url":"https://www.502starservices.com/images/logo.webp","width":500,"height":500}},${extraSchema},{"@type":"FAQPage","mainEntity":[${faqSchemaItems}]}]}</script>
     ${css}
 </head>
 <body class="font-sans antialiased overflow-x-hidden pt-20 bg-gray-50">
@@ -744,7 +747,7 @@ function buildPage(type, data, opts) {
     <section class="relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden bg-teal-900">
         <div id="bubbles-container" class="absolute inset-0 overflow-hidden pointer-events-none z-10"></div>
         <div class="absolute inset-0 z-0">
-            <img src="../${bannerImage}" alt="${data.title} - 502 Star Service Louisville KY" class="w-full h-full object-cover opacity-70 mix-blend-overlay" width="1200" height="800" />
+            <img src="../${bannerImage}" alt="${data.title} - 502 Star Service Louisville KY" class="w-full h-full object-cover opacity-70 mix-blend-overlay" width="1200" height="800" fetchpriority="high" decoding="async" />
             <div class="absolute inset-0 bg-gradient-to-t from-teal-900/95 via-gray-900/60 to-gray-900/80"></div>
         </div>
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center reveal pt-12">
@@ -753,11 +756,11 @@ function buildPage(type, data, opts) {
                 <span class="text-white font-medium text-sm">5.0 Rating | Local Louisville Cleaning Team</span>
             </div>
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                ${isLocal ? `Cleaning Services in ${data.title}, KY` : `${data.title} in Louisville, KY`}
+                ${isLocal ? `#1 Top-Rated Cleaning Services in ${data.title}, KY` : `#1 Top-Rated ${data.title} in Louisville, KY`}
             </h1>
-            <p class="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto font-semibold">
-                <b>We Clean So You Don't Have To! | 502 Star Service</b>
-            </p>
+            <h2 class="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto font-semibold">
+                <b>${data.id === 'window-cleaning' ? "Dominating Window Washing, Exterior Glass & Skylight Cleaning in Louisville!" : "Dominating House Cleaning, Deep Cleaning & Window Cleaning in Louisville!"} - 502 Star Service</b>
+            </h2>
             <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-10">
                 For a free estimate or to schedule service, call, text, or book online today.
             </p>
