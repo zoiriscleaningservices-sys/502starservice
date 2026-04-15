@@ -916,6 +916,7 @@ async function run() {
     footer = footer.replace(/href="about-us\/"/g, 'href="../about-us/"');
     footer = footer.replace(/href="contact-us\/"/g, 'href="../contact-us/"');
     footer = footer.replace(/src="images\//g, 'src="../images/');
+    footer = footer.replace(/img: "images\//g, 'img: "../images/');
 
     function savePage(item, html) {
         // Fix image paths

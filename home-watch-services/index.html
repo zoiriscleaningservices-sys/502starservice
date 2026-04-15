@@ -1215,41 +1215,41 @@
         // Infinite Marquee Generation Logic
         document.addEventListener('DOMContentLoaded', () => {
             const residentialServices = [
-                { name: "House Cleaning", keyword: "home,cleaning", img: "images/WhatsApp Image 2026-02-27 at 11.39.57 PM.jpeg" },
-                { name: "Deep Cleaning", keyword: "sparkle,clean", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (2).jpeg" },
-                { name: "Move-In Cleaning", keyword: "empty,room", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (3).jpeg" },
-                { name: "Move-Out Cleaning", keyword: "moving,boxes", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (6).jpeg" },
-                { name: "Carpet Cleaning", keyword: "carpet,clean", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM (2).jpeg" },
-                { name: "Window Cleaning", keyword: "window,washing", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (4).jpeg" },
-                { name: "Pressure Washing", keyword: "water,pressure", img: "images/pressure_washing.png" },
-                { name: "Luxury Estate Cleaning", keyword: "mansion,interior", img: "images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg" },
-                { name: "Laundry Services", keyword: "laundry,clothes", img: "images/WhatsApp Image 2026-02-27 at 11.40.23 PM.jpeg" },
-                { name: "Detailing", keyword: "wiping,counter", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (2).jpeg" }
+                { name: "House Cleaning", keyword: "home,cleaning", img: "../images/WhatsApp Image 2026-02-27 at 11.39.57 PM.jpeg" },
+                { name: "Deep Cleaning", keyword: "sparkle,clean", img: "../images/WhatsApp Image 2026-02-27 at 11.40.24 PM (2).jpeg" },
+                { name: "Move-In Cleaning", keyword: "empty,room", img: "../images/WhatsApp Image 2026-02-27 at 11.40.24 PM (3).jpeg" },
+                { name: "Move-Out Cleaning", keyword: "moving,boxes", img: "../images/WhatsApp Image 2026-02-27 at 11.40.24 PM (6).jpeg" },
+                { name: "Carpet Cleaning", keyword: "carpet,clean", img: "../images/WhatsApp Image 2026-02-27 at 11.40.21 PM (2).jpeg" },
+                { name: "Window Cleaning", keyword: "window,washing", img: "../images/WhatsApp Image 2026-02-27 at 11.40.26 PM (4).jpeg" },
+                { name: "Pressure Washing", keyword: "water,pressure", img: "../images/pressure_washing.png" },
+                { name: "Luxury Estate Cleaning", keyword: "mansion,interior", img: "../images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg" },
+                { name: "Laundry Services", keyword: "laundry,clothes", img: "../images/WhatsApp Image 2026-02-27 at 11.40.23 PM.jpeg" },
+                { name: "Detailing", keyword: "wiping,counter", img: "../images/WhatsApp Image 2026-02-27 at 11.40.22 PM (2).jpeg" }
             ];
 
             const commercialServices = [
-                { name: "Commercial Cleaning", keyword: "office,cleaning", img: "images/WhatsApp Image 2026-02-27 at 11.39.54 PM (1).jpeg" },
-                { name: "Office Janitorial", keyword: "janitor,desk", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM (1).jpeg" },
-                { name: "Janitorial Cleaning", keyword: "mop,floor", img: "images/WhatsApp Image 2026-02-27 at 11.40.01 PM.jpeg" },
-                { name: "Medical Facility", keyword: "hospital,clean", img: "images/WhatsApp Image 2026-02-27 at 11.40.09 PM (1).jpeg" },
-                { name: "Industrial & Warehouse", keyword: "warehouse,clean", img: "images/WhatsApp Image 2026-02-27 at 11.40.06 PM.jpeg" },
-                { name: "Floor Stripping", keyword: "polished,floor", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (1).jpeg" },
-                { name: "Gym & Fitness Cleaning", keyword: "gym,clean", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (3).jpeg" },
-                { name: "School & Daycare", keyword: "school,desk", img: "images/WhatsApp Image 2026-02-27 at 11.40.25 PM (1).jpeg" },
-                { name: "Church & Worship", keyword: "church,pews", img: "images/WhatsApp Image 2026-02-27 at 11.40.26 PM (1).jpeg" },
-                { name: "Solar Panel Cleaning", keyword: "solar,panels", img: "images/solar_panel_cleaning.png" }
+                { name: "Commercial Cleaning", keyword: "office,cleaning", img: "../images/WhatsApp Image 2026-02-27 at 11.39.54 PM (1).jpeg" },
+                { name: "Office Janitorial", keyword: "janitor,desk", img: "../images/WhatsApp Image 2026-02-27 at 11.40.21 PM (1).jpeg" },
+                { name: "Janitorial Cleaning", keyword: "mop,floor", img: "../images/WhatsApp Image 2026-02-27 at 11.40.01 PM.jpeg" },
+                { name: "Medical Facility", keyword: "hospital,clean", img: "../images/WhatsApp Image 2026-02-27 at 11.40.09 PM (1).jpeg" },
+                { name: "Industrial & Warehouse", keyword: "warehouse,clean", img: "../images/WhatsApp Image 2026-02-27 at 11.40.06 PM.jpeg" },
+                { name: "Floor Stripping", keyword: "polished,floor", img: "../images/WhatsApp Image 2026-02-27 at 11.40.24 PM (1).jpeg" },
+                { name: "Gym & Fitness Cleaning", keyword: "gym,clean", img: "../images/WhatsApp Image 2026-02-27 at 11.40.26 PM (3).jpeg" },
+                { name: "School & Daycare", keyword: "school,desk", img: "../images/WhatsApp Image 2026-02-27 at 11.40.25 PM (1).jpeg" },
+                { name: "Church & Worship", keyword: "church,pews", img: "../images/WhatsApp Image 2026-02-27 at 11.40.26 PM (1).jpeg" },
+                { name: "Solar Panel Cleaning", keyword: "solar,panels", img: "../images/solar_panel_cleaning.png" }
             ];
 
             const propMgmtServices = [
-                { name: "Vacation Rental", keyword: "vacation,home", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (1).jpeg" },
-                { name: "Airbnb Cleaning", keyword: "bed,hotel", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (6).jpeg" },
-                { name: "Airbnb & Rental Mgmt", keyword: "keys,house", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (5).jpeg" },
-                { name: "Post-Construction", keyword: "construction,cleanup", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (4).jpeg" },
-                { name: "Prop. Mgmt Janitorial", keyword: "apartment,hallway", img: "images/WhatsApp Image 2026-02-27 at 11.40.21 PM.jpeg" },
-                { name: "Property Maintenance", keyword: "maintenance,tools", img: "images/WhatsApp Image 2026-02-27 at 11.40.24 PM (5).jpeg" },
-                { name: "Home Watch Services", keyword: "security,home", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM (3).jpeg" },
-                { name: "Luxury Estate Mgmt", keyword: "luxury,living", img: "images/WhatsApp Image 2026-02-27 at 11.40.22 PM.jpeg" },
-                { name: "Gutter Cleaning", keyword: "roof,gutter", img: "images/gutter_cleaning.png" }
+                { name: "Vacation Rental", keyword: "vacation,home", img: "../images/WhatsApp Image 2026-02-27 at 11.40.22 PM (1).jpeg" },
+                { name: "Airbnb Cleaning", keyword: "bed,hotel", img: "../images/WhatsApp Image 2026-02-27 at 11.40.22 PM (6).jpeg" },
+                { name: "Airbnb & Rental Mgmt", keyword: "keys,house", img: "../images/WhatsApp Image 2026-02-27 at 11.40.22 PM (5).jpeg" },
+                { name: "Post-Construction", keyword: "construction,cleanup", img: "../images/WhatsApp Image 2026-02-27 at 11.40.24 PM (4).jpeg" },
+                { name: "Prop. Mgmt Janitorial", keyword: "apartment,hallway", img: "../images/WhatsApp Image 2026-02-27 at 11.40.21 PM.jpeg" },
+                { name: "Property Maintenance", keyword: "maintenance,tools", img: "../images/WhatsApp Image 2026-02-27 at 11.40.24 PM (5).jpeg" },
+                { name: "Home Watch Services", keyword: "security,home", img: "../images/WhatsApp Image 2026-02-27 at 11.40.22 PM (3).jpeg" },
+                { name: "Luxury Estate Mgmt", keyword: "luxury,living", img: "../images/WhatsApp Image 2026-02-27 at 11.40.22 PM.jpeg" },
+                { name: "Gutter Cleaning", keyword: "roof,gutter", img: "../images/gutter_cleaning.png" }
             ];
 
             const createCardHTML = (service, accentColor) => {
