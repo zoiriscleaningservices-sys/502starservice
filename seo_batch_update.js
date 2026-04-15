@@ -17,7 +17,7 @@ const PHONE_SCHEMA = '+15028351870';
 const servicePages = [
   {
     dir: 'house-cleaning',
-    title: 'House Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'House Cleaning Louisville KY | Residential Maid Services',
     desc: `Professional house cleaning services in Louisville, KY. Trusted, background-checked cleaners. Eco-friendly products. 100% satisfaction guarantee. Call ${PHONE} for a free quote!`,
     h1keyword: 'House Cleaning Services Louisville KY',
     faqs: [
@@ -30,7 +30,7 @@ const servicePages = [
   },
   {
     dir: 'deep-cleaning',
-    title: 'Deep Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Deep Cleaning Louisville KY | Top-Rated Home Sanitization',
     desc: `Professional deep cleaning services in Louisville, KY. We clean what regular cleaning misses — baseboards, inside appliances, grout & more. Background-checked pros. Call ${PHONE}!`,
     h1keyword: 'Deep Cleaning Services Louisville KY',
     faqs: [
@@ -43,7 +43,7 @@ const servicePages = [
   },
   {
     dir: 'move-in-cleaning',
-    title: 'Move-In Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Move In Cleaning Louisville KY | Reliable Relocation Services',
     desc: `Move-in cleaning services in Louisville, KY. Get your new home spotless before move-in day. Background-checked, insured pros. Fast scheduling. Call ${PHONE} for a free quote!`,
     h1keyword: 'Move-In Cleaning Services Louisville KY',
     faqs: [
@@ -56,7 +56,7 @@ const servicePages = [
   },
   {
     dir: 'move-out-cleaning',
-    title: 'Move-Out Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Move Out Cleaning Louisville KY | Deposit Recovery Cleaners',
     desc: `Move-out cleaning services in Louisville, KY. Get your deposit back with a spotless clean. We meet landlord standards. Background-checked, insured pros. Call ${PHONE}!`,
     h1keyword: 'Move-Out Cleaning Services Louisville KY',
     faqs: [
@@ -69,7 +69,7 @@ const servicePages = [
   },
   {
     dir: 'commercial-cleaning',
-    title: 'Commercial Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Commercial Cleaning Louisville KY | Office & Janitorial Services',
     desc: `Commercial cleaning services in Louisville, KY for offices, medical facilities, gyms, schools & more. Flexible scheduling, insured pros. Call ${PHONE} for a free quote!`,
     h1keyword: 'Commercial Cleaning Services Louisville KY',
     faqs: [
@@ -82,7 +82,7 @@ const servicePages = [
   },
   {
     dir: 'carpet-cleaning',
-    title: 'Carpet Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Carpet Cleaning Louisville KY | Professional Steam Cleaners',
     desc: `Professional carpet cleaning services in Louisville, KY. Deep clean and stain removal for homes and businesses. Background-checked pros. Call ${PHONE} for a free quote!`,
     h1keyword: 'Carpet Cleaning Services Louisville KY',
     faqs: [
@@ -95,7 +95,7 @@ const servicePages = [
   },
   {
     dir: 'airbnb-cleaning',
-    title: 'Airbnb Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Airbnb Cleaning Louisville KY | Vacation Rental Turnovers',
     desc: `Professional Airbnb cleaning services in Louisville, KY. Fast turnovers, hotel-quality standards. Reliable & flexible scheduling for hosts. Call ${PHONE} for a free quote!`,
     h1keyword: 'Airbnb Cleaning Services Louisville KY',
     faqs: [
@@ -108,7 +108,7 @@ const servicePages = [
   },
   {
     dir: 'post-construction-cleanup',
-    title: 'Post-Construction Cleanup in Louisville, KY | 502 Star Service',
+    title: 'Post Construction Cleanup Louisville KY | Deep Cleaning Pros',
     desc: `Post-construction cleanup services in Louisville, KY. We remove dust, debris, and construction residue. Licensed, insured pros. Fast scheduling. Call ${PHONE} for a free quote!`,
     h1keyword: 'Post-Construction Cleanup Louisville KY',
     faqs: [
@@ -121,7 +121,7 @@ const servicePages = [
   },
   {
     dir: 'window-cleaning',
-    title: 'Window Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Window Cleaning Louisville KY | Professional Glass Washers',
     desc: `Professional window cleaning services in Louisville, KY. Crystal-clear interior & exterior windows. Residential & commercial. Insured pros. Call ${PHONE} for a free quote!`,
     h1keyword: 'Window Cleaning Services Louisville KY',
     faqs: [
@@ -134,7 +134,7 @@ const servicePages = [
   },
   {
     dir: 'pressure-washing',
-    title: 'Pressure Washing Services in Louisville, KY | 502 Star Service',
+    title: 'Pressure Washing Louisville KY | Power Washing Services',
     desc: `Professional pressure washing services in Louisville, KY. Driveways, sidewalks, decks, siding & more. Insured pros. Fast results. Call ${PHONE} for a free quote!`,
     h1keyword: 'Pressure Washing Services Louisville KY',
     faqs: [
@@ -147,7 +147,7 @@ const servicePages = [
   },
   {
     dir: 'janitorial-cleaning',
-    title: 'Janitorial Cleaning Services in Louisville, KY | 502 Star Service',
+    title: 'Janitorial Services Louisville KY | Commercial Cleaning Company',
     desc: `Professional janitorial cleaning services in Louisville, KY for offices, buildings & facilities. Flexible schedules, fully insured. Call ${PHONE} for a free quote!`,
     h1keyword: 'Janitorial Cleaning Services Louisville KY',
     faqs: [
@@ -160,7 +160,7 @@ const servicePages = [
   },
   {
     dir: 'vacation-rental-cleaning',
-    title: 'Vacation Rental Cleaning in Louisville, KY | 502 Star Service',
+    title: 'Vacation Rental Cleaning Louisville KY | 5-Star Service turnovers',
     desc: `Professional vacation rental cleaning services in Louisville, KY. Fast turnovers, 5-star guest experiences. Reliable & flexible. Call ${PHONE} for a free quote!`,
     h1keyword: 'Vacation Rental Cleaning Louisville KY',
     faqs: [
@@ -308,6 +308,9 @@ function updatePage(filepath, title, desc, schema) {
   // 1. Update <title>
   content = content.replace(/<title>[^<]*<\/title>/i, `<title>${title}</title>`);
 
+  // 1.5. Update <h1> to perfectly align with the title
+  content = content.replace(/<h1([^>]*)>[\s\S]*?<\/h1>/i, `<h1$1>\n                    ${title}\n                </h1>`);
+
   // 2. Update or add meta description
   if (/<meta\s+name=["']description["'][^>]*>/i.test(content)) {
     content = content.replace(
@@ -368,7 +371,7 @@ console.log('\n📍 Updating NEIGHBORHOOD pages...\n');
 for (const nb of neighborhoodPages) {
   const filepath = path.join(baseDir, nb.dir, 'index.html');
   const pageUrl = `${BASE_URL}/${nb.dir}/`;
-  const title = `Cleaning Services in ${nb.name}, Louisville KY | 502 Star Service`;
+  const title = `Cleaning Services in ${nb.name} KY | Residential & House Cleaning`;
   const desc = `Professional cleaning services in ${nb.name}, Louisville KY. Background-checked, insured pros. House cleaning, deep cleaning & more. Call ${PHONE} for a free quote!`;
   const schema = buildNeighborhoodSchema(nb, pageUrl);
   const ok = updatePage(filepath, title, desc, schema);
