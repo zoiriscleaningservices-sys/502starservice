@@ -553,20 +553,25 @@ function buildSeoBlock(type, data, unique) {
     const nearbyCommunities = 'Jeffersonville, New Albany, and Clarksville';
     const cleanExtra = unique && unique.extra ? normalizeOutput(unique.extra) : '';
 
+    const internalLink1 = `<a href="../deep-cleaning/" class="text-teal-700 hover:text-teal-900 underline font-medium">deep cleaning specialists</a>`;
+    const internalLink2 = `<a href="../commercial-cleaning/" class="text-teal-700 hover:text-teal-900 underline font-medium">commercial janitorial care</a>`;
+    const internalLink3 = `<a href="../house-cleaning/" class="text-teal-700 hover:text-teal-900 underline font-medium">recurring maid service</a>`;
+
     if (type === 'location') {
+        const localZipCode = data.zip || '40203, 40204, 40202, 40206'; // fallback
         return `<!-- Targeted Local SEO Content Block -->
     <section class="py-20 bg-white border-t border-gray-100">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="prose max-w-none text-gray-600">
-                <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert Cleaning Services in ${data.title}, KY</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert Cleaning Services in ${data.title}, KY (${localZipCode})</h2>
                 <p class="mb-6 leading-relaxed text-lg">
-                    Searching for top-rated, reliable <strong>cleaning services in ${data.title}, KY</strong>? 502 Star Service delivers exceptional results across ${data.title} and the greater Louisville area. We assist homeowners, renters, Airbnb hosts, offices, and property managers with precise house cleaning, deep sanitization, commercial janitorial care, streak-free window washing, and recurring maid service.
+                    Searching for top-rated, reliable <strong>cleaning services in ${data.title}, KY</strong>? 502 Star Service delivers exceptional results across ${data.title} and the greater Louisville area. We assist homeowners, renters, Airbnb hosts, offices, and property managers with precise ${internalLink1}, ${internalLink2}, streak-free window washing, and ${internalLink3}. We service all surrounding local zip codes starting with ${localZipCode}.
                 </p>
-                ${cleanExtra ? `<p class="mb-6 leading-relaxed font-semibold">${cleanExtra}</p>` : ''}
+                ${cleanExtra ? `<p class="mb-6 leading-relaxed font-semibold text-gray-800">${cleanExtra}</p>` : ''}
 
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Professional Services in ${data.title}</h3>
                 <p class="mb-6 leading-relaxed">
-                    Clients in ${data.title} frequently book our recurring home cleaning, detailed deep cleaning, apartment move-out transformations, and professional window squeegee services. We customize every visit to match your specific property layout, focusing on the high-traffic areas and exterior details that matter most.
+                    Clients in ${data.title} frequently book our recurring home cleaning, detailed deep cleaning, apartment move-out transformations, and professional window squeegee services. We customize every visit to match your specific property layout, focusing on the high-traffic areas and exterior details that matter most. We guarantee our work in ${data.title}.
                 </p>
 
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Nearby Areas We Serve</h3>
@@ -592,14 +597,14 @@ function buildSeoBlock(type, data, unique) {
             <div class="prose max-w-none text-gray-600">
                 <h2 class="text-3xl font-bold text-gray-900 mb-6">Expert ${data.title} in Louisville, KY</h2>
                 <p class="mb-6 leading-relaxed text-lg">
-                    Looking for professional <strong>${data.title.toLowerCase()} in Louisville, KY</strong>? 502 Star Service provides meticulous, high-quality care for homes, rentals, offices, and managed properties across Jefferson County. Our fully insured, background-checked professionals deliver spotless results with clear communication and reliable scheduling.
+                    Looking for professional <strong>${data.title.toLowerCase()} in Louisville, KY</strong>? 502 Star Service provides meticulous, high-quality care for homes, rentals, offices, and managed properties across Jefferson County and zip codes like 40204, 40207, and 40299. Our fully insured, background-checked professionals deliver spotless results with clear communication and reliable scheduling. We also frequently work alongside our <a href="../window-cleaning/" class="text-teal-700 hover:text-teal-900 underline font-medium">exterior window technicians</a> and <a href="../deep-cleaning/" class="text-teal-700 hover:text-teal-900 underline font-medium">deep sanitization experts</a>.
                 </p>
-                ${cleanExtra ? `<p class="mb-6 leading-relaxed font-semibold">${cleanExtra}</p>` : ''}
-                ${data.id === 'window-cleaning' ? `<p class="mb-6 leading-relaxed font-bold text-teal-800 text-xl">Enhance your property's curb appeal with our specialized window washing. We use industry-grade squeegees, specialized microfiber applicators, and eco-friendly solutions to guarantee streak-free glass, spotless sills, and perfectly scrubbed tracks.</p>` : ''}
+                ${cleanExtra ? `<p class="mb-6 leading-relaxed font-semibold text-gray-800">${cleanExtra}</p>` : ''}
+                ${data.id === 'window-cleaning' ? `<p class="mb-6 leading-relaxed font-bold text-teal-800 text-xl">Enhance your curb appeal with our specialized window washing. We use industry-grade squeegees, specialized microfiber applicators, and eco-friendly solutions to guarantee streak-free glass, spotless sills, and perfectly scrubbed tracks.</p>` : ''}
 
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Why Louisville Clients Choose the Best for ${data.title}</h3>
                 <p class="mb-6 leading-relaxed">
-                    ${buildServiceUseCases(data)}
+                    ${buildServiceUseCases(data)} Whether you are near Churchill Downs, Downtown Louisville, or out in Anchorage, we bring the same standard of rigorous care to every corner of your property.
                 </p>
 
                 <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-8">Neighborhoods We Serve</h3>

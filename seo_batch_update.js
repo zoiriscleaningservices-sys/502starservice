@@ -218,7 +218,25 @@ function buildServiceSchema(page, pageUrl) {
           "addressRegion": "KY",
           "addressCountry": "US"
         },
-        "areaServed": "Louisville, KY and Jefferson County"
+        "areaServed": [
+          { "@type": "City", "name": "Louisville", "sameAs": "https://en.wikipedia.org/wiki/Louisville,_Kentucky" },
+          { "@type": "City", "name": "Jefferson County" }
+        ],
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Cleaning Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": page.h1keyword || page.title,
+                "description": page.desc,
+                "areaServed": { "@type": "City", "name": "Louisville" }
+              }
+            }
+          ]
+        }
       },
       {
         "@type": "BreadcrumbList",
@@ -273,7 +291,24 @@ function buildNeighborhoodSchema(nb, pageUrl) {
           "postalCode": nb.zip,
           "addressCountry": "US"
         },
-        "areaServed": { "@type": "Neighborhood", "name": nb.name }
+        "areaServed": { 
+          "@type": "Neighborhood", 
+          "name": nb.name 
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Cleaning Services in " + nb.name,
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Residential & Commercial Cleaning",
+                "areaServed": { "@type": "Neighborhood", "name": nb.name, "postalCode": nb.zip }
+              }
+            }
+          ]
+        }
       },
       {
         "@type": "BreadcrumbList",
