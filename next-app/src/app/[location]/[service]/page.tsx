@@ -9,7 +9,7 @@ import Reviews from "../../../components/sections/Reviews";
 import LocationMap from "../../../components/sections/LocationMap";
 import FAQ from "../../../components/sections/FAQ";
 import HomeContact from "../../../components/sections/HomeContact";
-import CrossLinkSection from "../../../components/sections/CrossLinkSection";
+
 import JsonLd from "../../../components/JsonLd";
 import React from "react";
 
@@ -126,7 +126,7 @@ export default async function SiloServicePage({ params }: { params: { location: 
       <LocationMap keyword={keyword} location={locStr} />
       <FAQ keyword={keyword} location={locStr} />
 
-      <CrossLinkSection type="silo-service" data={srvData} location={locData} />
+
     </>
   );
 }

@@ -9,7 +9,7 @@ import Reviews from "../../components/sections/Reviews";
 import LocationMap from "../../components/sections/LocationMap";
 import FAQ from "../../components/sections/FAQ";
 import HomeContact from "../../components/sections/HomeContact";
-import CrossLinkSection from "../../components/sections/CrossLinkSection";
+
 import JsonLd from "../../components/JsonLd";
 import React from "react";
 
@@ -129,11 +129,7 @@ export default async function SlugPage({ params }: { params: { slug: string } })
       <LocationMap keyword={keyword} location={locStr} />
       <FAQ keyword={keyword} location={locStr} />
 
-      <CrossLinkSection
-        type={isLocation ? "location" : "service"}
-        data={data}
-        location={isLocation ? data : undefined}
-      />
+
     </>
   );
 }
