@@ -156,13 +156,7 @@ export default function Hero({ isVideo = false, title, subtitle, desc, bannerIma
         </div>
       </div>
 
-      {/* Modern Bouncing Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity cursor-pointer animate-bounce">
-        <span className="text-white/60 text-xs font-semibold tracking-[0.2em] uppercase">Scroll</span>
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center p-1">
-          <div className="w-1 h-2 bg-white rounded-full"></div>
-        </div>
-      </div>
+
     </section>
   );
 }
