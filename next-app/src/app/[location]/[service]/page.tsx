@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: { params: { location: string;
 
   if (!locData || !srvData) return {};
 
-  const pageTitle = `#1 Top-Rated ${srvData.title} in ${locData.title}, KY | 502 Star Service`;
+  const pageTitle = `${srvData.title} in ${locData.title} KY | 502 Star Service`;
 
   return {
     title: pageTitle,
@@ -71,7 +71,7 @@ export default async function SiloServicePage({ params }: { params: { location: 
   const midText = spintax.middles[Math.floor(rng() * spintax.middles.length)];
   const bullets = spintax.bullets[Math.floor(rng() * spintax.bullets.length)];
 
-  const pageTitle = `#1 Top-Rated ${srvData.title} in ${locData.title}, KY`;
+  const pageTitle = `${srvData.title} in ${locData.title} KY`;
 
   const pageSubtitle = "Dominating House Cleaning, Deep Cleaning & Window Cleaning in Louisville! - 502 Star Service";
 

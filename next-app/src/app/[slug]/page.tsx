@@ -39,8 +39,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   if (!data) return {};
 
   const pageTitle = isLocation
-    ? `#1 Cleaning Services in ${data.title}, KY | 502 Star Service`
-    : `Expert ${data.title} in Louisville, KY | 502 Star Service`;
+    ? `Cleaning Services in ${data.title} KY | 502 Star Service`
+    : `${data.title} in Louisville KY | 502 Star Service`;
 
   return {
     title: pageTitle,
@@ -81,8 +81,8 @@ export default async function SlugPage({ params }: { params: { slug: string } })
   const bullets = spintax.bullets[Math.floor(rng() * spintax.bullets.length)];
 
   const pageTitle = isLocation
-    ? `#1 Top-Rated Cleaning Services in ${data.title}, KY`
-    : `#1 Top-Rated ${data.title} in Louisville, KY`;
+    ? `Cleaning Services in ${data.title} KY`
+    : `${data.title} in Louisville KY`;
 
   const pageSubtitle = isLocation
     ? "Dominating House Cleaning, Deep Cleaning & Window Cleaning in Louisville! - 502 Star Service"
