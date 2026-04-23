@@ -9,8 +9,8 @@ export default function About() {
           <div className="reveal active">
             <div className="relative">
               <img
-                src="/images/WhatsApp Image 2026-02-27 at 11.40.24 PM (4).jpeg"
-                alt="Louisville Kentucky House Cleaning Service Team"
+                src="/images/clean_mansion_interior.png"
+                alt="Ultra realistic clean interior of a modern mansion"
                 className="rounded-2xl shadow-2xl w-full object-cover h-96"
               />
               <div className="absolute -bottom-6 -right-6 bg-accent-yellow p-6 rounded-2xl shadow-xl">
