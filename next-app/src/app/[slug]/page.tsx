@@ -42,9 +42,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     ? `Cleaning Services in ${data.title} KY | 502 Star Service`
     : `${data.title} in Louisville KY | 502 Star Service`;
 
+  // Use custom injected descriptions from our matrix expansion if available
+  const { locationData, serviceData } = await import("../../lib/data");
+  let customDesc = "";
+  if (isLocation && locationData[slug] && locationData[slug].desc) {
+    customDesc = locationData[slug].desc;
+  } else if (!isLocation && serviceData[slug] && serviceData[slug].desc) {
+    customDesc = serviceData[slug].desc;
+  }
+
   return {
     title: pageTitle,
-    description: `Professional cleaning services for ${data.title}. Get a free quote today!`,
+    description: customDesc || `Looking for top-rated ${data.title.toLowerCase()}? 502 Star Service provides expert, background-checked professional cleaning. Get a free quote today!`,
   };
 }
 

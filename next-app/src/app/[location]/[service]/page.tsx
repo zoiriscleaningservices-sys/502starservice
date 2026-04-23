@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: { params: { location: string;
 
   return {
     title: pageTitle,
-    description: `Expert ${srvData.title.toLowerCase()} in ${locData.title}, KY. Professional, background-checked, and reliable. Get a free quote today!`,
+    description: `Looking for top-rated ${srvData.title.toLowerCase()} in ${locData.title}, KY? 502 Star Service offers expert, professional, and reliable cleaning. Get a free quote today!`,
   };
 }
 

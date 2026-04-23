@@ -7,8 +7,9 @@ import Footer from "../components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "502 Star Service",
-  description: "Louisville's #1 Rated Cleaning Services",
+  title: "502 Star Service | #1 Cleaning Services in Louisville, KY",
+  description: "Looking for top-rated cleaning services in Louisville, KY? 502 Star Service offers expert house cleaning, deep cleaning, and maid services. Get a free quote today!",
+  keywords: "cleaning services, house cleaning, maid service, deep cleaning, Louisville KY, commercial cleaning",
   icons: {
     icon: '/images/logo.webp',
   },
