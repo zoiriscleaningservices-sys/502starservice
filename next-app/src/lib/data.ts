@@ -53,7 +53,7 @@ export const services = [
     { id:"property-maintenance",         title:"Property Maintenance",            category:"Property Management",     img:"images/WhatsApp Image 2026-02-27 at 11.40.24 PM (5).jpeg" },
     { id:"home-watch-services",          title:"Home Watch Services",             category:"Property Management",     img:"images/WhatsApp Image 2026-02-27 at 11.40.22 PM (3).jpeg" },
     { id:"luxury-estate-management",     title:"Luxury Estate Management",        category:"Property Management",     img:"images/WhatsApp Image 2026-02-27 at 11.40.22 PM.jpeg" },
-    { id:"gutter-cleaning",              title:"Gutter Cleaning",                 category:"Property Management",     img:"images/gutter_cleaning.png" }
+    { id:"gutter-cleaning",              title:"Gutter Cleaning",                 category:"Property Management",     img:"images/gutter_cleaning.png" },
     { id:"maid-service",                 title:"Maid Service",                    category:"Residential & Property",  img:"images/WhatsApp Image 2026-02-27 at 11.39.57 PM.jpeg" },
     { id:"housekeeping",                 title:"Housekeeping",                    category:"Residential & Property",  img:"images/WhatsApp Image 2026-02-27 at 11.40.24 PM (2).jpeg" },
     { id:"apartment-cleaning",           title:"Apartment Cleaning",              category:"Residential & Property",  img:"images/WhatsApp Image 2026-02-27 at 11.40.24 PM (3).jpeg" },
@@ -83,7 +83,7 @@ export const locations = [
     { id:"prospect",        title:"Prospect"        },
     { id:"anchorage",       title:"Anchorage"       },
     { id:"hurstbourne",     title:"Hurstbourne"     },
-    { id:"lyndon",          title:"Lyndon"          }
+    { id:"lyndon",          title:"Lyndon"          },
     { id:"cherokee-triangle", title:"Cherokee Triangle" },
     { id:"clifton",           title:"Clifton"           },
     { id:"audubon-park",      title:"Audubon Park"      },
@@ -243,7 +243,7 @@ export const locationData: Record<string, any> = {
             { q:"How often should I schedule cleaning in my Lyndon home?", a:"Most Lyndon homeowners book bi-weekly service for the best balance of cleanliness and value. We also offer weekly, monthly, or one-time options." },
             { q:"Does 502 Star Service clean businesses in Lyndon?", a:"Yes. We handle commercial cleaning in Lyndon for offices, medical facilities, and retail spaces. Contact us for a free commercial cleaning assessment." }
         ]
-    }
+    },
     "cherokee-triangle": {
         desc: "Top-rated cleaning services in Cherokee Triangle, KY. We care for historic homes & apartments. Insured & bonded. Call (502) 835-1870!",
         extra: "Cherokee Triangle's beautiful architecture deserves special cleaning expertise — our team uses gentle, heritage-safe products on woodwork and period details.",
@@ -608,7 +608,7 @@ export const serviceData: Record<string, any> = {
             { q:"How often should gutters be cleaned in Louisville, KY?", a:"Louisville homeowners should clean gutters at least twice a year — once in late fall after leaves have fallen and once in spring. Heavily wooded properties may need 3–4 cleanings per year." },
             { q:"Do you inspect gutters for damage during Louisville gutter cleaning?", a:"Yes! During every Louisville gutter cleaning, we visually inspect for loose hangers, separating seams, and sagging sections. We'll note any issues found and recommend repair before they become major problems." }
         ]
-    }
+    },
     "maid-service": {
         desc: "Professional Maid Service in Louisville, KY. Thorough, reliable & eco-friendly. Serving all Jefferson County. Free quote: (502) 835-1870.",
         extra: "Our Louisville maid service covers every room top-to-bottom — dusting, vacuuming, mopping, sanitizing kitchens and bathrooms, and making your home feel truly refreshed.",
