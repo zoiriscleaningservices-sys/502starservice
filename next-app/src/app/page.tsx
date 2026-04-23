@@ -1,5 +1,4 @@
 import Hero from "../components/sections/Hero";
-import TrustBanner from "../components/sections/TrustBanner";
 import About from "../components/sections/About";
 import Process from "../components/sections/Process";
 import ServicesCarousel from "../components/sections/ServicesCarousel";
@@ -24,7 +23,6 @@ export default function Home() {
         faqs={faqs}
       />
       <Hero isVideo={true} />
-      <TrustBanner location="Louisville" />
       <About />
       <Process location="Louisville" />
       <ServicesCarousel />
