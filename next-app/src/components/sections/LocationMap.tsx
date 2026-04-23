@@ -1,7 +1,7 @@
 import React from "react";
 import { MapPin } from "lucide-react";
 
-export default function LocationMap({ location = "Louisville, KY" }: { location?: string }) {
+export default function LocationMap({ location = "Louisville, KY", keyword = "cleaning services" }: { location?: string, keyword?: string }) {
   return (
     <section className="py-24 bg-gray-50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,7 +14,7 @@ export default function LocationMap({ location = "Louisville, KY" }: { location?
             Proudly Serving <span className="text-teal-600">{location}</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We provide top-rated, professional cleaning services throughout {location} and the surrounding neighborhoods. 
+            We provide top-rated, professional {keyword.toLowerCase()} throughout {location} and the surrounding neighborhoods. 
             Our local teams are ready to transform your space today.
           </p>
         </div>

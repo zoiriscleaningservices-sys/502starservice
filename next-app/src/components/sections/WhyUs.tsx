@@ -1,7 +1,7 @@
 import React from "react";
 import { CheckCircle2, Leaf, Clock, HeartHandshake } from "lucide-react";
 
-export default function WhyUs({ location = "Louisville" }: { location?: string }) {
+export default function WhyUs({ location = "Louisville", keyword = "Cleaning Services" }: { location?: string, keyword?: string }) {
   const reasons = [
     {
       icon: <Leaf className="w-8 h-8 text-green-500" />,
@@ -30,10 +30,10 @@ export default function WhyUs({ location = "Louisville" }: { location?: string }
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 reveal active">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-            Why Choose Our <span className="text-teal-600">Cleaning Services in {location} KY</span>?
+            Why Choose Our <span className="text-teal-600">{keyword} in {location}</span>?
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We are more than just a maid service. We are {location}'s premier property care team, 
+            We are more than just a {keyword.toLowerCase()} provider. We are {location}'s premier property care team, 
             dedicated to elevating your standard of living through meticulous cleaning.
           </p>
         </div>

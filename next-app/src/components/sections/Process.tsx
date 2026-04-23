@@ -1,7 +1,7 @@
 import React from "react";
 import { MousePointerClick, Sparkles, Coffee } from "lucide-react";
 
-export default function Process({ location = "Louisville" }: { location?: string }) {
+export default function Process({ location = "Louisville", keyword = "Cleaning Services" }: { location?: string, keyword?: string }) {
   const steps = [
     {
       icon: <MousePointerClick className="w-8 h-8 text-teal-600" />,
@@ -27,10 +27,10 @@ export default function Process({ location = "Louisville" }: { location?: string
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 reveal active">
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6">
-            How Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-400">Cleaning Services in {location} KY</span> Work
+            How Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-teal-400">{keyword} in {location}</span> Work
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            We've simplified the process of hiring a professional maid service in {location}. 
+            We've simplified the process of hiring {keyword.toLowerCase()} in {location}. 
             Get your weekends back in three easy steps.
           </p>
         </div>

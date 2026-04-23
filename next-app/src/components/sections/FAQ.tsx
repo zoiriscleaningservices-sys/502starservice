@@ -4,8 +4,8 @@ import React, { useState } from "react";
 import { ChevronDown, MessageCircleQuestion } from "lucide-react";
 import { getFaqs } from "../../lib/data";
 
-export default function FAQ({ location = "Louisville" }: { location?: string }) {
-  const faqs = getFaqs(location);
+export default function FAQ({ location = "Louisville", keyword = "Cleaning Services" }: { location?: string, keyword?: string }) {
+  const faqs = getFaqs(location, keyword);
   const [openIndex, setOpenIndex] = useState<number | null>(0); // First one open by default
 
   const toggleFaq = (index: number) => {
@@ -27,7 +27,7 @@ export default function FAQ({ location = "Louisville" }: { location?: string }) 
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Everything you need to know about our {location} cleaning services, pricing, and guarantees.
+            Everything you need to know about our {keyword.toLowerCase()} in {location}, pricing, and guarantees.
           </p>
         </div>
 

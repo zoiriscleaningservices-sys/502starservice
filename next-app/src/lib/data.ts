@@ -527,10 +527,10 @@ export const spintax = {
 
 // ─── FAQ GENERATOR ────────────────────────────────────────────────────────────
 
-export const getFaqs = (location: string) => [
+export const getFaqs = (location: string, keyword: string = "Cleaning Services") => [
   {
-    q: `What is included in your standard house cleaning service in ${location}?`,
-    a: `Our standard house cleaning in ${location} includes dusting, vacuuming, mopping, wiping down all accessible surfaces, cleaning bathrooms (toilets, showers, sinks), and sanitizing kitchen countertops and appliance exteriors.`
+    q: `What is included in your standard ${keyword.toLowerCase()} in ${location}?`,
+    a: `Our standard ${keyword.toLowerCase()} in ${location} includes dusting, vacuuming, mopping, wiping down all accessible surfaces, cleaning bathrooms (toilets, showers, sinks), and sanitizing kitchen countertops and appliance exteriors.`
   },
   {
     q: `How much does professional cleaning cost in ${location}, KY?`,
