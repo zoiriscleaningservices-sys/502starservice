@@ -101,16 +101,16 @@ export const locations = [
 // ─── UNIQUE LOCATION DATA ───────────────────────────────────────────────────
 export const locationData: Record<string, any> = {
     "old-louisville": {
-        desc: "Top-rated cleaning services in Old Louisville, KY. We care for historic Victorian homes & modern condos. Insured & bonded. Call (502) 835-1870!",
+        desc: "Top-rated cleaning services in Old Louisville, KY. We care for historic Victorian homes & modern condos. Insured & bonded. Call (502) 804-2333!",
         extra: "Old Louisville's Victorian-era architecture and tree-lined streets deserve special cleaning expertise — our team uses gentle, heritage-safe products on woodwork, plaster, and period details.",
         faqs: [
             { q:"Do you clean historic Victorian homes in Old Louisville?", a:"Absolutely. We use gentle, heritage-safe products specifically suited for the plaster walls, hardwood floors, and ornate woodwork common in Old Louisville's Victorian homes." },
-            { q:"How quickly can I book a cleaner in Old Louisville?", a:"We typically offer next-day appointments in Old Louisville. Same-day service is often available — just call (502) 835-1870 and we'll get you scheduled fast." },
+            { q:"How quickly can I book a cleaner in Old Louisville?", a:"We typically offer next-day appointments in Old Louisville. Same-day service is often available — just call (502) 804-2333 and we'll get you scheduled fast." },
             { q:"Are your Old Louisville cleaners background-checked?", a:"Yes. Every 502 Star Service team member serving Old Louisville is fully background-checked, insured, and bonded for your complete peace of mind." }
         ]
     },
     "the-highlands": {
-        desc: "Trusted cleaning services in The Highlands, Louisville KY. Boutique neighborhood experts. Eco-friendly products. Free quote — (502) 835-1870.",
+        desc: "Trusted cleaning services in The Highlands, Louisville KY. Boutique neighborhood experts. Eco-friendly products. Free quote — (502) 804-2333.",
         extra: "The Highlands' eclectic mix of bungalows, apartments, and commercial strips requires a flexible cleaning approach — our team is fully equipped for every property style in this vibrant corridor.",
         faqs: [
             { q:"Do you clean apartments and bungalows in The Highlands?", a:"Yes! We regularly clean apartments, bungalows, condos, and commercial spaces throughout The Highlands neighborhood and surrounding streets." },
@@ -119,7 +119,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "nulu": {
-        desc: "Professional cleaning services in NuLu, Louisville KY. Lofts, condos, businesses — we handle it all. Call 502-835-1870 for a free estimate.",
+        desc: "Professional cleaning services in NuLu, Louisville KY. Lofts, condos, businesses — we handle it all. Call 502-804-2333 for a free estimate.",
         extra: "NuLu's thriving arts district is packed with lofts, galleries, and restaurants — our commercial and residential cleaning crews are experienced with the open-concept layouts common in this area.",
         faqs: [
             { q:"Do you clean commercial spaces and lofts in NuLu?", a:"Yes! NuLu is one of our most active service areas. We clean art studios, retail shops, restaurants, loft apartments, and condos throughout the district." },
@@ -128,7 +128,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "butchertown": {
-        desc: "Reliable cleaning services in Butchertown, Louisville KY. Houses, condos & businesses. 5-star rated local team. Free quote: (502) 835-1870.",
+        desc: "Reliable cleaning services in Butchertown, Louisville KY. Houses, condos & businesses. 5-star rated local team. Free quote: (502) 804-2333.",
         extra: "Butchertown's revitalized row homes and converted industrial spaces each have their own cleaning challenges — our experienced crew handles everything from exposed brick to polished concrete floors.",
         faqs: [
             { q:"Do you clean converted industrial spaces in Butchertown?", a:"Yes. We have extensive experience cleaning Butchertown's converted warehouses and industrial-style condos, including exposed brick, polished concrete, and high-ceiling spaces." },
@@ -137,16 +137,16 @@ export const locationData: Record<string, any> = {
         ]
     },
     "germantown": {
-        desc: "Expert cleaning services in Germantown, Louisville KY. Homes, offices & rentals. Licensed & insured. Call 502-835-1870 for a free estimate today.",
+        desc: "Expert cleaning services in Germantown, Louisville KY. Homes, offices & rentals. Licensed & insured. Call 502-804-2333 for a free estimate today.",
         extra: "Germantown's dense streets of craftsman homes and small businesses have unique cleaning needs — our locally-based team knows every block and delivers results that longtime Germantown residents rely on.",
         faqs: [
             { q:"Do you offer maid service in Germantown, Louisville?", a:"Yes! We provide recurring maid services in Germantown on weekly, bi-weekly, or monthly schedules — all at competitive prices with no contracts required." },
             { q:"Are you familiar with Germantown's older home styles?", a:"Absolutely. Our Germantown team regularly cleans 1920s–1960s craftsman homes and knows how to handle original hardwood, vintage tile, and older fixtures with care." },
-            { q:"How soon can you start cleaning services in Germantown?", a:"Most new Germantown clients get their first appointment within 1–3 business days. Call (502) 835-1870 or request online for fastest booking." }
+            { q:"How soon can you start cleaning services in Germantown?", a:"Most new Germantown clients get their first appointment within 1–3 business days. Call (502) 804-2333 or request online for fastest booking." }
         ]
     },
     "crescent-hill": {
-        desc: "Top cleaning services in Crescent Hill, Louisville KY. Residential & commercial. Eco-safe products. 5-star reviewed. Call (502) 835-1870!",
+        desc: "Top cleaning services in Crescent Hill, Louisville KY. Residential & commercial. Eco-safe products. 5-star reviewed. Call (502) 804-2333!",
         extra: "Crescent Hill homeowners trust 502 Star Service for consistent, detail-oriented cleaning that keeps their classic Louisville homes looking their absolute best year-round.",
         faqs: [
             { q:"Do you service homes near Crescent Hill's business district?", a:"Yes. We clean both residences and commercial properties throughout Crescent Hill, including spaces near Frankfort Avenue's popular shops and restaurants." },
@@ -155,16 +155,16 @@ export const locationData: Record<string, any> = {
         ]
     },
     "st-matthews": {
-        desc: "Premium cleaning services in St. Matthews, Louisville KY. Homes, offices & commercial spaces. Insured. Free quote at (502) 835-1870.",
+        desc: "Premium cleaning services in St. Matthews, Louisville KY. Homes, offices & commercial spaces. Insured. Free quote at (502) 804-2333.",
         extra: "St. Matthews is one of Louisville's most active suburbs — our cleaning teams service everything from single-family homes near Shelbyville Road to office suites and retail spaces in the commercial corridor.",
         faqs: [
             { q:"Do you clean offices and commercial spaces in St. Matthews?", a:"Yes! We provide professional janitorial and commercial cleaning services throughout St. Matthews, including offices, retail shops, and medical suites." },
-            { q:"Are you available for same-day cleaning in St. Matthews?", a:"Same-day availability depends on schedule, but we frequently accommodate last-minute requests in St. Matthews. Call (502) 835-1870 for current openings." },
+            { q:"Are you available for same-day cleaning in St. Matthews?", a:"Same-day availability depends on schedule, but we frequently accommodate last-minute requests in St. Matthews. Call (502) 804-2333 for current openings." },
             { q:"Do you offer move-out cleaning in the St. Matthews area?", a:"Absolutely. Move-out cleaning is a specialty — we help tenants and homeowners in St. Matthews leave properties spotless to maximize deposits and buyer impressions." }
         ]
     },
     "middletown": {
-        desc: "Trusted cleaning services in Middletown, Louisville KY. Residential & commercial. Locally owned, background-checked. Call (502) 835-1870 now.",
+        desc: "Trusted cleaning services in Middletown, Louisville KY. Residential & commercial. Locally owned, background-checked. Call (502) 804-2333 now.",
         extra: "Middletown's growing mix of new subdivisions and established neighborhoods makes it one of our busiest service areas — we're familiar with all the major Middletown communities and deliver consistent results.",
         faqs: [
             { q:"Do you clean new construction homes in Middletown?", a:"Yes! Post-construction cleanup is one of our specialties in Middletown. We remove construction dust, paint overspray, and debris to make your new home move-in ready." },
@@ -173,7 +173,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "jeffersontown": {
-        desc: "Best cleaning services in Jeffersontown, KY. Homes, offices & rentals near Blankenbaker. Licensed, insured & 5-star rated. Call (502) 835-1870.",
+        desc: "Best cleaning services in Jeffersontown, KY. Homes, offices & rentals near Blankenbaker. Licensed, insured & 5-star rated. Call (502) 804-2333.",
         extra: "Jeffersontown's blend of suburban neighborhoods and business parks means we handle everything from family home cleaning near Taylorsville Road to commercial janitorial contracts in the J-Town Tech corridor.",
         faqs: [
             { q:"Do you offer house cleaning near Blankenbaker Pkwy in J-Town?", a:"Yes! We service all areas of Jeffersontown including neighborhoods near Blankenbaker Parkway, Taylorsville Road, and throughout the Jeffersontown Tech Park corridor." },
@@ -182,7 +182,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "fern-creek": {
-        desc: "Reliable cleaning services in Fern Creek, Louisville KY. Family-friendly, eco-safe. 5-star rated. Call 502-835-1870 for your free quote today!",
+        desc: "Reliable cleaning services in Fern Creek, Louisville KY. Family-friendly, eco-safe. 5-star rated. Call 502-804-2333 for your free quote today!",
         extra: "Fern Creek's family-oriented neighborhoods and ranch-style homes are a perfect match for our professional residential cleaning teams who specialize in thorough, child and pet-safe cleaning.",
         faqs: [
             { q:"Is 502 Star Service available in Fern Creek, KY?", a:"Yes! Fern Creek is one of our primary service areas. We clean homes throughout Fern Creek including neighborhoods near Bardstown Road and Stony Brook Drive." },
@@ -191,7 +191,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "okolona": {
-        desc: "Affordable cleaning services in Okolona, Louisville KY. Homes, rentals & offices. Background-checked staff. Free quote: (502) 835-1870.",
+        desc: "Affordable cleaning services in Okolona, Louisville KY. Homes, rentals & offices. Background-checked staff. Free quote: (502) 804-2333.",
         extra: "Okolona's working-class neighborhood pride runs deep — our team delivers the same premium-quality cleaning to every Okolona home that we'd want for our own families.",
         faqs: [
             { q:"Do you provide affordable cleaning services in Okolona?", a:"Yes. We offer competitive pricing for all Okolona residents. We believe every family deserves a clean home — contact us for a free quote tailored to your budget." },
@@ -200,16 +200,16 @@ export const locationData: Record<string, any> = {
         ]
     },
     "shively": {
-        desc: "Professional cleaning services in Shively, Louisville KY. Residential & commercial. Trusted local team. Book today: (502) 835-1870.",
+        desc: "Professional cleaning services in Shively, Louisville KY. Residential & commercial. Trusted local team. Book today: (502) 804-2333.",
         extra: "Shively's tightly-knit community deserves cleaning professionals who understand and respect the neighborhood — our Shively team is local, reliable, and deeply familiar with the area.",
         faqs: [
             { q:"Do you offer regular maid service in Shively, KY?", a:"Yes! Many Shively residents trust us for weekly and bi-weekly maid service. We'll build a personalized cleaning plan that keeps your home consistently sparkling." },
             { q:"Can 502 Star Service handle commercial cleaning in Shively?", a:"Absolutely. We serve businesses throughout Shively including retail stores, offices, warehouses, and industrial facilities with professional-grade equipment and staff." },
-            { q:"How do I get a cleaning quote in Shively?", a:"Simply call (502) 835-1870 or fill out our online quote form. We'll respond within hours with a free, no-obligation estimate tailored to your Shively property." }
+            { q:"How do I get a cleaning quote in Shively?", a:"Simply call (502) 804-2333 or fill out our online quote form. We'll respond within hours with a free, no-obligation estimate tailored to your Shively property." }
         ]
     },
     "prospect": {
-        desc: "Luxury cleaning services in Prospect, KY. High-end homes & estates. White-glove standard. Bonded & insured. Call (502) 835-1870 for a quote.",
+        desc: "Luxury cleaning services in Prospect, KY. High-end homes & estates. White-glove standard. Bonded & insured. Call (502) 804-2333 for a quote.",
         extra: "Prospect's upscale estates and custom luxury homes demand a higher standard of cleaning — our Prospect team is handpicked for experience with high-end finishes, marble, and custom cabinetry.",
         faqs: [
             { q:"Do you specialize in luxury home cleaning in Prospect, KY?", a:"Yes. Prospect is one of our premium residential markets. We specialize in large estates, luxury finishes, marble countertops, and hardwood care that high-end homes require." },
@@ -218,16 +218,16 @@ export const locationData: Record<string, any> = {
         ]
     },
     "anchorage": {
-        desc: "Premium cleaning services in Anchorage, KY. Luxury estates & historic homes. White-glove detail. Insured. Contact us: (502) 835-1870.",
+        desc: "Premium cleaning services in Anchorage, KY. Luxury estates & historic homes. White-glove detail. Insured. Contact us: (502) 804-2333.",
         extra: "Anchorage is one of Kentucky's most prestigious communities — our elite cleaning team handles its grand estates, historic properties, and manicured grounds with the utmost professionalism and discretion.",
         faqs: [
             { q:"Do you clean large estates and historic homes in Anchorage, KY?", a:"Yes. Anchorage is one of our specialty markets. We regularly service large historic estates and custom luxury homes throughout the village of Anchorage with white-glove care." },
             { q:"Is 502 Star Service discreet for high-profile Anchorage clients?", a:"Absolutely. We understand the privacy expectations of our Anchorage clientele. Our team works discreetly, professionally, and with complete respect for your home and privacy." },
-            { q:"How do I schedule recurring cleaning for my Anchorage estate?", a:"Call (502) 835-1870 or submit a request online. We'll schedule a property walkthrough and design a custom recurring cleaning plan for your Anchorage estate." }
+            { q:"How do I schedule recurring cleaning for my Anchorage estate?", a:"Call (502) 804-2333 or submit a request online. We'll schedule a property walkthrough and design a custom recurring cleaning plan for your Anchorage estate." }
         ]
     },
     "hurstbourne": {
-        desc: "Expert cleaning services in Hurstbourne, Louisville KY. Homes, condos & offices near the Hurstbourne corridor. Call (502) 835-1870.",
+        desc: "Expert cleaning services in Hurstbourne, Louisville KY. Homes, condos & offices near the Hurstbourne corridor. Call (502) 804-2333.",
         extra: "Hurstbourne's booming residential and commercial corridor makes it one of our fastest-growing service areas — from luxury apartment complexes to corporate office parks, we service them all.",
         faqs: [
             { q:"Do you clean apartments and condos in Hurstbourne?", a:"Yes! We service apartment complexes, condos, and housing communities throughout Hurstbourne, providing both individual unit cleaning and communal area maintenance." },
@@ -236,25 +236,25 @@ export const locationData: Record<string, any> = {
         ]
     },
     "lyndon": {
-        desc: "Trusted cleaning services in Lyndon, Louisville KY. Residential & commercial. Careful, thorough, 5-star rated. Free quote: (502) 835-1870.",
+        desc: "Trusted cleaning services in Lyndon, Louisville KY. Residential & commercial. Careful, thorough, 5-star rated. Free quote: (502) 804-2333.",
         extra: "Lyndon's peaceful residential feel and established neighborhoods are served by our team of cleaning professionals who take pride in maintaining the quality of life that Lyndon residents enjoy.",
         faqs: [
-            { q:"Do you provide house cleaning in Lyndon, KY?", a:"Yes! We serve Lyndon and surrounding areas including Brownsboro Road and Lime Kiln Lane corridors. Booking is easy — call (502) 835-1870 or request online." },
+            { q:"Do you provide house cleaning in Lyndon, KY?", a:"Yes! We serve Lyndon and surrounding areas including Brownsboro Road and Lime Kiln Lane corridors. Booking is easy — call (502) 804-2333 or request online." },
             { q:"How often should I schedule cleaning in my Lyndon home?", a:"Most Lyndon homeowners book bi-weekly service for the best balance of cleanliness and value. We also offer weekly, monthly, or one-time options." },
             { q:"Does 502 Star Service clean businesses in Lyndon?", a:"Yes. We handle commercial cleaning in Lyndon for offices, medical facilities, and retail spaces. Contact us for a free commercial cleaning assessment." }
         ]
     },
     "cherokee-triangle": {
-        desc: "Top-rated cleaning services in Cherokee Triangle, KY. We care for historic homes & apartments. Insured & bonded. Call (502) 835-1870!",
+        desc: "Top-rated cleaning services in Cherokee Triangle, KY. We care for historic homes & apartments. Insured & bonded. Call (502) 804-2333!",
         extra: "Cherokee Triangle's beautiful architecture deserves special cleaning expertise — our team uses gentle, heritage-safe products on woodwork and period details.",
         faqs: [
             { q:"Do you clean historic homes in Cherokee Triangle?", a:"Absolutely. We use gentle, heritage-safe products specifically suited for the plaster walls and ornate woodwork common in Cherokee Triangle." },
-            { q:"How quickly can I book a cleaner in Cherokee Triangle?", a:"We typically offer next-day appointments in Cherokee Triangle. Same-day service is often available — just call (502) 835-1870." },
+            { q:"How quickly can I book a cleaner in Cherokee Triangle?", a:"We typically offer next-day appointments in Cherokee Triangle. Same-day service is often available — just call (502) 804-2333." },
             { q:"Are your Cherokee Triangle cleaners background-checked?", a:"Yes. Every 502 Star Service team member is fully background-checked, insured, and bonded." }
         ]
     },
     "clifton": {
-        desc: "Trusted cleaning services in Clifton, Louisville KY. Boutique neighborhood experts. Eco-friendly products. Free quote — (502) 835-1870.",
+        desc: "Trusted cleaning services in Clifton, Louisville KY. Boutique neighborhood experts. Eco-friendly products. Free quote — (502) 804-2333.",
         extra: "Clifton's eclectic mix of homes and commercial strips requires a flexible cleaning approach — our team is fully equipped for every property style.",
         faqs: [
             { q:"Do you clean apartments and bungalows in Clifton?", a:"Yes! We regularly clean apartments, bungalows, condos, and commercial spaces throughout the Clifton neighborhood." },
@@ -263,7 +263,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "audubon-park": {
-        desc: "Professional cleaning services in Audubon Park, KY. Homes, businesses — we handle it all. Call 502-835-1870 for a free estimate.",
+        desc: "Professional cleaning services in Audubon Park, KY. Homes, businesses — we handle it all. Call 502-804-2333 for a free estimate.",
         extra: "Audubon Park's residential charm is matched by our residential cleaning crews who are experienced with the unique layouts common in this area.",
         faqs: [
             { q:"Do you clean commercial spaces in Audubon Park?", a:"Yes! We clean art studios, retail shops, and offices throughout Audubon Park." },
@@ -272,7 +272,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "indian-hills": {
-        desc: "Luxury cleaning services in Indian Hills, KY. High-end homes & estates. White-glove standard. Bonded & insured. Call (502) 835-1870.",
+        desc: "Luxury cleaning services in Indian Hills, KY. High-end homes & estates. White-glove standard. Bonded & insured. Call (502) 804-2333.",
         extra: "Indian Hills' upscale estates demand a higher standard of cleaning — our team is handpicked for experience with high-end finishes, marble, and custom cabinetry.",
         faqs: [
             { q:"Do you specialize in luxury home cleaning in Indian Hills?", a:"Yes. Indian Hills is one of our premium residential markets. We specialize in large estates and luxury finishes." },
@@ -281,7 +281,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "springhurst": {
-        desc: "Expert cleaning services in Springhurst, Louisville KY. Homes, condos & offices. Call (502) 835-1870.",
+        desc: "Expert cleaning services in Springhurst, Louisville KY. Homes, condos & offices. Call (502) 804-2333.",
         extra: "Springhurst's booming residential and commercial corridor makes it one of our fastest-growing service areas.",
         faqs: [
             { q:"Do you clean apartments and condos in Springhurst?", a:"Yes! We service apartment complexes, condos, and housing communities throughout Springhurst." },
@@ -290,7 +290,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "norton-commons": {
-        desc: "Trusted cleaning services in Norton Commons, Prospect KY. Residential & commercial. Locally owned. Call (502) 835-1870 now.",
+        desc: "Trusted cleaning services in Norton Commons, Prospect KY. Residential & commercial. Locally owned. Call (502) 804-2333 now.",
         extra: "Norton Commons' unique mix of dense living and commercial spaces makes it one of our busiest service areas — we deliver consistent results.",
         faqs: [
             { q:"Do you clean new construction homes in Norton Commons?", a:"Yes! Post-construction cleanup is one of our specialties in Norton Commons. We make your new home move-in ready." },
@@ -299,7 +299,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "valley-station": {
-        desc: "Affordable cleaning services in Valley Station, KY. Homes, rentals & offices. Background-checked staff. Free quote: (502) 835-1870.",
+        desc: "Affordable cleaning services in Valley Station, KY. Homes, rentals & offices. Background-checked staff. Free quote: (502) 804-2333.",
         extra: "Valley Station's neighborhood pride runs deep — our team delivers the same premium-quality cleaning to every home.",
         faqs: [
             { q:"Do you provide affordable cleaning services in Valley Station?", a:"Yes. We offer competitive pricing for all Valley Station residents. Contact us for a free quote tailored to your budget." },
@@ -308,16 +308,16 @@ export const locationData: Record<string, any> = {
         ]
     },
     "pleasure-ridge-park": {
-        desc: "Professional cleaning services in Pleasure Ridge Park (PRP), KY. Residential & commercial. Trusted local team. Book today: (502) 835-1870.",
+        desc: "Professional cleaning services in Pleasure Ridge Park (PRP), KY. Residential & commercial. Trusted local team. Book today: (502) 804-2333.",
         extra: "PRP's tightly-knit community deserves cleaning professionals who understand and respect the neighborhood — our PRP team is local and reliable.",
         faqs: [
             { q:"Do you offer regular maid service in Pleasure Ridge Park?", a:"Yes! Many PRP residents trust us for weekly and bi-weekly maid service. We'll build a personalized cleaning plan." },
             { q:"Can 502 Star Service handle commercial cleaning in PRP?", a:"Absolutely. We serve businesses throughout Pleasure Ridge Park including retail stores and offices." },
-            { q:"How do I get a cleaning quote in Pleasure Ridge Park?", a:"Simply call (502) 835-1870 or fill out our online quote form. We'll respond with a free estimate." }
+            { q:"How do I get a cleaning quote in Pleasure Ridge Park?", a:"Simply call (502) 804-2333 or fill out our online quote form. We'll respond with a free estimate." }
         ]
     },
     "beechmont": {
-        desc: "Reliable cleaning services in Beechmont, Louisville KY. Family-friendly, eco-safe. 5-star rated. Call 502-835-1870 for your free quote today!",
+        desc: "Reliable cleaning services in Beechmont, Louisville KY. Family-friendly, eco-safe. 5-star rated. Call 502-804-2333 for your free quote today!",
         extra: "Beechmont's beautiful homes and tree-lined streets are a perfect match for our professional residential cleaning teams.",
         faqs: [
             { q:"Is 502 Star Service available in Beechmont, KY?", a:"Yes! Beechmont is one of our primary service areas in South Louisville." },
@@ -326,7 +326,7 @@ export const locationData: Record<string, any> = {
         ]
     },
     "mount-washington": {
-        desc: "Best cleaning services in Mount Washington, KY. Homes, offices & rentals. Licensed, insured & 5-star rated. Call (502) 835-1870.",
+        desc: "Best cleaning services in Mount Washington, KY. Homes, offices & rentals. Licensed, insured & 5-star rated. Call (502) 804-2333.",
         extra: "Mount Washington's growing suburban neighborhoods are served by our top-rated teams who handle everything from family homes to commercial janitorial.",
         faqs: [
             { q:"Do you offer house cleaning in Mount Washington?", a:"Yes! We service all areas of Mount Washington and surrounding Bullitt County neighborhoods." },
@@ -335,10 +335,10 @@ export const locationData: Record<string, any> = {
         ]
     },
     "shepherdsville": {
-        desc: "Trusted cleaning services in Shepherdsville, KY. Residential & commercial. Careful, thorough, 5-star rated. Free quote: (502) 835-1870.",
+        desc: "Trusted cleaning services in Shepherdsville, KY. Residential & commercial. Careful, thorough, 5-star rated. Free quote: (502) 804-2333.",
         extra: "Shepherdsville's residential communities and industrial parks are served by our team of professionals who take pride in maintaining quality.",
         faqs: [
-            { q:"Do you provide house cleaning in Shepherdsville, KY?", a:"Yes! We serve Shepherdsville and surrounding Bullitt County areas. Booking is easy — call (502) 835-1870." },
+            { q:"Do you provide house cleaning in Shepherdsville, KY?", a:"Yes! We serve Shepherdsville and surrounding Bullitt County areas. Booking is easy — call (502) 804-2333." },
             { q:"How often should I schedule cleaning in my Shepherdsville home?", a:"Most Shepherdsville homeowners book bi-weekly service for the best balance of cleanliness and value." },
             { q:"Does 502 Star Service clean businesses in Shepherdsville?", a:"Yes. We handle commercial cleaning in Shepherdsville for offices, warehouses, and retail spaces." }
         ]
@@ -349,7 +349,7 @@ export const locationData: Record<string, any> = {
 // ─── UNIQUE SERVICE DATA ────────────────────────────────────────────────────
 export const serviceData: Record<string, any> = {
     "house-cleaning": {
-        desc: "Professional house cleaning in Louisville, KY. Thorough, reliable & eco-friendly. Serving all Jefferson County. Free quote: (502) 835-1870.",
+        desc: "Professional house cleaning in Louisville, KY. Thorough, reliable & eco-friendly. Serving all Jefferson County. Free quote: (502) 804-2333.",
         extra: "Our Louisville house cleaning service covers every room top-to-bottom — dusting, vacuuming, mopping, sanitizing kitchens and bathrooms, and making your home feel truly refreshed.",
         faqs: [
             { q:"What's included in your standard Louisville house cleaning?", a:"Our standard house cleaning includes all living areas, bedrooms, bathrooms, and the kitchen. We dust surfaces, vacuum, mop floors, sanitize counters, scrub sinks, and clean toilets — a comprehensive home refresh every visit." },
@@ -358,7 +358,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "deep-cleaning": {
-        desc: "Expert deep cleaning services in Louisville, KY. We clean what regular services miss. Top-to-bottom thoroughness. Call (502) 835-1870!",
+        desc: "Expert deep cleaning services in Louisville, KY. We clean what regular services miss. Top-to-bottom thoroughness. Call (502) 804-2333!",
         extra: "Louisville deep cleaning goes beyond the surface — we scrub inside ovens, behind appliances, inside cabinets, and tackle every baseboard, vent, and tile grout line in your home.",
         faqs: [
             { q:"What does a deep cleaning include that standard cleaning doesn't?", a:"Deep cleaning includes all areas of a standard clean PLUS inside appliances, inside cabinets and drawers, baseboards, window sills, ceiling fans, light fixtures, and behind/under furniture." },
@@ -367,16 +367,16 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "move-in-cleaning": {
-        desc: "Move-in cleaning services in Louisville, KY. Start fresh in your new home. We scrub every inch. Call 502-835-1870 for a free estimate today!",
+        desc: "Move-in cleaning services in Louisville, KY. Start fresh in your new home. We scrub every inch. Call 502-804-2333 for a free estimate today!",
         extra: "Moving into a new Louisville home? Our move-in cleaning ensures you're starting fresh — we sanitize every surface the previous owners touched before a single box is unpacked.",
         faqs: [
             { q:"What does your Louisville move-in cleaning include?", a:"Our move-in clean covers the entire property: kitchens (inside appliances, cabinets), all bathrooms (deep scrub), all rooms, closets, windowsills, baseboards, and floors — completely sanitized and ready for you." },
             { q:"Do I need to be present during the move-in clean in Louisville?", a:"You don't need to be present! Many Louisville clients give us access before they arrive. We work independently and send you photos of the completed clean for peace of mind." },
-            { q:"Can you do a move-in clean on short notice in Louisville?", a:"We try our best to accommodate urgent requests in Louisville. Call (502) 835-1870 as soon as you know your move-in date and we'll reserve your spot immediately." }
+            { q:"Can you do a move-in clean on short notice in Louisville?", a:"We try our best to accommodate urgent requests in Louisville. Call (502) 804-2333 as soon as you know your move-in date and we'll reserve your spot immediately." }
         ]
     },
     "move-out-cleaning": {
-        desc: "Move-out cleaning in Louisville, KY. Get your full deposit back. Thorough, landlord-approved clean. Free quote — (502) 835-1870.",
+        desc: "Move-out cleaning in Louisville, KY. Get your full deposit back. Thorough, landlord-approved clean. Free quote — (502) 804-2333.",
         extra: "Our Louisville move-out cleaning is designed to satisfy even the most demanding landlords and property managers — we restore your space to its original condition so you get every dollar of your deposit back.",
         faqs: [
             { q:"Will a professional move-out clean help me get my deposit back in Louisville?", a:"Yes! Our move-out cleaning in Louisville is landlord-approved level. We clean to move-in standards — deep scrubbing all kitchens, bathrooms, and surfaces — which significantly increases your chance of a full deposit refund." },
@@ -385,7 +385,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "carpet-cleaning": {
-        desc: "Professional carpet cleaning in Louisville, KY. Deep steam & stain removal. Homes & offices. Call (502) 835-1870 for a free carpet cleaning quote!",
+        desc: "Professional carpet cleaning in Louisville, KY. Deep steam & stain removal. Homes & offices. Call (502) 804-2333 for a free carpet cleaning quote!",
         extra: "Our Louisville carpet cleaning service uses professional-grade hot water extraction to remove embedded dirt, allergens, pet dander, and stubborn stains — leaving carpets refreshed and looking nearly new.",
         faqs: [
             { q:"What carpet cleaning method do you use in Louisville?", a:"We use professional hot water extraction (steam cleaning) — the gold standard recommended by carpet manufacturers. It penetrates deep into fibers to remove dirt, bacteria, and allergens that vacuuming can't reach." },
@@ -394,7 +394,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "window-cleaning": {
-        desc: "Crystal-clear window cleaning in Louisville, KY. Inside & outside. Streak-free results. Residential & commercial. Call (502) 835-1870!",
+        desc: "Crystal-clear window cleaning in Louisville, KY. Inside & outside. Streak-free results. Residential & commercial. Call (502) 804-2333!",
         extra: "Clean windows dramatically transform how your Louisville home feels — our streak-free window cleaning service covers interior and exterior glass, window tracks, screens, and sills.",
         faqs: [
             { q:"Do you clean both interior and exterior windows in Louisville?", a:"Yes! Our Louisville window cleaning service includes interior and exterior glass, window tracks, sills, and screens. We leave every pane streak-free using professional squeegees and cleaning solutions." },
@@ -403,7 +403,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "pressure-washing": {
-        desc: "Power pressure washing in Louisville, KY. Driveways, decks, siding & more. Louisville's grime experts. Call (502) 835-1870 for a free quote!",
+        desc: "Power pressure washing in Louisville, KY. Driveways, decks, siding & more. Louisville's grime experts. Call (502) 804-2333 for a free quote!",
         extra: "Louisville's humid climate creates mold, mildew, and algae buildup on driveways, decks, and siding fast — our pressure washing service blasts it all away, restoring your property's curb appeal.",
         faqs: [
             { q:"What surfaces can you pressure wash in Louisville?", a:"We pressure wash driveways, sidewalks, decks, patios, siding, brick, fences, garage floors, and retaining walls throughout Louisville. If it has grime, we can clean it." },
@@ -412,7 +412,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "luxury-estate-cleaning": {
-        desc: "White-glove luxury estate cleaning in Louisville, KY. For discerning homeowners. Custom plans, insured & bonded. Call (502) 835-1870.",
+        desc: "White-glove luxury estate cleaning in Louisville, KY. For discerning homeowners. Custom plans, insured & bonded. Call (502) 804-2333.",
         extra: "Louisville's finest estates require a cleaning partner with the discretion, expertise, and white-glove standards to match — our luxury estate team is handpicked and fully trained on high-end finishes.",
         faqs: [
             { q:"What makes your luxury estate cleaning in Louisville different?", a:"Our luxury estate service features handpicked senior cleaners trained on marble, natural stone, custom hardwood, and delicate surfaces. We follow a white-glove checklist and treat your estate with absolute care and discretion." },
@@ -421,7 +421,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "laundry-services": {
-        desc: "Laundry services in Louisville, KY. Wash, dry, fold & more. Add-on to any cleaning visit. Convenient & affordable. Call (502) 835-1870.",
+        desc: "Laundry services in Louisville, KY. Wash, dry, fold & more. Add-on to any cleaning visit. Convenient & affordable. Call (502) 804-2333.",
         extra: "Our Louisville laundry service takes one more task off your plate — we wash, dry, and fold your laundry as part of your cleaning visit so you come home to a fully refreshed home.",
         faqs: [
             { q:"Do you offer laundry service as part of a Louisville home clean?", a:"Yes! Laundry is a popular add-on to our regular Louisville cleaning service. We wash, dry, and fold your laundry during the cleaning visit — just leave the instructions and we handle the rest." },
@@ -430,7 +430,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "detailing": {
-        desc: "Professional detailing services in Louisville, KY. Vehicles, upholstery & more. Spot-on results every time. Call (502) 835-1870 for a quote.",
+        desc: "Professional detailing services in Louisville, KY. Vehicles, upholstery & more. Spot-on results every time. Call (502) 804-2333 for a quote.",
         extra: "From vehicle interiors to fine upholstery, our Louisville detailing service uses pro-grade equipment and specialized treatments to restore surfaces to showroom condition.",
         faqs: [
             { q:"What does your Louisville detailing service include?", a:"Our Louisville detailing covers interior vacuuming, upholstery cleaning, leather conditioning, surface wipe-downs, glass cleaning, and odor elimination — bringing any interior back to pristine condition." },
@@ -439,7 +439,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "commercial-cleaning": {
-        desc: "Commercial cleaning services in Louisville, KY. Offices, retail, warehouses & more. Bonded, insured & experienced. Call (502) 835-1870.",
+        desc: "Commercial cleaning services in Louisville, KY. Offices, retail, warehouses & more. Bonded, insured & experienced. Call (502) 804-2333.",
         extra: "Louisville businesses trust 502 Star Service for consistent, professional commercial cleaning that keeps workplaces spotless, hygienic, and ready for employees and customers every day.",
         faqs: [
             { q:"What types of businesses do you clean commercially in Louisville?", a:"We clean offices, retail stores, medical facilities, warehouses, restaurants, schools, gyms, churches, and industrial facilities throughout Louisville and Jefferson County." },
@@ -448,16 +448,16 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "office-janitorial": {
-        desc: "Office janitorial services in Louisville, KY. Daily, weekly or monthly. Professional & reliable. Free commercial quote: (502) 835-1870.",
+        desc: "Office janitorial services in Louisville, KY. Daily, weekly or monthly. Professional & reliable. Free commercial quote: (502) 804-2333.",
         extra: "A clean office is a productive office — our Louisville janitorial teams maintain your workspace to a consistently high standard with customized schedules that minimize workplace disruption.",
         faqs: [
             { q:"What's typically included in office janitorial service in Louisville?", a:"Our Louisville office janitorial service includes trash removal, restroom sanitation, vacuuming/mopping all floors, surface disinfection, kitchen cleaning, and glass door/window wiping — fully customizable per your office layout." },
             { q:"Can you provide janitorial service to large Louisville office buildings?", a:"Yes! We service small suites and large multi-floor office buildings throughout Louisville. Our commercial team scales to meet the exact square footage and frequency you need." },
-            { q:"How do I get a janitorial quote for my Louisville office?", a:"Call (502) 835-1870 or fill out our online quote form. We'll schedule a free walkthrough of your Louisville office and provide a detailed, transparent janitorial proposal within 24 hours." }
+            { q:"How do I get a janitorial quote for my Louisville office?", a:"Call (502) 804-2333 or fill out our online quote form. We'll schedule a free walkthrough of your Louisville office and provide a detailed, transparent janitorial proposal within 24 hours." }
         ]
     },
     "janitorial-cleaning": {
-        desc: "Janitorial cleaning services in Louisville, KY. Commercial grade for businesses of all sizes. Licensed & bonded. Call (502) 835-1870 today.",
+        desc: "Janitorial cleaning services in Louisville, KY. Commercial grade for businesses of all sizes. Licensed & bonded. Call (502) 804-2333 today.",
         extra: "Our Louisville janitorial cleaning teams are fully trained, equipped with commercial-grade products, and available on daily, weekly, or custom schedules for facilities of all types and sizes.",
         faqs: [
             { q:"What's the difference between janitorial and standard commercial cleaning in Louisville?", a:"Janitorial service in Louisville refers to routine, frequent cleaning (daily or several times per week) to maintain hygiene — trash, restrooms, floors. Commercial deep cleaning is more periodic and thorough. We offer both." },
@@ -466,7 +466,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "medical-facility-cleaning": {
-        desc: "Medical facility cleaning in Louisville, KY. HIPAA-aware, infection-control protocols. Clinics, labs & offices. Call (502) 835-1870.",
+        desc: "Medical facility cleaning in Louisville, KY. HIPAA-aware, infection-control protocols. Clinics, labs & offices. Call (502) 804-2333.",
         extra: "Louisville medical facilities demand CDC-compliant disinfection protocols — our trained medical cleaning specialists use hospital-grade disinfectants and strict procedures to protect patients and staff.",
         faqs: [
             { q:"Are your Louisville cleaners trained for medical facility sanitation?", a:"Yes. Our medical facility cleaning team in Louisville is specifically trained in infection control procedures, cross-contamination prevention, and the use of EPA-registered hospital-grade disinfectants." },
@@ -475,7 +475,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "industrial-warehouse-cleaning": {
-        desc: "Industrial & warehouse cleaning in Louisville, KY. Heavy-duty, safety-compliant. Large facility specialists. Call (502) 835-1870 for a quote.",
+        desc: "Industrial & warehouse cleaning in Louisville, KY. Heavy-duty, safety-compliant. Large facility specialists. Call (502) 804-2333 for a quote.",
         extra: "Louisville's diverse industrial base demands cleaning partners who can handle concrete floors, machinery surroundings, loading docks, and high-bay areas safely and efficiently — that's exactly what we do.",
         faqs: [
             { q:"What industrial cleaning equipment do you use in Louisville warehouses?", a:"We use commercial-grade auto-scrubbers, pressure washers, industrial vacuums, and floor buffers appropriate for Louisville warehouse and industrial facility floor care and area cleaning." },
@@ -484,7 +484,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "floor-stripping-waxing": {
-        desc: "Floor stripping & waxing services in Louisville, KY. VCT, tile & commercial floors. High-gloss results. Call (502) 835-1870 for a free quote.",
+        desc: "Floor stripping & waxing services in Louisville, KY. VCT, tile & commercial floors. High-gloss results. Call (502) 804-2333 for a free quote.",
         extra: "Louisville's commercial floors take constant abuse — our floor stripping and waxing service removes old, yellowed finish and applies fresh coats that protect floors and restore that high-gloss professional shine.",
         faqs: [
             { q:"What floor types do you strip and wax in Louisville?", a:"We strip and wax VCT (vinyl composition tile), linoleum, luxury vinyl plank, and composite commercial floors throughout Louisville. We do not wax natural stone or hardwood — those have specialized treatments." },
@@ -493,7 +493,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "gym-fitness-cleaning": {
-        desc: "Gym & fitness center cleaning in Louisville, KY. Equipment, locker rooms & weight floors. Sanitized for safety. Call (502) 835-1870.",
+        desc: "Gym & fitness center cleaning in Louisville, KY. Equipment, locker rooms & weight floors. Sanitized for safety. Call (502) 804-2333.",
         extra: "Louisville gyms and fitness centers require the highest hygiene standards — our specialized gym cleaning service disinfects all equipment, locker rooms, and floor surfaces to keep your members healthy and coming back.",
         faqs: [
             { q:"What does your Louisville gym cleaning service cover?", a:"We clean and disinfect all fitness equipment (machines, free weights, benches), locker rooms, showers, restrooms, floor mats, and common areas using EPA-approved disinfectants that are safe for gym environments." },
@@ -502,7 +502,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "school-daycare-cleaning": {
-        desc: "School & daycare cleaning in Louisville, KY. Child-safe products. Germ-reducing sanitation. Licensed & insured. Call (502) 835-1870.",
+        desc: "School & daycare cleaning in Louisville, KY. Child-safe products. Germ-reducing sanitation. Licensed & insured. Call (502) 804-2333.",
         extra: "Louisville schools and daycares require extra vigilance against germs — our child-safe cleaning protocols use non-toxic, EPA-registered disinfectants to protect the health of every student and child in your care.",
         faqs: [
             { q:"Are your Louisville school cleaning products safe for children?", a:"Absolutely. We exclusively use child-safe, non-toxic, EPA-registered disinfectants in Louisville schools and daycares. All products are free from harsh chemicals and fumes that could harm children." },
@@ -511,7 +511,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "church-worship-cleaning": {
-        desc: "Church & worship center cleaning in Louisville, KY. Respectful, thorough & affordable. Sanctuaries, halls & offices. Call (502) 835-1870.",
+        desc: "Church & worship center cleaning in Louisville, KY. Respectful, thorough & affordable. Sanctuaries, halls & offices. Call (502) 804-2333.",
         extra: "Louisville's diverse faith communities deserve a cleaning partner who approaches their sacred spaces with respect and care — our church cleaning team treats every sanctuary and fellowship hall with the reverence it deserves.",
         faqs: [
             { q:"Do you clean sanctuaries and pews in Louisville churches?", a:"Yes. Our Louisville church cleaning service covers sanctuaries, pews, altars, aisles, choir areas, baptismal spaces, fellowship halls, classrooms, and restrooms — a complete worship center cleaning solution." },
@@ -520,7 +520,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "solar-panel-cleaning": {
-        desc: "Solar panel cleaning in Louisville, KY. Maximize energy output. Safe, streak-free cleaning. Residential & commercial. Call (502) 835-1870.",
+        desc: "Solar panel cleaning in Louisville, KY. Maximize energy output. Safe, streak-free cleaning. Residential & commercial. Call (502) 804-2333.",
         extra: "Dirty solar panels in Louisville can lose 15–25% efficiency — our professional solar panel cleaning service safely removes pollen, bird droppings, and grime to maximize your system's energy output and ROI.",
         faqs: [
             { q:"Why is solar panel cleaning important for Louisville homeowners?", a:"Louisville's pollen, bird droppings, and seasonal grime can reduce solar panel efficiency by 15–25%. Regular professional cleaning maximizes energy output and extends the life of your investment." },
@@ -529,7 +529,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "vacation-rental-cleaning": {
-        desc: "Vacation rental cleaning in Louisville, KY. Fast turnover, guest-ready every time. Reliable 5-star standard. Call (502) 835-1870 for a quote.",
+        desc: "Vacation rental cleaning in Louisville, KY. Fast turnover, guest-ready every time. Reliable 5-star standard. Call (502) 804-2333 for a quote.",
         extra: "Louisville vacation rental owners rely on us for fast, thorough turnovers that earn 5-star guest reviews — our dedicated turnover team ensures linens, kitchens, and bathrooms are perfect for every check-in.",
         faqs: [
             { q:"Do you offer same-day turnover cleaning for Louisville vacation rentals?", a:"Yes! We specialize in rapid turnover cleaning for Louisville short-term rentals. Same-day turnovers are available for most properties — just notify us of check-out and check-in times and we'll handle the rest." },
@@ -538,7 +538,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "airbnb-cleaning": {
-        desc: "Expert Airbnb cleaning in Louisville, KY. 5-star ready every turnover. Fast & reliable. Connects with Airbnb app. Call (502) 835-1870.",
+        desc: "Expert Airbnb cleaning in Louisville, KY. 5-star ready every turnover. Fast & reliable. Connects with Airbnb app. Call (502) 804-2333.",
         extra: "Louisville Airbnb hosts trust 502 Star Service for consistent 5-star turnovers — we know what guests inspect first and ensure your listing earns SuperHost status through impeccable cleanliness.",
         faqs: [
             { q:"How does Airbnb cleaning work in Louisville with 502 Star Service?", a:"We coordinate with your Airbnb calendar — when a guest checks out, we're there. We turn the property around to hotel-quality standard, replace linens, restock supplies, and have it ready before the next guest arrives." },
@@ -547,7 +547,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "airbnb-rental-management": {
-        desc: "Airbnb & rental management in Louisville, KY. Full-service hosting support. Turnovers, restocking & inspections. Call (502) 835-1870.",
+        desc: "Airbnb & rental management in Louisville, KY. Full-service hosting support. Turnovers, restocking & inspections. Call (502) 804-2333.",
         extra: "Louisville short-term rental management is our specialty — from turnover cleaning and guest supply management to property inspection reports, we handle every detail so you earn passive income stress-free.",
         faqs: [
             { q:"What does full Airbnb rental management include in Louisville?", a:"Our Louisville rental management package covers turnover cleaning, linen service, guest supply restocking, property condition reports with photos, and direct coordination with your booking calendar — a complete hosting solution." },
@@ -556,7 +556,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "post-construction-cleanup": {
-        desc: "Post-construction cleanup in Louisville, KY. Dust, debris & residue removal. Builder-grade standard. Free quote: (502) 835-1870.",
+        desc: "Post-construction cleanup in Louisville, KY. Dust, debris & residue removal. Builder-grade standard. Free quote: (502) 804-2333.",
         extra: "Louisville construction cleanup requires specialized equipment and techniques to safely remove drywall dust, joint compound residue, adhesive, and construction debris from every surface without damaging new finishes.",
         faqs: [
             { q:"What does post-construction cleanup include in Louisville?", a:"Our Louisville post-construction cleanup removes all construction dust from every surface, cleans drywall dust from vents, wipes adhesive residue, removes stickers from windows/fixtures, cleans all surfaces, and does a final detail pass — leaving your new space move-in ready." },
@@ -565,7 +565,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "property-management-janitorial": {
-        desc: "Property management janitorial services in Louisville, KY. Common areas, lobbies & grounds. Commercial-grade. Call (502) 835-1870.",
+        desc: "Property management janitorial services in Louisville, KY. Common areas, lobbies & grounds. Commercial-grade. Call (502) 804-2333.",
         extra: "Louisville property managers rely on us to maintain impeccable common areas, lobbies, stairwells, and exterior grounds across their entire portfolio — ensuring tenants are satisfied and property value is protected.",
         faqs: [
             { q:"What does property management janitorial service cover in Louisville?", a:"We cover all common areas: lobbies, hallways, stairwells, elevators, parking garages, laundry rooms, and outdoor common spaces across Louisville apartment communities and commercial properties." },
@@ -574,7 +574,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "property-maintenance": {
-        desc: "Property maintenance services in Louisville, KY. Cleaning, upkeep & inspections. Landlord & investor focused. Call (502) 835-1870.",
+        desc: "Property maintenance services in Louisville, KY. Cleaning, upkeep & inspections. Landlord & investor focused. Call (502) 804-2333.",
         extra: "Louisville landlords and investors trust 502 Star Service for comprehensive property maintenance that keeps units rent-ready, protects property value, and minimizes time-consuming management headaches.",
         faqs: [
             { q:"What property maintenance services do you offer in Louisville?", a:"We offer unit turnover cleaning, between-tenant deep cleans, common area maintenance, carpet cleaning, window washing, post-repair cleaning, and pre-inspection cleaning for Louisville rental properties." },
@@ -583,7 +583,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "home-watch-services": {
-        desc: "Home watch services in Louisville, KY. We check your home while you're away. Scheduled inspections & reports. Call (502) 835-1870.",
+        desc: "Home watch services in Louisville, KY. We check your home while you're away. Scheduled inspections & reports. Call (502) 804-2333.",
         extra: "Louisville homeowners who travel frequently, snowbirds, and absentee owners rely on our home watch service to monitor their property, catch issues early, and ensure their home is safe and secure.",
         faqs: [
             { q:"What does a Louisville home watch visit include?", a:"Our Louisville home watch visits include a full interior and exterior inspection covering HVAC, plumbing, windows, doors, signs of pests, pool/outdoor areas, and security. We document everything with photos and send you a same-day report." },
@@ -592,7 +592,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "luxury-estate-management": {
-        desc: "Luxury estate management in Louisville, KY. Complete property care for discerning owners. Cleaning, maintenance & oversight. Call (502) 835-1870.",
+        desc: "Luxury estate management in Louisville, KY. Complete property care for discerning owners. Cleaning, maintenance & oversight. Call (502) 804-2333.",
         extra: "Louisville's premier luxury estates require a management partner with the standards, training, and discretion to maintain them at the highest level — 502 Star Service delivers white-glove estate management that reflects your lifestyle.",
         faqs: [
             { q:"What's included in luxury estate management in Louisville?", a:"Our Louisville luxury estate management covers all cleaning services, grounds oversight coordination, seasonal preparation, vendor management, security checks, inventory maintenance, and bespoke scheduling — fully comprehensive care for your estate." },
@@ -601,7 +601,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "gutter-cleaning": {
-        desc: "Gutter cleaning services in Louisville, KY. Remove clogs, debris & leaves. Protect your home's foundation. Call (502) 835-1870 for a quote!",
+        desc: "Gutter cleaning services in Louisville, KY. Remove clogs, debris & leaves. Protect your home's foundation. Call (502) 804-2333 for a quote!",
         extra: "Louisville's dense tree canopy means gutters clog fast — our professional gutter cleaning service removes packed leaves, seedpods, and debris so water flows freely and protects your home from costly foundation damage.",
         faqs: [
             { q:"Why is gutter cleaning important for Louisville homeowners?", a:"Louisville's abundant trees drop leaves, seeds, and debris that quickly clog gutters. Clogged gutters cause water overflow that damages fascia boards, soffits, siding, landscaping, and foundations — all very expensive repairs." },
@@ -610,7 +610,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "maid-service": {
-        desc: "Professional Maid Service in Louisville, KY. Thorough, reliable & eco-friendly. Serving all Jefferson County. Free quote: (502) 835-1870.",
+        desc: "Professional Maid Service in Louisville, KY. Thorough, reliable & eco-friendly. Serving all Jefferson County. Free quote: (502) 804-2333.",
         extra: "Our Louisville maid service covers every room top-to-bottom — dusting, vacuuming, mopping, sanitizing kitchens and bathrooms, and making your home feel truly refreshed.",
         faqs: [
             { q:"What's included in your standard Louisville maid service?", a:"Our standard maid service includes all living areas, bedrooms, bathrooms, and the kitchen. We dust surfaces, vacuum, mop floors, sanitize counters, scrub sinks, and clean toilets." },
@@ -619,7 +619,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "housekeeping": {
-        desc: "Expert housekeeping services in Louisville, KY. We handle the chores so you don't have to. Call (502) 835-1870!",
+        desc: "Expert housekeeping services in Louisville, KY. We handle the chores so you don't have to. Call (502) 804-2333!",
         extra: "Louisville housekeeping goes beyond the surface — we ensure your home is organized, sanitized, and perfectly maintained on a schedule that fits your life.",
         faqs: [
             { q:"What does a housekeeping service include?", a:"Housekeeping includes dusting, vacuuming, mopping, and comprehensive sanitization of your kitchen and bathrooms." },
@@ -628,7 +628,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "apartment-cleaning": {
-        desc: "Apartment cleaning services in Louisville, KY. Start fresh in your space. We scrub every inch. Call 502-835-1870 for a free estimate today!",
+        desc: "Apartment cleaning services in Louisville, KY. Start fresh in your space. We scrub every inch. Call 502-804-2333 for a free estimate today!",
         extra: "Living in a Louisville apartment? Our apartment cleaning ensures your space is completely sanitized, maximizing every square foot for your comfort.",
         faqs: [
             { q:"What does your Louisville apartment cleaning include?", a:"Our apartment clean covers the entire unit: kitchen, bathroom, living room, and bedrooms, completely sanitized and ready for you." },
@@ -637,7 +637,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "condo-cleaning": {
-        desc: "Condo cleaning in Louisville, KY. Thorough, reliable clean. Free quote — (502) 835-1870.",
+        desc: "Condo cleaning in Louisville, KY. Thorough, reliable clean. Free quote — (502) 804-2333.",
         extra: "Our Louisville condo cleaning is designed to satisfy even the most demanding HOA standards — we maintain your space to perfection.",
         faqs: [
             { q:"Do you clean high-rise condos in Louisville?", a:"Yes! We service condos of all sizes and heights throughout Louisville, including downtown high-rises." },
@@ -646,7 +646,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "spring-cleaning": {
-        desc: "Professional spring cleaning in Louisville, KY. Deep scrubbing & organization. Homes & offices. Call (502) 835-1870 for a free quote!",
+        desc: "Professional spring cleaning in Louisville, KY. Deep scrubbing & organization. Homes & offices. Call (502) 804-2333 for a free quote!",
         extra: "Our Louisville spring cleaning service is an intensive top-to-bottom clean that eliminates a year's worth of hidden dust, allergens, and grime.",
         faqs: [
             { q:"What makes spring cleaning different from a regular clean?", a:"Spring cleaning is a massive deep clean. It includes inside appliances, baseboards, window blinds, and areas that aren't typically reached in a standard clean." },
@@ -655,16 +655,16 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "one-time-cleaning": {
-        desc: "One-time cleaning in Louisville, KY. Perfect for events, holidays, or a fresh start. Call (502) 835-1870!",
+        desc: "One-time cleaning in Louisville, KY. Perfect for events, holidays, or a fresh start. Call (502) 804-2333!",
         extra: "Need a spotless home for an event or just need a break? Our one-time cleaning service delivers a massive impact without any ongoing commitment.",
         faqs: [
             { q:"Can I book just a single cleaning visit in Louisville?", a:"Yes! We happily provide one-time cleaning services with zero pressure to sign up for a recurring plan." },
             { q:"Is a one-time clean a deep clean or a standard clean?", a:"You can choose either! We offer both standard one-time cleans and intensive deep one-time cleans based on your needs." },
-            { q:"How quickly can you do a one-time clean before my event?", a:"We often have next-day availability. Call (502) 835-1870 to secure an urgent one-time cleaning slot." }
+            { q:"How quickly can you do a one-time clean before my event?", a:"We often have next-day availability. Call (502) 804-2333 to secure an urgent one-time cleaning slot." }
         ]
     },
     "routine-cleaning": {
-        desc: "Routine cleaning in Louisville, KY. Consistent, spotless results. Call (502) 835-1870 for a free quote!",
+        desc: "Routine cleaning in Louisville, KY. Consistent, spotless results. Call (502) 804-2333 for a free quote!",
         extra: "Set it and forget it. Our routine cleaning service ensures your Louisville home is consistently pristine week after week.",
         faqs: [
             { q:"What frequencies do you offer for routine cleaning?", a:"We offer weekly, bi-weekly, and monthly routine cleaning schedules in Louisville." },
@@ -673,7 +673,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "move-out-maid-service": {
-        desc: "Move-Out Maid Service in Louisville, KY. Get your full deposit back. Call (502) 835-1870.",
+        desc: "Move-Out Maid Service in Louisville, KY. Get your full deposit back. Call (502) 804-2333.",
         extra: "Our move-out maid service is designed for tenants who want absolute certainty that their property is spotless for the final landlord walkthrough.",
         faqs: [
             { q:"Does your move-out maid service include inside the fridge and oven?", a:"Yes! Inside appliances are a standard inclusion in our move-out maid service package." },
@@ -682,7 +682,7 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "same-day-cleaning": {
-        desc: "Same Day Cleaning services in Louisville, KY. Urgent, fast, and reliable. Call (502) 835-1870.",
+        desc: "Same Day Cleaning services in Louisville, KY. Urgent, fast, and reliable. Call (502) 804-2333.",
         extra: "Emergency situation? Unexpected guests? Our same day cleaning dispatch can have a professional team at your Louisville home within hours.",
         faqs: [
             { q:"Do you really offer same day cleaning in Louisville?", a:"Yes, we keep dispatch slots open for urgent, same day cleaning requests. Availability is first-come, first-served." },
@@ -691,12 +691,12 @@ export const serviceData: Record<string, any> = {
         ]
     },
     "affordable-house-cleaning": {
-        desc: "Affordable house cleaning in Louisville, KY. High quality, low prices. Call (502) 835-1870 for a quote.",
+        desc: "Affordable house cleaning in Louisville, KY. High quality, low prices. Call (502) 804-2333 for a quote.",
         extra: "We believe a clean home shouldn't be a luxury. Our affordable house cleaning packages deliver 5-star results without breaking the bank.",
         faqs: [
             { q:"How do you keep your house cleaning affordable?", a:"We use highly efficient routing, streamlined processes, and local teams to keep overhead low and pass the savings to you." },
             { q:"Are you cutting corners with 'affordable' cleaning?", a:"Never. We maintain a strict 5-star standard and a 100% satisfaction guarantee on every single clean, regardless of price." },
-            { q:"How can I get a quote for affordable house cleaning?", a:"Call (502) 835-1870. We'll give you a transparent, flat-rate quote instantly over the phone." }
+            { q:"How can I get a quote for affordable house cleaning?", a:"Call (502) 804-2333. We'll give you a transparent, flat-rate quote instantly over the phone." }
         ]
     },
 
@@ -748,7 +748,7 @@ export const getFaqs = (location: string, keyword: string = "Cleaning Services")
   },
   {
     q: `How much does professional cleaning cost in ${location}, KY?`,
-    a: `Pricing depends on the size of your home and the specific services requested. We offer transparent, flat-rate pricing. You can get a free, instant quote online or by calling us directly at (502) 835-1870.`
+    a: `Pricing depends on the size of your home and the specific services requested. We offer transparent, flat-rate pricing. You can get a free, instant quote online or by calling us directly at (502) 804-2333.`
   },
   {
     q: `Do I need to be home during the cleaning appointment?`,

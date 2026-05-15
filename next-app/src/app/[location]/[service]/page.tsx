@@ -79,7 +79,7 @@ export default async function SiloServicePage({ params }: { params: { location: 
     ? `/${(srvData as any).img}`
     : "/images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg";
 
-  const pageDesc = `Professional ${keyword.toLowerCase()} in ${locStr}. Trusted experts. Call (502) 835-1870!`;
+  const pageDesc = `Professional ${keyword.toLowerCase()} in ${locStr}. Trusted experts. Call (502) 804-2333!`;
   const canonicalUrl = `https://www.502starservices.com/${location}/${service}/`;
 
   // Build FAQs
@@ -94,7 +94,7 @@ export default async function SiloServicePage({ params }: { params: { location: 
     },
     {
       q: `How do I schedule service in ${locStr}?`,
-      a: `You can directly call our expert team at (502) 835-1870 for a fast, free quote.`,
+      a: `You can directly call our expert team at (502) 804-2333 for a fast, free quote.`,
     },
   ];
 

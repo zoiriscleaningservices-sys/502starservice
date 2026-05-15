@@ -100,8 +100,8 @@ export default async function SlugPage({ params }: { params: { slug: string } })
     : "Dominating House Cleaning, Deep Cleaning & Window Cleaning in Louisville! - 502 Star Service";
 
   const pageDesc = isLocation
-    ? `Professional cleaning services in ${data.title}. Trusted experts. Call (502) 835-1870!`
-    : (data as any).desc || `Professional ${keyword.toLowerCase()} in ${locStr}. Trusted experts. Call (502) 835-1870!`;
+    ? `Professional cleaning services in ${data.title}. Trusted experts. Call (502) 804-2333!`
+    : (data as any).desc || `Professional ${keyword.toLowerCase()} in ${locStr}. Trusted experts. Call (502) 804-2333!`;
 
   const bannerImage = isLocation
     ? "/images/WhatsApp Image 2026-02-27 at 11.40.23 PM (1).jpeg"

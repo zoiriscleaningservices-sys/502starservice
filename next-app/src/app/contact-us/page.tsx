@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact Us | 502 Star Service Louisville",
-  description: "Get a fast, free, no-obligation quote for residential or commercial cleaning in Louisville. Call (502) 835-1870 today.",
+  description: "Get a fast, free, no-obligation quote for residential or commercial cleaning in Louisville. Call (502) 804-2333 today.",
 };
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
         type="homepage"
         canonicalUrl="https://www.502starservices.com/contact-us/"
         pageTitle="Contact Us | 502 Star Service Louisville"
-        pageDesc="Get a fast, free, no-obligation quote for residential or commercial cleaning in Louisville. Call (502) 835-1870 today."
+        pageDesc="Get a fast, free, no-obligation quote for residential or commercial cleaning in Louisville. Call (502) 804-2333 today."
       />
       <Hero
         isVideo={false}

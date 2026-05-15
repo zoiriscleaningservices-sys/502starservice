@@ -32,10 +32,10 @@ export default function Contact() {
             <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
             <div className="mt-6 pt-6 border-t border-gray-100 text-center">
               <a
-                href="tel:5028351870"
+                href="tel:5028042333"
                 className="text-teal-700 font-bold text-lg hover:text-teal-900 transition-colors flex items-center justify-center gap-2"
               >
-                <Phone className="w-5 h-5" /> (502) 835-1870
+                <Phone className="w-5 h-5" /> (502) 804-2333
               </a>
               <p className="text-gray-500 text-xs mt-1">Call or text anytime — 7 days a week</p>
             </div>

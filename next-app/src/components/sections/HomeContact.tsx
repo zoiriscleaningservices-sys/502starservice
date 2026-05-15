@@ -69,13 +69,13 @@ export default function HomeContact() {
             <div className="mt-12 pt-8 border-t border-gray-200">
               <p className="text-gray-500 text-sm mb-4 uppercase tracking-widest font-semibold">Or Call Us Directly</p>
               <a
-                href="tel:5028351870"
+                href="tel:5028042333"
                 className="group inline-flex items-center gap-4 text-gray-900 hover:text-teal-600 transition-colors"
               >
                 <div className="bg-teal-100 p-4 rounded-full group-hover:scale-110 transition-transform">
                   <Phone className="w-6 h-6 text-teal-600" />
                 </div>
-                <span className="text-3xl font-bold">(502) 835-1870</span>
+                <span className="text-3xl font-bold">(502) 804-2333</span>
               </a>
             </div>
           </div>

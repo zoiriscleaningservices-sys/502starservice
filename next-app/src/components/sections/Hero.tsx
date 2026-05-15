@@ -137,12 +137,12 @@ export default function Hero({ isVideo = false, title, subtitle, desc, bannerIma
           {/* High-End Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
-              href="tel:5028351870"
+              href="tel:5028042333"
               className="group w-full sm:w-auto bg-accent-yellow text-gray-900 px-6 py-3 sm:px-8 sm:py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white transition-all shadow-[0_0_40px_rgba(251,208,39,0.3)] hover:shadow-[0_0_60px_rgba(251,208,39,0.5)] flex items-center justify-center gap-3 relative overflow-hidden"
             >
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
               <Phone className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" /> 
-              <span className="relative z-10">(502) 835-1870</span>
+              <span className="relative z-10">(502) 804-2333</span>
             </a>
             
             <Link

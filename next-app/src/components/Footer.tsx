@@ -191,12 +191,12 @@ export default function Footer() {
                 Reach Out Today
               </h3>
 
-              <a href="tel:5028351870" className="block mb-6 hover:-translate-y-1 transition-transform group/phone">
+              <a href="tel:5028042333" className="block mb-6 hover:-translate-y-1 transition-transform group/phone">
                 <span className="block text-gray-500 text-[13px] uppercase tracking-wider font-bold mb-1">
                   Call for an Estimate
                 </span>
                 <span className="text-3xl font-extrabold text-white group-hover/phone:text-accent-yellow transition-colors">
-                  (502) 835-1870
+                  (502) 804-2333
                 </span>
               </a>
 
